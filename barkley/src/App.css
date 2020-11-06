@@ -3,3 +3,41 @@
   margin: 0;
   padding: 0;
 }
+
+input, label {
+  display: block;
+  width: 60%;
+}
+
+label {
+  margin: 0.5rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 0.4rem;
+}
+
+.App {
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+input{
+  border: rgba(74, 171, 201, 0.824) solid 5px;
+}
+
+label{
+  font-weight: bolder;
+}
+
+button{
+  background-color: rgba(67, 147, 218, 0.824);
+  color: aliceblue;
+  padding: 5px;
+  font-size: large;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
