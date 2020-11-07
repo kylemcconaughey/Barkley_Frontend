@@ -18,3 +18,17 @@ export function register (username, password) {
   })
     .then(res => res.token)
 }
+
+// export function getUserInfo (token) {
+//   return axios.get('', {
+
+//   })
+// }
+
+export function getUserPost (token) {
+  return axios.get('', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+}
