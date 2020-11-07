@@ -39,11 +39,11 @@ class Login extends React.Component {
             </div>
             <div>
               <label htmlFor='username'>Username</label>
-              <input id='username' type='text' value={this.state.username} onChange={event => this.setState({ username: event.target.value })} />
+              <input id='username' placeholder='Username' type='text' value={this.state.username} onChange={event => this.setState({ username: event.target.value })} />
             </div>
             <div>
               <label htmlFor='password'>Password</label>
-              <input id='password' type='password' value={this.state.password} onChange={event => this.setState({ password: event.target.value })} />
+              <input id='password' placeholder='Password' type='password' value={this.state.password} onChange={event => this.setState({ password: event.target.value })} />
             </div>
             <div>
               <button type='submit' className='loginBtn'>Login</button>
