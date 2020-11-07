@@ -41,3 +41,21 @@ button{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.navlinks{
+  background-color: rgb(75, 127, 162);
+  overflow: hidden;
+}
+.navlinks a{
+  float: left;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navlinks a:hover{
+  background-color: rgb(0, 75, 237);
+  cursor: pointer;
+}
