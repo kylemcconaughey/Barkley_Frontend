@@ -59,3 +59,45 @@ button{
   background-color: rgb(0, 75, 237);
   cursor: pointer;
 }
+
+       
+.styleNormal{
+  font-style: normal;
+}
+
+.styleBold{
+  font-style: bolder;
+}
+
+.styleItalics{
+  font-style: italic;
+}
+
+.styleUnderline{
+  text-decoration: underline black 5px;
+}
+
+.alignmentLeft{
+text-align: left;
+} 
+.alignmentRight{
+text-align: right;
+}
+.alignmentCenter{
+text-align: center;
+}
+.alignmentJustified{
+text-align: justify;
+}
+.fontSizeSmall{
+font-size: medium;
+}
+.fontSizeMedium{
+font-size: larger;
+}
+.fontSizeLarge{
+font-size: x-large;
+}
+.fontSizeJumbo{
+font-size: 250%;
+}
