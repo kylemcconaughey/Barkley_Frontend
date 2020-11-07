@@ -101,7 +101,7 @@ function Register (props) {
         />
         <input
           type='file' className='form' id='profilepic' value={profilepic}
-          onChange={event => SetBirthdate(event.target.value)}
+          onChange={event => setProfilepic(event.target.value)}
         />
         <label
           htmlFor='username'
