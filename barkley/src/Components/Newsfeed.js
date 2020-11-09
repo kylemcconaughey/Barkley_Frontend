@@ -1,62 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import { getPosts, getToken } from './api'
-import Apost from './Post'
-import InfiniteScroll from 'react-infinite-scroller'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Posts from './Posts'
 
-export default function Posts (props) {
+export default function Newsfeed (props) {
   const { token } = props
-  const [loading, setLoading] = useState(true)
-  const [posts, setPosts] = useState([])
-  const [nextUrl, setNextUrl] = useState(null)
-  const [postsErr, setPostsErr] = useState(null)
-
-  function getMorePosts () {
-    if (nextUrl && !loading) {
-      setLoading(true)
-      getToken(token, nextUrl).then(addPosts).catch(handleError)
-    }
-  }
-
-  function addPosts (data) {
-    setPosts(posts.concat(data.results))
-    setNextUrl(data.next)
-    setLoading(false)
-  }
-
-  function handleError (error) {
-    console.log({ error })
-    setPostsErr(error)
-    setNextUrl(null)
-    setLoading(false)
-  }
-
-  useEffect(() => {
-    setLoading(true)
-    getPosts(token).then(data => {
-      setPosts(data)
-      setLoading(false)
-    })
-  }, [token])
-
-  if (loading) {
-    return <p>Loading posts...</p>
-  }
 
   return (
-    <div className='posts'>
-      <InfiniteScroll
-        initialLoad={false}
-        loadMore={getMorePosts}
-        hasMore={nextUrl}
-        loader={<p key={0}>Loading...</p>}
-      >
-        {posts.map(post => (
-          <Apost key={post.id} post={post} />
-        ))}
-      </InfiniteScroll>
-      {postsErr && (
-        <p>There was an error loading the posts</p>
-      )}
+    <div className='Home'>
+      <Posts token={token} />
     </div>
   )
+}
+
+Newsfeed.propTypes = {
+  token: PropTypes.string.isRequired
 }
