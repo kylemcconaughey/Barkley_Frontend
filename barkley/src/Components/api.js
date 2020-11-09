@@ -20,7 +20,7 @@ export function register (username, password) {
 }
 
 export function getUserPost (token) {
-  return axios.get('http://brkly.herokuapp.com/posts/', {
+  return axios.get('http://brkly.herokuapp.com/posts/mine/', {
     headers: {
       Authorization: 'Token ' + token
     }
