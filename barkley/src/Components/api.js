@@ -61,3 +61,21 @@ export function uploadImage (token, cardUrl, image) {
     }
   }).then(res => res.data)
 }
+
+export function getPosts (token) {
+  return axios.get('http://brkly.herokuapp.com/posts/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+
+export function getDogInfo (token) {
+  return axios.get('http://brkly.herokuapp.com/dogs/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}

@@ -11,7 +11,7 @@ function MyPost (props) {
     getUserPost(token).then(data => {
       setPosts(data)
       setLoading(false)
-      console.log(data)
+      // console.log(data)
     })
   }, [token])
 

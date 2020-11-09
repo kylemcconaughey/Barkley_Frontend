@@ -7,13 +7,13 @@ function Profile (props, { post }) {
   const { token, username } = props
   const [postnum, setPostnum] = useState(0)
   const [friends, setFriends] = useState(0)
-  const [profilepic, setProfilepic] = useState([])
+  // const [profilepic, setProfilepic] = useState([])
 
-  useEffect(() => {
-    getUserInfo(token).then(data => {
-      setProfilepic(data)
-    })
-  }, [token])
+  // useEffect(() => {
+  //   getUserInfo(token).then(data => {
+  //     setProfilepic(data)
+  //   })
+  // }, [token])
 
   useEffect(() => {
     getPostnum(token).then(data => {
@@ -29,7 +29,7 @@ function Profile (props, { post }) {
 
   return (
     <div className='profile-container'>
-      <div className='user-pic'>{profilepic}</div>
+      <div className='user-pic'>{}</div>
       <div className='user-title'>{username}</div>
       <div className='post-num'>posts: {postnum}</div>
       <div className='friends'>friends: {friends}</div>
