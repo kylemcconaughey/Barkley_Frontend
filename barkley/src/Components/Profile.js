@@ -30,7 +30,7 @@ function Profile (props, { post }) {
         <p>Posts</p>
         <MyPost token={token} username={username} />
       </div>
-      <PostEditor></PostEditor>
+      <PostEditor />
     </div>
   )
 }
