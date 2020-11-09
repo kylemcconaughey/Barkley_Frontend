@@ -11,6 +11,7 @@ import Header from './components/Header'
 import Logout from './components/Logout'
 import Profile from './components/Profile'
 import Register from './components/Register'
+import Newsfeed from './components/Newsfeed'
 
 class App extends React.Component {
   constructor () {
@@ -44,7 +45,7 @@ class App extends React.Component {
           <Route path='/search'> </Route>
           <Route path='/messages'> </Route>
           <Route path='/recommendations'> </Route>
-          <Route path='/newsfeed'> </Route>
+          <Route path='/newsfeed'><Newsfeed /> </Route>
           <Route path='/register'><Register /></Route>
         </Switch>
       </Router>
