@@ -16,10 +16,12 @@ class Nav extends React.Component {
       <div>
         <div className='navlinks'>
           <Link to='/profile'><p className='links'> Profile <i className='fas fa-user-circle' /></p></Link>
-          <Link to='/search'> Search <i class='fas fa-search' /> </Link>
-          <Link to='/messages'> Messages <i class='far fa-envelope' /> </Link>
-          <Link to='/recommendations'> Recommendations <i class='far fa-question-circle' /> </Link>
+          <Link to='/search'> Explore <i class='fas fa-search' /> </Link>
           <Link to='/newsfeed'> Newsfeed <i class='far fa-newspaper' /> </Link>
+          <Link to='/messages'> Notifications <i class='far fa-bell' /> </Link>
+          <Link to='/messages'> Messages <i class='far fa-envelope' /> </Link>
+          <Link to='/search'> Dog Friendly Locations <i class='fas fa-search-location' /> </Link>
+          <Link to='/recommendations'> Helpful Advice <i class='far fa-question-circle' /> </Link>
           <Link to='/logout'><p className='links'> Logout <i className='fas fa-sign-out-alt' /></p></Link>
         </div>
       </div>
