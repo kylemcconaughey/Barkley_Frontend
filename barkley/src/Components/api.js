@@ -28,7 +28,7 @@ export function getUserPost (token) {
     .then(res => res.data)
 }
 export function getPosts (token) {
-  return axios.get('http://brkly.herokuapp.com/posts/', {
+  return axios.get('http://brkly.herokuapp.com/posts/all/', {
     headers: {
       Authorization: 'Token ' + token
     }
