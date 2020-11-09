@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Card from 'react-bootstrap/post'
+import Card from 'react-bootstrap/Card'
 import classNames from 'classnames'
 import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
