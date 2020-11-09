@@ -45,7 +45,7 @@ class App extends React.Component {
           <Route path='/search'> </Route>
           <Route path='/messages'> </Route>
           <Route path='/recommendations'> </Route>
-          <Route path='/newsfeed'><Newsfeed></Newsfeed> </Route>
+          <Route path='/newsfeed'><Newsfeed /> </Route>
           <Route path='/register'><Register /></Route>
         </Switch>
       </Router>
