@@ -24,6 +24,21 @@ input {
   padding: 1rem;
 }
 
+.post{
+  padding: 10px;
+  min-height: 100px;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  border: 5px solid black;
+  max-width: 45rem;
+}
+
+.image, img{
+  max-width: 60%;
+  max-width: 70%;
+  margin-left: 32px;
+}
+
 input{
   border: rgba(74, 171, 201, 0.824) solid 5px;
 }

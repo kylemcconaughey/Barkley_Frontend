@@ -23,12 +23,12 @@ function Profile (props, { post }) {
     <div className='profile-container'>
       <div className='user-pic'>{}</div>
       <div className='user-title'>{username}</div>
-      <div className='post-num'>posts: {postnum}</div>
-      <div className='friends'>friends: {friends}</div>
+      <div className='post-num'>Posts: {postnum}</div>
+      <div className='friends'>Friends: {friends}</div>
       {/* <div className='bio'>{}</div> */}
       <div className='user-post'>
         <p>List of Post</p>
-        <MyPost token={token} />
+        <MyPost token={token} username={username} />
       </div>
     </div>
   )
