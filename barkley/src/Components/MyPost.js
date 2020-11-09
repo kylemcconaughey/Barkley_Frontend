@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import Apost from './Post'
 import { getUserPost } from './api'
 
 function MyPost (props) {
   const { token } = props
-  const [posts, setPosts] = useState('')
+  const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -20,10 +21,9 @@ function MyPost (props) {
 
   return (
     <div>
-        L
       {/* {posts.map(post => (
-
-        ))} */}
+        <Apost key={post.id} post={post} />
+      ))} */}
     </div>
   )
 }

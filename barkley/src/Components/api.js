@@ -19,16 +19,35 @@ export function register (username, password) {
     .then(res => res.token)
 }
 
-// export function getUserInfo (token) {
-//   return axios.get('', {
-
-//   })
-// }
-
 export function getUserPost (token) {
+  return axios.get('http://brkly.herokuapp.com/posts/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+
+export function getUserInfo (token) {
+  return axios.get('http://brkly.herokuapp.com/users/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+}
+
+export function getFriendsnum (token) {
   return axios.get('', {
     headers: {
       Authorization: 'Token ' + token
     }
   })
+    .then(res => res.data)
+}
+
+export function getPostnum (token) {
+  return axios.get('', {
+    Authorization: 'Token ' + token
+  })
+    .then(res => res.data)
 }
