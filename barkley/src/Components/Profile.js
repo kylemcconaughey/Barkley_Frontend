@@ -5,7 +5,7 @@ import PostEditor from './AddPost'
 
 function Profile (props, { post }) {
   const { token, username } = props
-  const [postnum, setPostnum] = useState(0)
+  const [setPostnum] = useState(0)
   const [friends, setFriends] = useState(0)
 
   useEffect(() => {

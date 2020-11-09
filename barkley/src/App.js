@@ -44,7 +44,7 @@ class App extends React.Component {
           <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
           <Route path='/search'> </Route>
           <Route path='/messages'> </Route>
-          <Route path='/recommendations'> </Route>
+          <Route path='/helpful'> </Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/register'><Register /></Route>
         </Switch>
