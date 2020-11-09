@@ -39,7 +39,7 @@ export default function Posts (props) {
   }, [token])
 
   if (loading) {
-    return <p>Loading your posts...</p>
+    return <p>Loading posts...</p>
   }
 
   return (
