@@ -51,3 +51,13 @@ export function getPostnum (token) {
   })
     .then(res => res.data)
 }
+
+export function uploadImage (token, cardUrl, image) {
+  return axios.put(cardUrl + 'image/', image, {
+    headers: {
+      Authorization: 'Token ' + token,
+      'Content-Type': image.type,
+      'Content-Disposition': `attachment; filename=${image.name}`
+    }
+  }).then(res => res.data)
+}
