@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'http://brkly.herokuapp.com/'
+  baseURL: 'https://brkly.herokuapp.com/'
 })
 
 export function getToken (username, password) {
@@ -12,7 +12,7 @@ export function getToken (username, password) {
 }
 
 export function register (username, password) {
-  return axios.post('http://brkly.herokuapp.com//auth/users/', {
+  return axios.post('https://brkly.herokuapp.com//auth/users/', {
     username: username,
     password: password
   })
