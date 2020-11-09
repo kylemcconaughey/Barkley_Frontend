@@ -28,7 +28,7 @@ function Profile (props, { post }) {
       {/* <div className='bio'>{}</div> */}
       <div className='user-post'>
         <p>List of Post</p>
-        <MyPost token={token} />
+        <MyPost token={token} username={username} />
       </div>
     </div>
   )

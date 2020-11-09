@@ -20,6 +20,14 @@ export function register (username, password) {
 }
 
 export function getUserPost (token) {
+  return axios.get('http://brkly.herokuapp.com/posts/mine/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+export function getPosts (token) {
   return axios.get('http://brkly.herokuapp.com/posts/', {
     headers: {
       Authorization: 'Token ' + token
@@ -50,4 +58,14 @@ export function getPostnum (token) {
     Authorization: 'Token ' + token
   })
     .then(res => res.data)
+}
+
+export function uploadImage (token, cardUrl, image) {
+  return axios.put(cardUrl + 'image/', image, {
+    headers: {
+      Authorization: 'Token ' + token,
+      'Content-Type': image.type,
+      'Content-Disposition': `attachment; filename=${image.name}`
+    }
+  }).then(res => res.data)
 }
