@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { getFriendsnum, getPostnum } from './api'
 import MyPost from './MyPost'
 import PostEditor from './AddPost'
+import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
   const { token, username } = props
-  const [postnum, setPostnum] = useState(0)
+  const [setPostnum] = useState(0)
   const [friends, setFriends] = useState(0)
 
   useEffect(() => {
@@ -23,8 +24,9 @@ function Profile (props, { post }) {
   return (
     <div className='profile-container'>
       <div className='user-title'>{username}'s Profile</div>
+      <FollowButton />
       <div className='user-pic'>{}</div>
-      <div className='friends'>Friends: {friends}</div>
+      <div className='friends'>Followers: {friends}</div>
       {/* <div className='bio'>{}</div> */}
       <div className='user-post'>
         <p>Posts</p>
