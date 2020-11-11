@@ -15,7 +15,7 @@ export default function Apost ({ post }) {
     <div className='post'>
       <post style={{ width: '40rem' }}>
         <p className='postHeader'> Posted by:
-          <em> <Link to='/profile/{post.user_id}'>{post.user} </Link></em>
+          <em> <Link to='/profile/{user_id}'>{post.user} </Link></em>
              on {postedAt}
         </p>
         <Card.Body className={classNames({
