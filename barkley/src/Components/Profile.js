@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { getFriendsnum, getPostnum, getUserInfo } from './api'
+import DogProfile from './DogProfile'
 import MyPost from './MyPost'
 import PostEditor from './AddPost'
+import DogInfo from './DogInfo'
 
 function Profile (props, { post }) {
   const { token, username } = props
@@ -33,6 +35,9 @@ function Profile (props, { post }) {
       <div className='user-title'>{username}</div>
       <div className='post-num'>posts: {postnum}</div>
       <div className='friends'>friends: {friends}</div>
+      {/* <div className='user-dogs'>
+        <DogInfo token={token} />
+      </div> */}
       {/* <div className='bio'>{}</div> */}
       <div className='user-post'>
         <p>Posts</p>

@@ -11,7 +11,7 @@ function MyPost (props) {
     getUserPost(token).then(data => {
       setPosts(data)
       setLoading(false)
-      // console.log(data)
+      console.log(data)
     })
   }, [token])
 
@@ -21,9 +21,9 @@ function MyPost (props) {
 
   return (
     <div>
-      {posts.map(post => (
-        <Apost key={post.id} post={post} />
-      ))}
+      {/* {posts.map(post => (
+        <Apost key={post.user.id} post={post} />
+      ))} */}
     </div>
   )
 }

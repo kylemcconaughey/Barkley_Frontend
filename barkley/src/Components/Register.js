@@ -117,9 +117,9 @@ function Register (props) {
           type='password' className='form' placeholder='Password' name='password' value={password}
           onChange={event => setPassword(event.target.value)}
         />
-        <label
+        {/* <label
           htmlFor='email'
-        />
+        /> */}
         <button className='formBtn' type='submit'>
             Sign Up
         </button>

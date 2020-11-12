@@ -12,7 +12,7 @@ export function getToken (username, password) {
 }
 
 export function register (username, password) {
-  return axios.post('https://brkly.herokuapp.com//auth/users/', {
+  return axios.post('https://brkly.herokuapp.com/auth/users/', {
     username: username,
     password: password
   })
