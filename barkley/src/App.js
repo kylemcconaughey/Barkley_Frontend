@@ -12,7 +12,7 @@ import Logout from './components/Logout'
 import Profile from './components/Profile'
 import Register from './components/Register'
 import Newsfeed from './components/Newsfeed'
-
+import Search from './components/Explore'
 
 class App extends React.Component {
   constructor () {
@@ -43,7 +43,7 @@ class App extends React.Component {
           <Route path='/login' exact component={Login}> Login </Route>
           <Route path='/logout/'><Logout onLogout={this.handleLogout} /></Route>
           <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/search'> </Route>
+          <Route path='/search'><Search> </Search> </Route>
           <Route path='/messages'> </Route>
           <Route path='/helpful'> </Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>
