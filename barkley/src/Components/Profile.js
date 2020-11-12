@@ -10,13 +10,13 @@ function Profile (props, { post }) {
   const { token, username } = props
   const [setPostnum] = useState(0)
   const [friends, setFriends] = useState(0)
-  const [profilepic, setProfilepic] = useState([])
+  // const [profilepic, setProfilepic] = useState([])
 
-  useEffect(() => {
-    getUserInfo(token).then(data => {
-      setProfilepic(data)
-    })
-  }, [token])
+  // useEffect(() => {
+  //   getUserInfo(token).then(data => {
+  //     setProfilepic(data)
+  //   })
+  // }, [token])
 
   useEffect(() => {
     getPostnum(token).then(data => {
