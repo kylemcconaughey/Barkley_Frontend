@@ -21,9 +21,9 @@ function MyPost (props) {
 
   return (
     <div>
-      {/* {posts.map(post => (
+      {posts.map(post => (
         <Apost key={post.user.id} post={post} />
-      ))} */}
+      ))}
     </div>
   )
 }

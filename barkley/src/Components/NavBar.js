@@ -16,7 +16,7 @@ class Nav extends React.Component {
       <div>
         <div className='navlinks'>
           <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
-          <Link to='/doglist'><p className='links'> DogList</p></Link>
+          <Link to='/doglist'><p className='links'> <i class='fas fa-paw' /> Dogs</p></Link>
           <Link to='/search'> <i class='fas fa-search' /> Explore  </Link>
           <Link to='/newsfeed'> <i class='far fa-newspaper' /> Newsfeed  </Link>
           <Link to='/messages'> <i class='far fa-bell' /> Notifications </Link>

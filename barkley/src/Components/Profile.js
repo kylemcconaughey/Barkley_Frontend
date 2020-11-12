@@ -10,13 +10,13 @@ function Profile (props, { post }) {
   const { token, username } = props
   const [setPostnum] = useState(0)
   const [friends, setFriends] = useState(0)
-  // const [profilepic, setProfilepic] = useState([])
+  const [profilepic, setProfilepic] = useState([])
 
-  // useEffect(() => {
-  //   getUserInfo(token).then(data => {
-  //     setProfilepic(data)
-  //   })
-  // }, [token])
+  useEffect(() => {
+    getUserInfo(token).then(data => {
+      setProfilepic(data)
+    })
+  }, [token])
 
   useEffect(() => {
     getPostnum(token).then(data => {
@@ -32,20 +32,10 @@ function Profile (props, { post }) {
 
   return (
     <div className='profile-container'>
-<<<<<<< HEAD
-      <div className='user-pic'>{}</div>
-      <div className='user-title'>{username}</div>
-      <div className='post-num'>posts: {postnum}</div>
-      <div className='friends'>friends: {friends}</div>
-      {/* <div className='user-dogs'>
-        <DogInfo token={token} />
-      </div> */}
-=======
       <div className='user-title'>{username}'s Profile</div>
       <FollowButton />
-      <div className='user-pic'>{}</div>
+      {/* <img src={picture} alt='Owner' className='ownerProfPic' /> */}
       <div className='friends'>Followers: {friends}</div>
->>>>>>> 4097a32fdd9779881ba938f0b3b8746b7b0fdb22
       {/* <div className='bio'>{}</div> */}
       <div className='user-post'>
         <p>Posts</p>
