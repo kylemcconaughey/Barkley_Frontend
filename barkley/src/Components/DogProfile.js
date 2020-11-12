@@ -2,17 +2,15 @@ import React from 'react'
 
 function DogProfile ({ dog }) {
   return (
-    <div>
-      <div>{dog.picture}</div>
-      <div>{dog.name}</div>
-      <div>{dog.age}</div>
-      <div>{dog.breed}</div>
-      <div>{dog.energy}</div>
-      <div>{dog.group_size}</div>
-      <div>{dog.kid_friendly}</div>
-      <div>{dog.size}</div>
-      <div>{dog.temper}</div>
-      <div>{dog.vaccinated}</div>
+    <div className='doggo'>
+      <h2>{dog.name} </h2>
+      <div>
+        <img src={dog.picture} alt='doggo' className='dogProfPic' />
+      </div>
+      <div>Age: {dog.age}</div>
+      <div>Breed:{dog.breed}</div>
+      <div>Good in group sizes: {dog.group_size}</div>
+      <div>Vaccinated: {dog.vaccinated}</div>
     </div>
   )
 }
