@@ -2,6 +2,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Comfortaa', cursive;
+}
+
+.appheader{
+  background-color: rgba(200, 223, 235, 0.577);
+  align-items: center;
+}
+
+.appimg{
+ align-self: center;
 }
 
 input, label {
@@ -27,15 +37,19 @@ input {
 .post{
   padding: 10px;
   min-height: 100px;
-  margin-left: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2rem;
-  border: 5px solid black;
+  margin-top: 2rem;
+  border: 5px solid rgb(22, 102, 164);
   max-width: 45rem;
+  align-items: center;
 }
 
 .image, img{
   max-width: 60%;
   max-width: 70%;
+  max-height: 30%;
   margin-left: 32px;
 }
 
@@ -58,20 +72,20 @@ button{
 }
 
 .navlinks{
-  background-color: rgb(75, 127, 162);
+  background-color: rgb(40, 125, 181);
   overflow: hidden;
 }
 .navlinks a{
   float: left;
   color: #f5f5f5;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .navlinks a:hover{
-  background-color: rgb(0, 75, 237);
+  background-color: rgb(34, 214, 255);
   cursor: pointer;
 }
 

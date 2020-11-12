@@ -15,15 +15,14 @@ class Nav extends React.Component {
     return (
       <div>
         <div className='navlinks'>
-          <Link to='/profile'><p className='links'> Profile <i className='fas fa-user-circle' /></p></Link>
-          <Link to='/doglist'><p className='links'> DogList</p></Link>
-          <Link to='/search'> Explore <i class='fas fa-search' /> </Link>
-          <Link to='/newsfeed'> Newsfeed <i class='far fa-newspaper' /> </Link>
-          <Link to='/messages'> Notifications <i class='far fa-bell' /> </Link>
-          <Link to='/messages'> Messages <i class='far fa-envelope' /> </Link>
-          <Link to='/search'> Dog Friendly Locations <i class='fas fa-search-location' /> </Link>
-          <Link to='/recommendations'> Helpful Advice <i class='far fa-question-circle' /> </Link>
-          <Link to='/logout'><p className='links'> Logout <i className='fas fa-sign-out-alt' /></p></Link>
+          <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
+          <Link to='/search'> <i class='fas fa-search' /> Explore  </Link>
+          <Link to='/newsfeed'> <i class='far fa-newspaper' /> Newsfeed  </Link>
+          <Link to='/messages'> <i class='far fa-bell' /> Notifications </Link>
+          <Link to='/messages'> <i class='far fa-envelope' /> Messages </Link>
+          <Link to='/search'> <i class='fas fa-search-location' />Dog Friendly  </Link>
+          <Link to='/helpful'> <i class='far fa-question-circle' />Helpful Advice  </Link>
+          <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
         </div>
       </div>
     )

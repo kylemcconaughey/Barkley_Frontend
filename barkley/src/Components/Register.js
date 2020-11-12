@@ -12,7 +12,6 @@ function Register (props) {
   const [phonenum, setPhonenum] = useState('')
   const [birthdate, SetBirthdate] = useState('')
   const [profilepic, setProfilepic] = useState('')
-  const [createdat, setCreatedat] = useState()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState(null)
