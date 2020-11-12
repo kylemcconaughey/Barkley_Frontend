@@ -79,3 +79,12 @@ export function getDogInfo (token) {
   })
     .then(res => res.data)
 }
+
+export function getMessages (token) {
+  return axios.get('', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}

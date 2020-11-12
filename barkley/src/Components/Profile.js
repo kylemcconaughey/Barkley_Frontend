@@ -32,21 +32,14 @@ function Profile (props, { post }) {
 
   return (
     <div className='profile-container'>
-<<<<<<< HEAD
       <div className='user-pic'>{}</div>
       <div className='user-title'>{username}</div>
-      <div className='post-num'>posts: {postnum}</div>
+      {/* <div className='post-num'>posts: {postnum}</div> */}
       <div className='friends'>friends: {friends}</div>
-      {/* <div className='user-dogs'>
+      <div className='user-dogs'>
         <DogInfo token={token} />
       </div> */}
-=======
-      <div className='user-title'>{username}'s Profile</div>
-      <FollowButton />
-      <div className='user-pic'>{}</div>
-      <div className='friends'>Followers: {friends}</div>
->>>>>>> 4097a32fdd9779881ba938f0b3b8746b7b0fdb22
-      {/* <div className='bio'>{}</div> */}
+      {/* <div className='bio'>{}</div>
       <div className='user-post'>
         <p>Posts</p>
         <MyPost token={token} username={username} />
