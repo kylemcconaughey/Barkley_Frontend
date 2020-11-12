@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 import classNames from 'classnames'
 import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
+import Comments from './Comments'
 
 export default function Apost ({ post }) {
   let postedAt = post.posted_at

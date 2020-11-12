@@ -14,6 +14,7 @@ import Register from './components/Register'
 import Newsfeed from './components/Newsfeed'
 import DogInfo from './components/DogInfo'
 import Search from './components/Explore'
+import DogInfo from './components/DogInfo'
 
 class App extends React.Component {
   constructor () {
