@@ -1,38 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input, label {
+  display: block;
+  width: 60%;
+}
+
+label {
+  margin: 0.5rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 0.4rem;
+}
+
 .App {
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.post{
+  padding: 10px;
+  min-height: 100px;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  border: 5px solid black;
+  max-width: 45rem;
+}
+
+.image, img{
+  max-width: 60%;
+  max-width: 70%;
+  margin-left: 32px;
+}
+
+input{
+  border: rgba(74, 171, 201, 0.824) solid 5px;
+}
+
+label{
+  font-weight: bolder;
+}
+
+button{
+  background-color: rgba(67, 147, 218, 0.824);
+  color: aliceblue;
+  padding: 5px;
+  font-size: large;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navlinks{
+  background-color: rgb(75, 127, 162);
+  overflow: hidden;
+}
+.navlinks a{
+  float: left;
+  color: #f5f5f5;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navlinks a:hover{
+  background-color: rgb(0, 75, 237);
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+       
+.styleNormal{
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.styleBold{
+  font-style: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+.styleItalics{
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.styleUnderline{
+  text-decoration: underline black 5px;
+}
+
+.alignmentLeft{
+text-align: left;
+} 
+.alignmentRight{
+text-align: right;
+}
+.alignmentCenter{
+text-align: center;
+}
+.alignmentJustified{
+text-align: justify;
+}
+.fontSizeSmall{
+font-size: medium;
+}
+.fontSizeMedium{
+font-size: larger;
+}
+.fontSizeLarge{
+font-size: x-large;
+}
+.fontSizeJumbo{
+font-size: 250%;
 }
