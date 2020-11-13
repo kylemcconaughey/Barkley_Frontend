@@ -4,14 +4,14 @@ import { getDogInfo, getFriendsnum, getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
 import PostEditor from './AddPost'
-import DogInfo from './DogInfo'
+// import DogInfo from './DogInfo'
 import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
   const { token, username } = props
   const [setPostnum] = useState(0)
   const [friends, setFriends] = useState(0)
-  
+
   useEffect(() => {
     getPostnum(token).then(data => {
       setPostnum(data)
