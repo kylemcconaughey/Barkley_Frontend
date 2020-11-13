@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { getFriendsnum, getPostnum, getUserInfo } from './api'
+import { Link } from 'react-router-dom'
+import { getDogInfo, getFriendsnum, getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
 import PostEditor from './AddPost'
@@ -10,14 +11,7 @@ function Profile (props, { post }) {
   const { token, username } = props
   const [setPostnum] = useState(0)
   const [friends, setFriends] = useState(0)
-  // const [profilepic, setProfilepic] = useState([])
-
-  // useEffect(() => {
-  //   getUserInfo(token).then(data => {
-  //     setProfilepic(data)
-  //   })
-  // }, [token])
-
+  
   useEffect(() => {
     getPostnum(token).then(data => {
       setPostnum(data)
@@ -36,10 +30,11 @@ function Profile (props, { post }) {
       <div className='user-title'>{username}</div>
       {/* <div className='post-num'>posts: {postnum}</div> */}
       <div className='friends'>friends: {friends}</div>
-      <div className='user-dogs'>
-        <DogInfo token={token} />
+      {/* <div><Link to='/dogprofile'>{DogProfile.name}</Link></div> */}
+      {/* <div className='user-dogs'>
+        <DogInfo token={token} username={username} />
       </div> */}
-      {/* <div className='bio'>{}</div>
+      {/* <div className='bio'>{}</div> */}
       <div className='user-post'>
         <p>Posts</p>
         <MyPost token={token} username={username} />

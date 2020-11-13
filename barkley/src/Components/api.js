@@ -81,7 +81,7 @@ export function getDogInfo (token) {
 }
 
 export function getMessages (token) {
-  return axios.get('', {
+  return axios.get('http://brkly.herokuapp.com/messages/', {
     headers: {
       Authorization: 'Token ' + token
     }

@@ -14,7 +14,7 @@ function DogInfo (props) {
   }, [token])
 
   return (
-    <div className=''>
+    <div>
       {doginfo.map(dog => (
         <DogProfile key={dog.id} dog={dog} />
       ))}
