@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Form, ListGroup, Jumbotron } from 'react-bootstrap'
 
 export default function Search () {
-
   const [query, setQuery] = useState('')
   const [users, setUsers] = useState([])
   const focusSearch = useRef(null)
@@ -10,7 +9,7 @@ export default function Search () {
   useEffect(() => { focusSearch.current.focus() }, [])
 
   const searchUsers = async (query) => {
-    const results = await fetch(`http://brkly.herokuapp.com/users/search?term=${query}`, {
+    const results = await fetch(`http://brkly.herokuapp.com/users/search/?q=${query}`, {
       headers: { accept: 'application/json' }
     })
     const usersData = await results.json()
@@ -20,6 +19,7 @@ export default function Search () {
   const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
+  // sets delay
 
   useEffect(() => {
     let currentQuery = true

@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 import classNames from 'classnames'
 import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
-import Comments from './Comments'
+import Reactions from './Reactions'
 
 export default function Apost ({ post }) {
   let postedAt = post.posted_at
@@ -44,7 +44,10 @@ export default function Apost ({ post }) {
         </Card.Body>
 
       </post>
-      <i className='far fa-heart' /><Link to='/profile/{post.url}'> {post.liked_by} </Link>
+
+      <Reactions> </Reactions>
+      <span role="img" aria-label="heart">💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link>
+      {/* <Comments> </Comments> */}
 
     </div>
   )

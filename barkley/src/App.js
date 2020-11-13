@@ -13,7 +13,7 @@ import Profile from './components/Profile'
 import Register from './components/Register'
 import Newsfeed from './components/Newsfeed'
 import DogInfo from './components/DogInfo'
-import Search from './components/Explore'
+import Search from './components/Search'
 
 class App extends React.Component {
   constructor () {

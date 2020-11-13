@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { getFriendsnum, getPostnum, getUserInfo } from './api'
-import DogProfile from './DogProfile'
+import { getFriendsnum, getPostnum } from './api'
+// import DogProfile from './DogProfile'
 import MyPost from './MyPost'
 import PostEditor from './AddPost'
-import DogInfo from './DogInfo'
+// import DogInfo from './DogInfo'
 import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
