@@ -88,3 +88,12 @@ export function getMessages (token) {
   })
     .then(res => res.data)
 }
+
+export function getConvo (token) {
+  return axios.get('http://brkly.herokuapp.com/conversations/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
