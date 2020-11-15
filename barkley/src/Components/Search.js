@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Form, ListGroup, Jumbotron } from 'react-bootstrap'
+import UsersInfo from './UsersList'
 
 export default function Search () {
   const [query, setQuery] = useState('')
@@ -53,7 +54,7 @@ export default function Search () {
   return (
     <>
       <Jumbotron fluid>
-        <Form id='search-form'>
+        <Form id='searchForm'>
           <h4>Search Barkley</h4>
           <Form.Control
             type='text'
