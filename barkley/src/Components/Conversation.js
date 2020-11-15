@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Chat from './Chat'
+// import Chat from './Chat'
 
 function Convo ({ clist }) {
   const [showchat, setShowChat] = useState(false)
