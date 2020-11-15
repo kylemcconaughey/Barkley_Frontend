@@ -5,17 +5,17 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import Home from './components/Home'
-import Login from './components/Login'
-import Header from './components/Header'
-import Logout from './components/Logout'
-import Profile from './components/Profile'
-import Register from './components/Register'
-import Newsfeed from './components/Newsfeed'
-import DogInfo from './components/DogInfo'
-import Search from './components/Search'
-import DogProfile from './components/DogProfile'
-import Conversations from './components/Conversations'
+import Home from './Components/Home'
+import Login from './Components/Login'
+import Header from './Components/Header'
+import Logout from './Components/Logout'
+import Profile from './Components/Profile'
+import Register from './Components/Register'
+import Newsfeed from './Components/Newsfeed'
+import DogInfo from './Components/DogInfo'
+import Search from './Components/Search'
+// import DogProfile from './Components/DogProfile'
+import Conversations from './Components/Conversations'
 
 class App extends React.Component {
   constructor () {
