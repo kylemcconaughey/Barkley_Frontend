@@ -53,7 +53,7 @@ export default function Search () {
   return (
     <>
       <Jumbotron fluid>
-        <Form id='search-form'>
+        <Form id='searchForm'>
           <h4>Search Barkley</h4>
           <Form.Control
             type='text'

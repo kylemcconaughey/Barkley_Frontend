@@ -46,7 +46,7 @@ export default function Apost ({ post }) {
       </post>
 
       <Reactions> </Reactions>
-      <span role="img" aria-label="heart">💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link>
+      <span role='img' aria-label='heart'>💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link>
       {/* <Comments> </Comments> */}
 
     </div>

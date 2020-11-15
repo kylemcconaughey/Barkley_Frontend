@@ -5,6 +5,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+<<<<<<< HEAD
 import Home from './components/Home'
 import Login from './components/Login'
 import Header from './components/Header'
@@ -16,6 +17,18 @@ import DogInfo from './components/DogInfo'
 import Search from './components/Search'
 import DogProfile from './components/DogProfile'
 import Conversations from './components/Conversations'
+=======
+import Home from './Components/Home'
+import Login from './Components/Login'
+import Header from './Components/Header'
+import Logout from './Components/Logout'
+import Profile from './Components/Profile'
+import Register from './Components/Register'
+import Newsfeed from './Components/Newsfeed'
+import DogInfo from './Components/DogInfo'
+import Search from './Components/Search'
+import Map from './Components/Location'
+>>>>>>> b7ff83a6fbb04cba89b497d005770f0d44f848e3
 
 class App extends React.Component {
   constructor () {

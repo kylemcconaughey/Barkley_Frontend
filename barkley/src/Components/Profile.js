@@ -16,7 +16,7 @@ function Profile (props, { post }) {
     getPostnum(token).then(data => {
       setPostnum(data)
     })
-  }, [token])
+  }, [token, setPostnum])
 
   useEffect(() => {
     getFriendsnum(token).then(data => {

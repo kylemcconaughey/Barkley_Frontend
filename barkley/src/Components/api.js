@@ -20,7 +20,7 @@ export function register (username, password) {
 }
 
 export function getUserPost (token) {
-  return axios.get('http://brkly.herokuapp.com/posts/mine/', {
+  return axios.get('https://brkly.herokuapp.com/posts/mine/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -29,7 +29,7 @@ export function getUserPost (token) {
 }
 
 export function getUserInfo (token) {
-  return axios.get('http://brkly.herokuapp.com/users/', {
+  return axios.get('https://brkly.herokuapp.com/users/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -63,7 +63,7 @@ export function uploadImage (token, cardUrl, image) {
 }
 
 export function getPosts (token) {
-  return axios.get('http://brkly.herokuapp.com/posts/', {
+  return axios.get('https://brkly.herokuapp.com/posts/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -72,7 +72,7 @@ export function getPosts (token) {
 }
 
 export function getDogInfo (token) {
-  return axios.get('http://brkly.herokuapp.com/dogs/', {
+  return axios.get('https://brkly.herokuapp.com/dogs/', {
     headers: {
       Authorization: 'Token ' + token
     }

@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Chat from './Chat'
 
 function Convo ({ clist }) {
-  
+  const [showchat, setShowChat] = useState(false)
 
+  // function handleClick (event) {
+  //   setShowChat(true)
+  // }
+
+  //  const showchat = () => {
+  //    setShowChat(!showchat)
+  //  }
   return (
     <div className='message-container'>
-      <button onClick={Chat}>{clist.convo_name}</button>
+      <button onClick={() => setShowChat(!showchat)}>{clist.convo_name}</button>
     </div>
   )
 }
