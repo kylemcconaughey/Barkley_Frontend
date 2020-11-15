@@ -79,3 +79,21 @@ export function getDogInfo (token) {
   })
     .then(res => res.data)
 }
+
+export function getMessages (token) {
+  return axios.get('http://brkly.herokuapp.com/messages/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+
+export function getConvo (token) {
+  return axios.get('http://brkly.herokuapp.com/conversations/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
