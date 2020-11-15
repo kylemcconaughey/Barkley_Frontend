@@ -11,7 +11,7 @@ function DogProfile ({ dog }) {
       <div>Breed:{dog.breed}</div>
       <div>Good in group sizes: {dog.group_size}</div>
       <div>Vaccinated: {dog.vaccinated}</div>
-      <div>Owner: {dog.url}</div>
+      <div>Owner: </div>
     </div>
   )
 }

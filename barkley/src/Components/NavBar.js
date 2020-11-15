@@ -19,7 +19,7 @@ class Nav extends React.Component {
           <Link to='/doglist'><p className='links'> <i class='fas fa-paw' /> Dogs</p></Link>
           <Link to='/search'> <i class='fas fa-search' /> Explore  </Link>
           <Link to='/newsfeed'> <i class='far fa-newspaper' /> Newsfeed  </Link>
-          <Link to='/messages'> <i class='far fa-bell' /> Notifications </Link>
+          <Link to='/notifications'> <i class='far fa-bell' /> Notifications </Link>
           <Link to='/messages'> <i class='far fa-envelope' /> Messages </Link>
           <Link to='/dogfriendlylocations'> <i class='fas fa-search-location' />Dog Friendly  </Link>
           <Link to='/helpful'> <i class='far fa-question-circle' />Helpful Advice  </Link>
