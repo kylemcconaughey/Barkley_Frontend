@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getDogInfo, getFriendsnum, getPostnum } from './api'
+import { getFriendsnum, getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
 import PostEditor from './AddPost'
 // import DogInfo from './DogInfo'
-import FollowButton from './FollowButton'
+// import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
   const { token, username } = props
@@ -30,7 +30,7 @@ function Profile (props, { post }) {
       <div className='user-title'>{username}</div>
       {/* <div className='post-num'>posts: {postnum}</div> */}
       <div className='friends'>friends: {friends}</div>
-      {/* <div><Link to='/dogprofile'>{DogProfile.name}</Link></div> */}
+      <div><Link to='/dogprofile'>{DogProfile.name}</Link></div>
       {/* <div className='user-dogs'>
         <DogInfo token={token} username={username} />
       </div> */}
