@@ -14,6 +14,7 @@ import Register from './Components/Register'
 import Newsfeed from './Components/Newsfeed'
 import DogInfo from './Components/DogInfo'
 import Search from './Components/Search'
+import Map from './Components/Location'
 
 class App extends React.Component {
   constructor () {
@@ -46,6 +47,7 @@ class App extends React.Component {
           <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
           <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
           <Route path='/search'><Search> </Search> </Route>
+          <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/messages'> </Route>
           <Route path='/helpful'> </Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>
