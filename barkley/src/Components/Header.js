@@ -1,6 +1,6 @@
 import React from 'react'
 import Login from './Login'
-import Nav from './NavBar'
+import NavBar from './NavBar'
 import logo from './barkleylogo1.png'
 
 class Header extends React.Component {
@@ -13,7 +13,7 @@ class Header extends React.Component {
               <div>
                 <h1 className='appheader'><img className='appimg' src={logo} alt='Barkley Header' /> </h1>
                 <div className='navbar'>
-                  <Nav />
+                  <NavBar />
                 </div>
               </div>
 

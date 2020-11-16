@@ -32,7 +32,7 @@ handleSubmit = e => {
 }
 
 handleFollowing = e => {
-    axios.post(`https://brkly.herokuapp.com/users/${this.state.userid}/follow/`, this.state, {
+    axios.post(`https://brkly.herokuapp.com/users/${this.state.userid}/followed_by/`, this.state, {
       headers: {
         Authorization: `Token ${this.state.token}`
       }

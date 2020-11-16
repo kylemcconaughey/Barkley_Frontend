@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import "emoji-mart/css/emoji-mart.css";
 import { Picker, Emoji } from "emoji-mart";
+import axios from "axios";
 
 const customReactionEmojis = [
   {
@@ -126,6 +127,12 @@ class Reactions extends Component {
   };
 
   handleEmojiSelect = emoji => {
+    axios.post('http://brkly.herokuapp.com/users/', this.state, {
+      headers: {
+        Authorization: `Token ${this.state.token}`
+      }
+    })
+    
     console.log(emoji);
     let isEmojiAlreadyFound = false;
     let emojiObjectWithReactionCount = { ...emoji, reaction_count: 1 };
