@@ -1,73 +1,51 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Form, ListGroup, Jumbotron } from 'react-bootstrap'
+import React, { Component } from "react";
+// import axios from "axios";
+import { search } from "./Utils";
+import UsersInfo from "./Users";
 
-export default function Search () {
-  const [query, setQuery] = useState('')
-  const [users, setUsers] = useState([])
-  const focusSearch = useRef(null)
+class Search extends Component {
+  state = {
+    users: null,
+    loading: false,
+    value: ""
+  };
 
-  useEffect(() => { focusSearch.current.focus() }, [])
+  search = async val => {
+    this.setState({ loading: true })
+    const results = await search(
+      `https://brkly.herokuapp.com/users/search/?q=${val}`
+    );
+    const users = results
 
-  const searchUsers = async (query) => {
-    const results = await fetch(`http://brkly.herokuapp.com/users/search/?q=${query}`, {
-      headers: { accept: 'application/json' }
-    })
-    const usersData = await results.json()
-    return usersData.results
+    this.setState({ users, loading: false })
+  };
+
+  onChangeHandler = async e => {
+    this.search(e.target.value);
+    this.setState({ value: e.target.value })
+  };
+
+  get renderusers() {
+    let users = <h2>There are no users with that name</h2>
+    if (this.state.users) {
+      users = <UsersInfo list={this.state.users} />
+    }
+
+    return users;
   }
 
-  const sleep = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms))
-  }
-  // sets delay
-
-  useEffect(() => {
-    let currentQuery = true
-    const controller = new AbortController()
-
-    const loadusers = async () => {
-      if (!query) return setUsers([])
-
-      await sleep(350)
-      if (currentQuery) {
-        const users = await searchUsers(query, controller)
-        setUsers(users)
-      }
-    }
-    loadusers()
-
-    return () => {
-      currentQuery = false
-      controller.abort()
-    }
-  }, [query])
-
-  const usersComponents = users.map((users, index) => {
+  render() {
     return (
-      <ListGroup.Item key={index} action variant='secondary'>
-        {users.username}
-      </ListGroup.Item>
-    )
-  })
-
-  return (
-    <>
-      <Jumbotron fluid>
-        <Form id='searchForm'>
-          <h4>Search Barkley</h4>
-          <Form.Control
-            type='text'
-            placeholder='Search for a person or dog...'
-            ref={focusSearch}
-            onChange={(e) => setQuery(e.target.value)}
-            value={query}
-          />
-        </Form>
-
-        <ListGroup>
-          {usersComponents}
-        </ListGroup>
-      </Jumbotron>
-    </>
-  )
+      <div>
+        <input
+          value={this.state.value}
+          onChange={e => this.onChangeHandler(e)}
+          placeholder="Type something to search"
+        />
+        {this.renderusers}
+      </div>
+    );
+  }
 }
+
+export default Search;

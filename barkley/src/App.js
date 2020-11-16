@@ -14,8 +14,10 @@ import Register from './Components/Register'
 import Newsfeed from './Components/Newsfeed'
 import DogInfo from './Components/DogInfo'
 import Search from './Components/Search'
+// import NavBar from './Components/NavBar'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
+import Map from './Components/Location'
 
 class App extends React.Component {
   constructor () {
@@ -41,6 +43,7 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
+
         <Switch>
           <Route path='/' exact component={Home}> </Route>
           <Route path='/login' exact component={Login}> Login </Route>
@@ -49,6 +52,7 @@ class App extends React.Component {
           <Route path='/dogprofile/'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
           <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
           <Route path='/search'><Search> </Search> </Route>
+          <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/helpful'> </Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>

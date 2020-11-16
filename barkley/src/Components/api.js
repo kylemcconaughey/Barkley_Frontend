@@ -37,7 +37,7 @@ export function getUserInfo (token) {
 }
 
 export function getFriendsnum (token) {
-  return axios.get('', {
+  return axios.get('https://brkly.herokuapp.com/users/', {
     headers: {
       Authorization: 'Token ' + token
     }

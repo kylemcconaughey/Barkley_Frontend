@@ -1,6 +1,7 @@
 import React from 'react'
 import { getToken } from './api'
 import Register from './Register'
+import logo from './barkleylogo1.png'
 
 class Login extends React.Component {
   constructor () {
@@ -32,6 +33,9 @@ class Login extends React.Component {
     return (
 
       <div className='login'>
+        <div>
+          <h1 className='appheader'><img className='appimg' src={logo} alt='Barkley Header' /> </h1>
+        </div>
         <div className='login-form'>
           <form onSubmit={this.handleLogin}>
             <div>
