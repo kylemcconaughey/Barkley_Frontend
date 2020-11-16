@@ -2,32 +2,31 @@ import React from 'react'
 import {
   Link
 } from 'react-router-dom'
+import { Sidenav } from 'rsuite'
 
-// Profile
-// Direct Messages
-// Search
-// Location Search
-// Recommendations
-// Newsfeed
-
-class Nav extends React.Component {
+class NavBar extends React.Component {
   render () {
     return (
-      <div>
-        <div className='navlinks'>
-          <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
-          <Link to='/doglist'><p className='links'> <i class='fas fa-paw' /> Dogs</p></Link>
-          <Link to='/search'> <i class='fas fa-search' /> Explore  </Link>
-          <Link to='/newsfeed'> <i class='far fa-newspaper' /> Newsfeed  </Link>
-          <Link to='/notifications'> <i class='far fa-bell' /> Notifications </Link>
-          <Link to='/messages'> <i class='far fa-envelope' /> Messages </Link>
-          <Link to='/dogfriendlylocations'> <i class='fas fa-search-location' />Dog Friendly  </Link>
-          <Link to='/helpful'> <i class='far fa-question-circle' />Helpful Advice  </Link>
-          <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
-        </div>
+      <div style={{ width: 250 }}>
+        <Sidenav defaultOpenKeys={['3', '4']} activeKey='1'>
+          <Sidenav.Body>
+            <div className='navlinks'>
+              <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
+              <Link to='/doglist'><p className='links'> <i class='fas fa-paw' /> Dogs</p></Link>
+              <Link to='/search'> <i class='fas fa-search' /> Explore  </Link>
+              <Link to='/newsfeed'> <i class='far fa-newspaper' /> Newsfeed  </Link>
+              <Link to='/notifications'> <i class='far fa-bell' /> Notifications </Link>
+              <Link to='/messages'> <i class='far fa-envelope' /> Messages </Link>
+              <Link to='/dogfriendlylocations'> <i class='fas fa-search-location' />Dog Friendly  </Link>
+              <Link to='/helpful'> <i class='far fa-question-circle' />Helpful Advice  </Link>
+              <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
+            </div>
+          </Sidenav.Body>
+        </Sidenav>
+
       </div>
     )
   }
 }
 
-export default Nav
+export default NavBar

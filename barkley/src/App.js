@@ -14,6 +14,7 @@ import Register from './Components/Register'
 import Newsfeed from './Components/Newsfeed'
 import DogInfo from './Components/DogInfo'
 import Search from './Components/Search'
+import NavBar from './Components/NavBar'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
 import Map from './Components/Location'
@@ -42,6 +43,11 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
+        <div>
+          <div className='navbar'>
+            <NavBar />
+          </div>
+        </div>
         <Switch>
           <Route path='/' exact component={Home}> </Route>
           <Route path='/login' exact component={Login}> Login </Route>

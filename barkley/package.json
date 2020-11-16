@@ -24,6 +24,8 @@
     "react-scripts": "4.0.0",
     "react-search-box": "^2.0.2",
     "react-search-field": "^1.1.0",
+    "react-simple-sidenav": "^2.0.0",
+    "rsuite": "^4.8.4",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
