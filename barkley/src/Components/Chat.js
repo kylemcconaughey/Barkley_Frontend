@@ -2,7 +2,11 @@ import React from 'react'
 
 function Chat () {
   return (
-    <div>Button works</div>
+    <form className='chat-box'>
+      <button type='submit'>
+            Send Message
+      </button>
+    </form>
   )
 }
 

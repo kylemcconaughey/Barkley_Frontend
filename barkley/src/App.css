@@ -163,3 +163,11 @@ font-size: 250%;
 max-width: 100%;
 height: 200%;
 }
+
+.col-left {
+  background-color: aqua;
+}
+
+.m-title {
+  padding-bottom: 0.5rem;
+}
