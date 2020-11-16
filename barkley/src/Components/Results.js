@@ -17,7 +17,7 @@ const Results = (props) => {
       <td>
         {obj.description}
       </td>
-            </tr>)
+    </tr>)
   })
 
   return (
