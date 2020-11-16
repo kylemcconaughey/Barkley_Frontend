@@ -87,6 +87,7 @@ button{
 .navlinks{
   background-color: rgb(40, 125, 181);
   overflow: hidden;
+  list-style: none;
 }
 .navlinks a{
   float: left;

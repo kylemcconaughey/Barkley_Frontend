@@ -43,11 +43,7 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
-        <div>
-          <div className='navbar'>
-            <NavBar />
-          </div>
-        </div>
+
         <Switch>
           <Route path='/' exact component={Home}> </Route>
           <Route path='/login' exact component={Login}> Login </Route>

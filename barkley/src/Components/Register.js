@@ -18,7 +18,7 @@ function Register (props) {
   const { token, onRegister } = props
 
   if (token) {
-    return <Redirect to='/home' />
+    return <Redirect to='/newsfeed' />
   }
 
   function registration (event) {

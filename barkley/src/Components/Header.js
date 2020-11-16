@@ -12,6 +12,9 @@ class Header extends React.Component {
             ? (
               <div>
                 <h1 className='appheader'><img className='appimg' src={logo} alt='Barkley Header' /> </h1>
+                <div className='navbar'>
+                  <NavBar />
+                </div>
               </div>
 
             )

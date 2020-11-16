@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // import axios from "axios";
-
 import { search } from "./Utils";
 import UsersInfo from "./Users";
 
@@ -12,24 +11,24 @@ class Search extends Component {
   };
 
   search = async val => {
-    this.setState({ loading: true });
+    this.setState({ loading: true })
     const results = await search(
       `https://brkly.herokuapp.com/users/search/?q=${val}`
     );
-    const users = results;
+    const users = results
 
-    this.setState({ users, loading: false });
+    this.setState({ users, loading: false })
   };
 
   onChangeHandler = async e => {
     this.search(e.target.value);
-    this.setState({ value: e.target.value });
+    this.setState({ value: e.target.value })
   };
 
   get renderusers() {
-    let users = <h2>There's no users with that name</h2>;
+    let users = <h2>There are no users with that name</h2>
     if (this.state.users) {
-      users = <UsersInfo list={this.state.users} />;
+      users = <UsersInfo list={this.state.users} />
     }
 
     return users;
