@@ -18,6 +18,7 @@ import Search from './Components/Search'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
 import Map from './Components/Location'
+import Advice from './Components/Recommendations'
 
 class App extends React.Component {
   constructor () {
@@ -54,7 +55,7 @@ class App extends React.Component {
           <Route path='/search'><Search> </Search> </Route>
           <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
-          <Route path='/helpful'> </Route>
+          <Route path='/helpful'><Advice> </Advice> </Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/register'><Register /></Route>
         </Switch>

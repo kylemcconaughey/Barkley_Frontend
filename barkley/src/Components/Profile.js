@@ -4,7 +4,7 @@ import { getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
 import PostEditor from './AddPost'
-import FollowButton from './FollowButton'
+// import FollowButton from './FollowButton'
 
 // import DogInfo from './DogInfo'
 // import FollowButton from './FollowButton'
@@ -40,7 +40,7 @@ function Profile (props, { post }) {
       {/* <div className='post-num'>posts: {postnum}</div> */}
       {/* <div className='friends'>Friends: {friends}</div> */}
       <div><Link to='/dogprofile'>{DogProfile.name}</Link></div>
-      <FollowButton> </FollowButton>
+      {/* <FollowButton> </FollowButton> */}
       {/* <div className='user-dogs'>
         <DogInfo token={token} username={username} />
       </div> */}

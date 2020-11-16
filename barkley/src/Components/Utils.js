@@ -26,7 +26,7 @@ const makeRequestCreator = () => {
         // Return result if it exists
         return resources[query]
       }
-      const res = await axios(query, { cancelToken: cancel.token })
+      const res = await axios(query)
 
       const result = res.data.results
       // Store response

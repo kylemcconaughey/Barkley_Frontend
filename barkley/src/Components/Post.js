@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
 import Reactions from './Reactions'
-import LikeButton from './LikeButton'
+// import LikeButton from './LikeButton'
 
 export default function Apost ({ post }) {
   let postedAt = post.posted_at
@@ -47,7 +47,7 @@ export default function Apost ({ post }) {
       </post>
 
       <Reactions> </Reactions>
-      <LikeButton> </LikeButton>
+      {/* <LikeButton> </LikeButton> */}
       {/* <span role='img' aria-label='heart'>💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link> */}
       {/* <Comments> </Comments> */}
 
