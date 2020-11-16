@@ -97,3 +97,12 @@ export function getConvo (token) {
   })
     .then(res => res.data)
 }
+
+export function getDiscussions (token) {
+  return axios.get('http://brkly.herokuapp.com/discussionboards/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
