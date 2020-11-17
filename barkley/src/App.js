@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import 'rsuite/dist/styles/rsuite-default.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -57,7 +58,7 @@ class App extends React.Component {
           <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
           <Route path='/dogprofile/'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
           <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/search'><Search> </Search> </Route>
+          <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
           <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/calendar'> <CalendarPost> </CalendarPost></Route>

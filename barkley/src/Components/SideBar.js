@@ -50,7 +50,7 @@ class SideNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item eventKey='2'>
-                  <Link to='/doglist'><p className='links'> <i class='fas fa-paw' /> Dogs</p></Link>
+                  <Link to='/doglist'><p className='links'> <i className='fas fa-paw' /> Dogs</p></Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='3'>
@@ -70,14 +70,18 @@ class SideNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item eventKey='7'>
-                  <Link to='/dogfriendlylocations'> <i className='fas fa-search-location' />Dog Friendly  </Link>
+                  <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='8'>
-                  <Link to='/helpful'> <i className='far fa-question-circle' />Helpful Advice  </Link>
+                  <Link to='/dogfriendlylocations'> <i className='fas fa-search-location' />Dog Friendly  </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='9'>
+                  <Link to='/helpful'> <i className='far fa-question-circle' />Helpful Advice  </Link>
+                </Nav.Item>
+
+                <Nav.Item eventKey='10'>
                   <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
                 </Nav.Item>
 
