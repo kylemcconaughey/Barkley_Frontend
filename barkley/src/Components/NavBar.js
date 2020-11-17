@@ -16,6 +16,7 @@ class NavBar extends React.Component {
             <Link to='/newsfeed'> <i className='far fa-newspaper' /> Newsfeed  </Link>
             <Link to='/notifications'> <i className='far fa-bell' /> Notifications </Link>
             <Link to='/messages'> <i className='far fa-envelope' /> Messages </Link>
+            <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
             <Link to='/dogfriendlylocations'> <i className='fas fa-search-location' />Dog Friendly  </Link>
             <Link to='/helpful'> <i className='far fa-question-circle' />Helpful Advice  </Link>
             <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>

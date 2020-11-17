@@ -19,6 +19,8 @@ import Search from './Components/Search'
 import Conversations from './Components/Conversations'
 import Map from './Components/Location'
 import Advice from './Components/Recommendations'
+import SideNavBar from './Components/SideBar'
+import CalendarPost from './Components/Calendar'
 
 class App extends React.Component {
   constructor () {
@@ -44,6 +46,9 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
+        <div>
+          <SideNavBar> </SideNavBar>
+        </div>
 
         <Switch>
           <Route path='/' exact component={Home}> </Route>
@@ -55,6 +60,7 @@ class App extends React.Component {
           <Route path='/search'><Search> </Search> </Route>
           <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
+          <Route path='/calendar'> <CalendarPost> </CalendarPost></Route>
           <Route path='/helpful'><Advice> </Advice> </Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/register'><Register /></Route>
