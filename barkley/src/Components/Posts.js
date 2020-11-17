@@ -51,7 +51,7 @@ export default function Posts (props) {
         loader={<p key={0}>Loading...</p>}
       >
         {posts.map(post => (
-          <Apost key={post.id} post={post} />
+          <Apost key={post.id} post={post} token={token} />
         ))}
       </InfiniteScroll>
       {postsErr && (
