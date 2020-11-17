@@ -28,6 +28,15 @@ class Map extends React.Component {
         zoom: map.getZoom().toFixed(2)
       })
     })
+
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        trackUserLocation: true
+      })
+    )
   }
 
   render () {
