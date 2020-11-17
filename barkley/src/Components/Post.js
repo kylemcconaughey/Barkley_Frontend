@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
 import Reactions from './Reactions'
+import Comments from './Comments'
 // import LikeButton from './LikeButton'
 
 export default function Apost ({ post }) {
@@ -37,6 +38,8 @@ export default function Apost ({ post }) {
         >
           <Card.Text id='post'>
             {post.body}
+            {post.comments.body}
+
             {post.image && (
               <img src={post.image} alt='post' className='image' />
             )}
@@ -47,6 +50,7 @@ export default function Apost ({ post }) {
       </post>
 
       <Reactions> </Reactions>
+      <Comments token={token}> </Comments>
       {/* <LikeButton> </LikeButton> */}
       {/* <span role='img' aria-label='heart'>💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link> */}
       {/* <Comments> </Comments> */}

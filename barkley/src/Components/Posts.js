@@ -35,6 +35,7 @@ export default function Posts (props) {
     getPosts(token).then(data => {
       setPosts(data)
       setLoading(false)
+      console.log(data)
     })
   }, [token])
 

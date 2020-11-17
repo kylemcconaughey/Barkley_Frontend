@@ -100,7 +100,9 @@ export function getConvo (token) {
 
 export function getComments (token) {
   return axios.get('http://brkly.herokuapp.com/comments/', {
-    Authorization: 'Token ' + token
+    headers: {
+      Authorization: 'Token ' + token
+    }
   })
     .then(res => res.data)
 }

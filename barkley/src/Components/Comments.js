@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { getComments } from './api'
-
-// const Comments = (props) => {
-//   const commentslist = props.data.map((obj, index) => {
-//     const link = '/u/' + obj.username
-//     return (<li key={index}><span className='commentUsr'><Link to={link}>{obj.username}</Link></span> <span className='comment'>{obj.comment}</span></li>)
-//   })
-
-//   return (
-//     <div className='comments'>
-//       <ul>
-//         {commentslist}
-//       </ul>
-//     </div>
-//   )
-// }
-
-// export default Comments
+import { getPosts } from './api'
 
 function Comments (props) {
   const { token } = props
   const [comment, SetComment] = useState([])
 
   useEffect(() => {
-    getComments(token).then(data => {
+    getPosts(token).then(data => {
       SetComment(data)
       console.log(data)
     })
   }, [token])
 
-  return (
-    <div>
-      <div>{comment}</div>
+  return comment.map((c) => (
+    <div key={c.id}>
+      <div>
+        {c.comments.map((nice) => (
+          <p key={nice.id}>{nice.body}</p>
+        ))}
+      </div>
     </div>
-  )
+  ))
+
+  // return (
+  //   <div>
+  //     {comment.map((c) => (
+  //       <div>
+  //         <div>
+  //           {comment.comments.map(com => (
+  //             <p>{com.body}</p>
+  //           ))}
+  //         <div/>
+  //       <div/>
+  //     ))}
+  //   </div>
+  // )
 }
 
 export default Comments
