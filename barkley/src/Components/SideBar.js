@@ -70,7 +70,7 @@ class SideNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item eventKey='7'>
-                <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
+                  <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='8'>

@@ -7,17 +7,13 @@ class Search extends Component {
   state = {
     users: null,
     loading: false,
-    value: "",
+    value: ""
   };
 
   search = async val => {
     this.setState({ loading: true })
     const results = await search(
-      `https://brkly.herokuapp.com/users/search/?q=${val}`, {
-        headers: {
-          Authorization: `Token ${this.props.token}`
-        }
-      })
+      `https://brkly.herokuapp.com/users/search/?q=${val}`)
     const users = results
 
     this.setState({ users, loading: false })
@@ -33,6 +29,7 @@ class Search extends Component {
     if (this.state.users) {
       users = <UsersInfo list={this.state.users} />
     }
+
     return users;
   }
 
