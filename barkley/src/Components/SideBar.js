@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import { Sidenav, Toggle, Nav } from 'rsuite'
 
-class NavBar extends React.Component {
+class SideNavBar extends React.Component {
   constructor () {
     super()
     this.state = {
@@ -91,4 +91,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar
+export default SideNavBar
