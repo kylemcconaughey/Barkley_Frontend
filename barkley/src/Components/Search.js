@@ -7,7 +7,7 @@ class Search extends Component {
   state = {
     users: null,
     loading: false,
-    value: ""
+    value: "",
   };
 
   search = async val => {
