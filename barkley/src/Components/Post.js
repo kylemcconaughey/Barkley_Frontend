@@ -7,7 +7,7 @@ import Reactions from './Reactions'
 import Comments from './Comments'
 // import LikeButton from './LikeButton'
 
-export default function Apost ({ post }) {
+export default function Apost ({ post, token }) {
   let postedAt = post.posted_at
   if (typeof postedAt === 'string') {
     postedAt = parse(postedAt, 'isoDateTime')
@@ -50,7 +50,7 @@ export default function Apost ({ post }) {
       </post>
 
       <Reactions> </Reactions>
-      <Comments token={token}> </Comments>
+      <Comments> </Comments>
       {/* <LikeButton> </LikeButton> */}
       {/* <span role='img' aria-label='heart'>💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link> */}
       {/* <Comments> </Comments> */}

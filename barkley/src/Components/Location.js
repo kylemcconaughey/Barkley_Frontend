@@ -1,5 +1,6 @@
 import React from 'react'
 import mapboxgl from 'mapbox-gl'
+import Directions from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGxlYWNoMDEiLCJhIjoiY2toaWN2emd0MDh0MzJ4czhxYXpuM2w5dSJ9.MU8RRrECFsuAxFI9o8Jm-g'
 
@@ -9,7 +10,7 @@ class Map extends React.Component {
     this.state = {
       lng: -78.6382,
       lat: 35.7796,
-      zoom: 10
+      zoom: 12
     }
   }
 
@@ -28,6 +29,22 @@ class Map extends React.Component {
         zoom: map.getZoom().toFixed(2)
       })
     })
+
+    map.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        trackUserLocation: true
+      })
+    )
+
+    map.addControl(
+      new Directions({
+        accessToken: mapboxgl.accessToken
+      }),
+      'top-left'
+    )
   }
 
   render () {

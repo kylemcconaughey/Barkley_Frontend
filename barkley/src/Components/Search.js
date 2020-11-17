@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import axios from "axios";
 import { search } from "./Utils";
-import UsersInfo from "./Users";
+import User from './User'
 
 class Search extends Component {
   state = {
@@ -15,7 +15,7 @@ class Search extends Component {
     const results = await search(
       `https://brkly.herokuapp.com/users/search/?q=${val}`, {
         headers: {
-          Authorization: `Token ${this.props.token}`
+         Authorization: `Token ${this.props.token}`
         }
       })
     const users = results
@@ -31,8 +31,10 @@ class Search extends Component {
   get renderusers() {
     let users = <h2>There are no users with that name</h2>
     if (this.state.users) {
-      users = <UsersInfo list={this.state.users} />
+      console.log(this.state.users)
+      users = this.state.users.map(user => <User key={user.id} user={user} />)
     }
+
     return users;
   }
 

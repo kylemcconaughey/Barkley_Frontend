@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 export const truncStr = (string, limit) => {
+  if (!string) { return '' }
   return string.length > limit
     ? string
       .trim()
@@ -14,7 +15,7 @@ const resources = {}
 const makeRequestCreator = () => {
   let cancel
 
-  return async query => {
+  return async (query, config) => {
     if (cancel) {
       // Cancel the previous request before making a new request
       cancel.cancel()
@@ -26,9 +27,9 @@ const makeRequestCreator = () => {
         // Return result if it exists
         return resources[query]
       }
-      const res = await axios(query)
+      const res = await axios(query, config)
 
-      const result = res.data.results
+      const result = res.data
       // Store response
       resources[query] = result
 

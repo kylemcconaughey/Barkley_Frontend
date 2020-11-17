@@ -127,9 +127,9 @@ class Reactions extends Component {
   };
 
   handleEmojiSelect = emoji => {
-    axios.post('http://brkly.herokuapp.com/reactions/', this.state, {
+    axios.post('http://brkly.herokuapp.com/reactions/', {reaction: emoji}, {
       headers: {
-        Authorization: `Token ${this.state.token}`
+        Authorization: `Token ${this.props.token}`
       }
     })
     

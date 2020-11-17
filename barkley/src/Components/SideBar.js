@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import { Sidenav, Toggle, Nav } from 'rsuite'
 
-class NavBar extends React.Component {
+class SideNavBar extends React.Component {
   constructor () {
     super()
     this.state = {
@@ -50,34 +50,38 @@ class NavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item eventKey='2'>
-                  <Link to='/doglist'><p className='links'> <i class='fas fa-paw' /> Dogs</p></Link>
+                  <Link to='/doglist'><p className='links'> <i className='fas fa-paw' /> Dogs</p></Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='3'>
-                  <Link to='/search'> <i class='fas fa-search' /> Explore  </Link>
+                  <Link to='/search'> <i className='fas fa-search' /> Explore  </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='4'>
-                  <Link to='/newsfeed'> <i class='far fa-newspaper' /> Newsfeed  </Link>
+                  <Link to='/newsfeed'> <i className='far fa-newspaper' /> Newsfeed  </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='5'>
-                  <Link to='/notifications'> <i class='far fa-bell' /> Notifications </Link>
+                  <Link to='/notifications'> <i className='far fa-bell' /> Notifications </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='6'>
-                  <Link to='/messages'> <i class='far fa-envelope' /> Messages </Link>
+                  <Link to='/messages'> <i className='far fa-envelope' /> Messages </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='7'>
-                  <Link to='/dogfriendlylocations'> <i class='fas fa-search-location' />Dog Friendly  </Link>
+                  <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='8'>
-                  <Link to='/helpful'> <i class='far fa-question-circle' />Helpful Advice  </Link>
+                  <Link to='/dogfriendlylocations'> <i className='fas fa-search-location' />Dog Friendly  </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='9'>
+                  <Link to='/helpful'> <i className='far fa-question-circle' />Helpful Advice  </Link>
+                </Nav.Item>
+
+                <Nav.Item eventKey='10'>
                   <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
                 </Nav.Item>
 
@@ -91,4 +95,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar
+export default SideNavBar

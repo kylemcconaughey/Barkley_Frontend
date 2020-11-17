@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import 'rsuite/dist/styles/rsuite-default.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -44,6 +45,9 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
+        <div>
+          <SideNavBar> </SideNavBar>
+        </div>
 
         <Switch>
           <Route path='/' exact component={Home}> </Route>

@@ -11,13 +11,14 @@ class NavBar extends React.Component {
         <Sidenav>
           <div className='navlinks'>
             <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
-            <Link to='/doglist'><p className='links'> <i class='fas fa-paw' /> Dogs</p></Link>
-            <Link to='/search'> <i class='fas fa-search' /> Explore  </Link>
-            <Link to='/newsfeed'> <i class='far fa-newspaper' /> Newsfeed  </Link>
-            <Link to='/notifications'> <i class='far fa-bell' /> Notifications </Link>
-            <Link to='/messages'> <i class='far fa-envelope' /> Messages </Link>
-            <Link to='/dogfriendlylocations'> <i class='fas fa-search-location' />Dog Friendly  </Link>
-            <Link to='/helpful'> <i class='far fa-question-circle' />Helpful Advice  </Link>
+            <Link to='/doglist'><p className='links'> <i className='fas fa-paw' /> Dogs</p></Link>
+            <Link to='/search'> <i className='fas fa-search' /> Explore  </Link>
+            <Link to='/newsfeed'> <i className='far fa-newspaper' /> Newsfeed  </Link>
+            <Link to='/notifications'> <i className='far fa-bell' /> Notifications </Link>
+            <Link to='/messages'> <i className='far fa-envelope' /> Messages </Link>
+            <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
+            <Link to='/dogfriendlylocations'> <i className='fas fa-search-location' />Dog Friendly  </Link>
+            <Link to='/helpful'> <i className='far fa-question-circle' />Helpful Advice  </Link>
             <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
           </div>
         </Sidenav>
