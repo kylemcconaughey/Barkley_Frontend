@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { getDiscussions, getToken } from './api'
-import Recommendation from './Recommendation'
+import Recommendation from './Discussion'
 import InfiniteScroll from 'react-infinite-scroller'
+import {
+  Link
+} from 'react-router-dom'
 
 export default function Advice (props) {
   const { token } = props
@@ -10,14 +13,14 @@ export default function Advice (props) {
   const [nextUrl, setNextUrl] = useState(null)
   const [adviceErr, setAdviceErr] = useState(null)
 
-  function getMoreadvice () {
+  function getMoreAdvice () {
     if (nextUrl && !loading) {
       setLoading(true)
-      getToken(token, nextUrl).then(addadvice).catch(handleError)
+      getToken(token, nextUrl).then(addAdvice).catch(handleError)
     }
   }
 
-  function addadvice (data) {
+  function addAdvice (data) {
     setadvice(advice.concat(data.results))
     setNextUrl(data.next)
     setLoading(false)
@@ -46,10 +49,11 @@ export default function Advice (props) {
     <div className='advice'>
       <InfiniteScroll
         initialLoad={false}
-        loadMore={getMoreadvice}
+        loadMore={getMoreAdvice}
         hasMore={nextUrl}
         loader={<p key={0}>Loading...</p>}
       >
+        <button><Link to='/addnewdiscussion'> <i className='far fa-question-circle' />Add new discussion  </Link></button>
         {advice.map(post => (
           <Recommendation key={post.id} post={post} />
         ))}
@@ -60,4 +64,3 @@ export default function Advice (props) {
     </div>
   )
 }
-
