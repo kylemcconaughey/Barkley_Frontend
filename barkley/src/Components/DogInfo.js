@@ -11,7 +11,7 @@ function DogInfo (props) {
       setDogInfo(data)
       console.log(data)
     })
-  }, [token])
+  }, [token, url])
 
   return (
     <div>
