@@ -42,6 +42,7 @@ input {
   margin-bottom: 2rem;
   margin-top: 2rem;
   border: 5px solid rgb(22, 102, 164);
+  box-shadow: 0px 8px 6px 2px gray;
   max-width: 45rem;
   align-items: center;
 }
@@ -56,14 +57,23 @@ input {
 .doggo{
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   border: solid 5px rgb(132, 177, 255);
   max-width: 35rem;
+  box-shadow: 0px 8px 6px 2px gray;
 }
 
 .dogProfPic{
   max-width: 25rem;
   max-height: 25rem;
   border-radius: 30px 30px;
+}
+
+.userProfPic{
+  max-width: 20rem;
+  max-height: 25rem;
+  border-radius: 75px 75px 75px 75px;
 }
 
 input{
