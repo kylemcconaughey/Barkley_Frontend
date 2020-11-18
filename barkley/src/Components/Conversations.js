@@ -15,9 +15,10 @@ function Conversations (props) {
 
   return (
     <div>
+      <p className='m-title'>Conversations</p>
       <div>
-        {convo.map(clist => (
-          <Convo key={clist.id} clist={clist} />
+        {convo.map(cList => (
+          <Convo key={cList.id} cList={cList} />
         ))}
       </div>
     </div>

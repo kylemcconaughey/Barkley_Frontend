@@ -3,20 +3,20 @@ import DogProfile from './DogProfile'
 import { getDogInfo } from './api'
 
 function DogInfo (props) {
-  const { token } = props
+  const { token, url } = props
   const [doginfo, setDogInfo] = useState([])
 
   useEffect(() => {
-    getDogInfo(token).then(data => {
+    getDogInfo(token, url).then(data => {
       setDogInfo(data)
       console.log(data)
     })
-  }, [token])
+  }, [token, url])
 
   return (
     <div>
       {doginfo.map(dog => (
-        <DogProfile key={dog.id} dog={dog} />
+        <DogProfile key={dog.url} dog={dog} />
       ))}
     </div>
   )

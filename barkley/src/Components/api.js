@@ -98,11 +98,12 @@ export function getConvo (token) {
     .then(res => res.data)
 }
 
-export function getDiscussions (token) {
-  return axios.get('http://brkly.herokuapp.com/discussionboards/', {
+export function getComments (token) {
+  return axios.get('http://brkly.herokuapp.com/comments/', {
     headers: {
       Authorization: 'Token ' + token
     }
   })
     .then(res => res.data)
 }
+
