@@ -20,6 +20,7 @@ import Search from './Components/Search'
 import Conversations from './Components/Conversations'
 import Chat from './Components/Chat'
 import Comments from './Components/Comments'
+import SideNavBar from './Components/SideBar'
 
 class App extends React.Component {
   constructor () {
