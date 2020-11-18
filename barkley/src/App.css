@@ -28,13 +28,18 @@ input {
   padding: 0.4rem;
 }
 
+.addBtn{
+  padding: 15px;
+  margin-top: 20px;
+}
+
 .App {
   max-width: 40rem;
   margin: 1rem auto;
   padding: 1rem;
 }
 
-.post{
+.post, .discussionBrd{
   padding: 10px;
   min-height: 100px;
   margin-left: auto;
@@ -69,7 +74,6 @@ input {
   max-height: 25rem;
   border-radius: 30px 30px;
 }
-
 .userProfPic{
   max-width: 20rem;
   max-height: 25rem;
@@ -155,7 +159,6 @@ font-size: x-large;
 font-size: 250%;
 }
 
-
 .sidebarStyle {
   display: inline-block;
   position: absolute;
@@ -183,4 +186,16 @@ font-size: 250%;
 
 .m-title {
   padding-bottom: 0.5rem;
+}
+
+.discussionHeader{
+  font-size: xx-large;
+}
+
+.discussionAnswr{
+  font-size: x-large;
+}
+
+.answerHeader{
+  font-size: large;
 }

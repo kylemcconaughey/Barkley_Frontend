@@ -16,6 +16,7 @@ class PostEditor extends React.Component {
       body: '',
       text_align: '',
       font_size: '',
+      dog: '',
       image: null,
       created: false
     }
@@ -23,6 +24,7 @@ class PostEditor extends React.Component {
     this.handleFontStyleChange = this.handleFontStyleChange.bind(this)
     this.handleTextAlignChange = this.handleTextAlignChange.bind(this)
     this.handleFontSizeChange = this.handleFontSizeChange.bind(this)
+    this.handleDogChange = this.handleDogChange.bind(this)
     this.handleImageChange = this.handleImageChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -43,6 +45,10 @@ class PostEditor extends React.Component {
     this.setState({ font_size: event.target.value })
   }
 
+  handleDogChange (event) {
+    this.setState({ dog: event.target.value })
+  }
+
   handleImageChange (event) {
     console.log(event.target)
     this.setState({ image: event.target.files[0] })
@@ -50,16 +56,15 @@ class PostEditor extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    const fd = new FormData()
-    fd.append('image', this.state.image, this.state.image.name)
     axios
-      .post('http://brkly.herokuapp.com/profile/', {
+      .post('http://brkly.herokuapp.com/posts/', {
         body: this.state.body,
         font_style: this.state.font_style,
         text_align: this.state.text_align,
         font_size: this.state.font_size,
+        dog: this.state.dog,
         image: this.state.image
-      }, fd,
+      },
       {
         headers: {
           Authorization: `Token ${this.props.token}`
@@ -142,6 +147,10 @@ class PostEditor extends React.Component {
                       <option value='2'>Large</option>
                       <option value='3'>Jumbo</option>
                     </Form.Control>
+                  </Form.Group>
+
+                  <Form.Group controlId='addPostText'>
+                    <Form.Control type='text' style={{ height: 100 }} placeholder='Add dogs in post here' value={this.state.dog} onChange={this.handleDogChange} />
                   </Form.Group>
 
                   <Form.Group>

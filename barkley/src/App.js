@@ -13,14 +13,21 @@ import Logout from './Components/Logout'
 import Profile from './Components/Profile'
 import Register from './Components/Register'
 import Newsfeed from './Components/Newsfeed'
+import PostEditor from './Components/AddPost'
 import DogInfo from './Components/DogInfo'
 import Search from './Components/Search'
+import Discussions from './Components/Discussions'
+import DiscussionEditor from './Components/AddDiscussion'
+import Notes from './Components/Notes'
+import Note from './Components/Note'
+import NotesEditor from './Components/AddNotes'
 // import NavBar from './Components/NavBar'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
 import Chat from './Components/Chat'
-import Comments from './Components/Comments'
 import SideNavBar from './Components/SideBar'
+import Calendar from './Components/Calendar'
+import Map from './Components/Location'
 
 class App extends React.Component {
   constructor () {
@@ -57,10 +64,17 @@ class App extends React.Component {
           <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
           <Route path='/dogprofile/'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
           <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/search'><Search> </Search> </Route>
+          <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
           <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> <Chat token={this.state.token} username={this.state.username} /> </Route>
-          <Route path='/helpful'> </Route>
-          <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />  <Comments token={this.state.token} username={this.state.username} /> </Route>
+          <Route path='/helpful'><Discussions token={this.state.token} username={this.state.username} /> </Route>
+          <Route path='/addnewdiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
+          <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />   </Route>
+          <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username}>  </PostEditor></Route>
+          <Route path='/helpful'><Notes token={this.state.token} username={this.state.username}> </Notes></Route>
+          <Route path='/helpful'><Note token={this.state.token} username={this.state.username}> </Note></Route>
+          <Route path='/helpful'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
+          <Route path='/calendar'> <Calendar> </Calendar> </Route>
+          <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/register'><Register /></Route>
         </Switch>
       </Router>

@@ -4,6 +4,8 @@ import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
 // import LikeButton from './LikeButton'
 import Vote from './Voting'
+import Notes from './Notes'
+import NotesEditor from './AddNotes'
 
 export default function Recommendation ({ post }) {
   let postedAt = post.posted_at
@@ -27,8 +29,9 @@ export default function Recommendation ({ post }) {
           <Card.Text id='post' className='discussionAnswr'>
             {post.body}
           </Card.Text>
-
           <Vote> </Vote>
+          <Notes> </Notes>
+          <NotesEditor> </NotesEditor>
         </Card.Body>
 
       </post>

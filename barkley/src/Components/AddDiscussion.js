@@ -52,7 +52,7 @@ class DiscussionEditor extends React.Component {
     }
     return (
       <div>
-        <h1 className='addHeader'> Add a new discussion!</h1>
+        <h1 className='addHeader'> Start a new discussion!</h1>
         <Col>
           <div className='discussionBrd'>
             <Card style={{ width: '40rem' }}>
@@ -81,7 +81,7 @@ class DiscussionEditor extends React.Component {
                     <Form.Control type='text' style={{ height: 100 }} placeholder='Add text to your post here' value={this.state.body} onChange={this.handleBodyChange} />
                   </Form.Group>
 
-                  <Button variant='outline-primary' type='submit' name='submit' value='Submit'>
+                  <Button type='submit' class="btn btn-primary btn-lg" name='submit' value='Submit'>
                 Add Discussion
                   </Button>
                 </Form>
