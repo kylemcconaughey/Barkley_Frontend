@@ -19,9 +19,11 @@ import Search from './Components/Search'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
 import Map from './Components/Location'
-import Advice from './Components/Recommendations'
+import Advice from './Components/Discussions'
 import SideNavBar from './Components/SideBar'
 import CalendarPost from './Components/Calendar'
+import DiscussionEditor from './Components/AddDiscussion'
+import PostEditor from './Components/AddPost'
 
 class App extends React.Component {
   constructor () {
@@ -62,8 +64,10 @@ class App extends React.Component {
           <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/calendar'> <CalendarPost> </CalendarPost></Route>
-          <Route path='/helpful'><Advice> </Advice> </Route>
+          <Route path='/helpful'><Advice token={this.state.token} username={this.state.username}> </Advice> </Route>
+          <Route path='/addnewdiscussion'><DiscussionEditor token={this.state.token} username={this.state.username}> </DiscussionEditor> </Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>
+          <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username} /></Route>
           <Route path='/register'><Register /></Route>
         </Switch>
       </Router>

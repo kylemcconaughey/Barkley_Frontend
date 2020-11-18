@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
-import PostEditor from './AddPost'
+
 // import FollowButton from './FollowButton'
 
 // import DogInfo from './DogInfo'
@@ -49,7 +49,6 @@ function Profile (props, { post }) {
         <p>Posts</p>
         <MyPost token={token} username={username} />
       </div>
-      <PostEditor />
     </div>
   )
 }

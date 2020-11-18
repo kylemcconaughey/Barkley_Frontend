@@ -63,7 +63,7 @@ export function uploadImage (token, cardUrl, image) {
 }
 
 export function getPosts (token) {
-  return axios.get('https://brkly.herokuapp.com/posts/', {
+  return axios.get('https://brkly.herokuapp.com/posts/all/', {
     headers: {
       Authorization: 'Token ' + token
     }

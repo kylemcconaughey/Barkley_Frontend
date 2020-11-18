@@ -54,7 +54,7 @@ class PostEditor extends React.Component {
     fd.append('image', this.state.image, this.state.image.name)
     axios
       .post('http://brkly.herokuapp.com/profile/', {
-        outer_text: this.state.outer_text,
+        body: this.state.body,
         font_style: this.state.font_style,
         text_align: this.state.text_align,
         font_size: this.state.font_size,
