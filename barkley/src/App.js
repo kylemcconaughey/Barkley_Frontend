@@ -18,12 +18,9 @@ import Search from './Components/Search'
 // import NavBar from './Components/NavBar'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
-import Map from './Components/Location'
-import Advice from './Components/Discussions'
+import Chat from './Components/Chat'
+import Comments from './Components/Comments'
 import SideNavBar from './Components/SideBar'
-import CalendarPost from './Components/Calendar'
-import DiscussionEditor from './Components/AddDiscussion'
-import PostEditor from './Components/AddPost'
 
 class App extends React.Component {
   constructor () {
@@ -60,14 +57,10 @@ class App extends React.Component {
           <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
           <Route path='/dogprofile/'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
           <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
-          <Route path='/dogfriendlylocations'><Map> </Map></Route>
-          <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
-          <Route path='/calendar'> <CalendarPost> </CalendarPost></Route>
-          <Route path='/helpful'><Advice token={this.state.token} username={this.state.username}> </Advice> </Route>
-          <Route path='/addnewdiscussion'><DiscussionEditor token={this.state.token} username={this.state.username}> </DiscussionEditor> </Route>
-          <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} /> </Route>
-          <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username} /></Route>
+          <Route path='/search'><Search> </Search> </Route>
+          <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> <Chat token={this.state.token} username={this.state.username} /> </Route>
+          <Route path='/helpful'> </Route>
+          <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />  <Comments token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/register'><Register /></Route>
         </Switch>
       </Router>
