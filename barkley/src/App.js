@@ -18,6 +18,7 @@ import DogInfo from './Components/DogInfo'
 import Search from './Components/Search'
 import Discussions from './Components/Discussions'
 import DiscussionEditor from './Components/AddDiscussion'
+import NotesEditor from './Components/AddNotes'
 // import NavBar from './Components/NavBar'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
@@ -66,6 +67,7 @@ class App extends React.Component {
           <Route path='/addnewdiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />   </Route>
           <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username}>  </PostEditor></Route>
+          <Route path='/addanswer'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
           <Route path='/calendar'> <Calendar> </Calendar> </Route>
           <Route path='/register'><Register /></Route>
         </Switch>

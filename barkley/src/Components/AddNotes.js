@@ -45,9 +45,9 @@ class NoteEditor extends React.Component {
     }
     return (
       <div>
-        <h1 className='addHeader'> Add an answer!</h1>
+        <h1 className='answerHeader'> Add an answer!</h1>
         <Col>
-          <div className='discussionBrd'>
+          <div className='answerText'>
             <Card style={{ width: '40rem' }}>
               <Card.Body>
                 <Card.Text>
@@ -63,7 +63,7 @@ class NoteEditor extends React.Component {
               <div>
                 <Form onSubmit={this.handleSubmit}>
 
-                  <Form.Group controlId='addPostText'>
+                  <Form.Group controlId='addAnswerText'>
                     <Form.Control type='text' style={{ height: 100 }} placeholder='Add text to your post here' value={this.state.body} onChange={this.handleBodyChange} />
                   </Form.Group>
 
