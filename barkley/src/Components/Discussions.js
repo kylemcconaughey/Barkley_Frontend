@@ -53,7 +53,7 @@ export default function Advice (props) {
         hasMore={nextUrl}
         loader={<p key={0}>Loading...</p>}
       >
-        <button><Link to='/addnewdiscussion'> <i className='far fa-question-circle' />Add new discussion  </Link></button>
+        <button className='addBtn'><Link to='/addnewdiscussion'> <i class='far fa-plus-square' /> Add new discussion  </Link></button>
         {advice.map(post => (
           <Recommendation key={post.id} post={post} />
         ))}
