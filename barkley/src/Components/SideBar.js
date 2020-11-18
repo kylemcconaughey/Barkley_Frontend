@@ -3,7 +3,7 @@ import React from 'react'
 import {
   Link
 } from 'react-router-dom'
-import { Sidenav, Toggle, Nav } from 'rsuite'
+import { Sidenav, Toggle, Nav, Icon } from 'rsuite'
 
 class SideNavBar extends React.Component {
   constructor () {
@@ -45,43 +45,43 @@ class SideNavBar extends React.Component {
             <Nav>
               <div className='navlinks'>
 
-                <Nav.Item eventKey='1'>
-                  <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
+                <Nav.Item eventKey='1' icon={<Icon icon='user' />}>
+                  <Link to='/profile'><p className='links'><i className='fas fa-user-circle' /> Profile </p></Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='2'>
+                <Nav.Item eventKey='2' icon={<Icon icon='paw' />}>
                   <Link to='/doglist'><p className='links'> <i className='fas fa-paw' /> Dogs</p></Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='3'>
+                <Nav.Item eventKey='3' icon={<Icon icon='search-peoples' />}>
                   <Link to='/search'> <i className='fas fa-search' /> Explore  </Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='4'>
+                <Nav.Item eventKey='4' icon={<Icon icon='newspaper-o' />}>
                   <Link to='/newsfeed'> <i className='far fa-newspaper' /> Newsfeed  </Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='5'>
+                <Nav.Item eventKey='5' icon={<Icon icon='bell-o' />}>
                   <Link to='/notifications'> <i className='far fa-bell' /> Notifications </Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='6'>
+                <Nav.Item eventKey='6' icon={<Icon icon='comments-o' />}>
                   <Link to='/messages'> <i className='far fa-envelope' /> Messages </Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='7'>
+                <Nav.Item eventKey='7' icon={<Icon icon='calendar' />}>
                   <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='8'>
+                <Nav.Item eventKey='8' icon={<Icon icon='map-marker' />}>
                   <Link to='/dogfriendlylocations'> <i className='fas fa-search-location' />Dog Friendly  </Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='9'>
+                <Nav.Item eventKey='9' icon={<Icon icon='help-o' />}>
                   <Link to='/helpful'> <i className='far fa-question-circle' />Helpful Advice  </Link>
                 </Nav.Item>
 
-                <Nav.Item eventKey='10'>
+                <Nav.Item eventKey='10' icon={<Icon icon='sign-out' />}>
                   <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
                 </Nav.Item>
 
