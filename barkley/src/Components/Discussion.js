@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
 // import LikeButton from './LikeButton'
+import Vote from './Voting'
 
 export default function Recommendation ({ post }) {
   let postedAt = post.posted_at
@@ -26,8 +27,8 @@ export default function Recommendation ({ post }) {
           <Card.Text id='post' className='discussionAnswr'>
             {post.body}
           </Card.Text>
-          <Card.Text>Upvoted: {post.num_upvotes}  Downvoted: {post.num_downvotes}</Card.Text>
 
+          <Vote> </Vote>
         </Card.Body>
 
       </post>

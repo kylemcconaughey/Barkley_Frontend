@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 import { parse, format } from 'fecha'
+import Vote from './Voting'
 
 export default function Note ({ post }) {
   let postedAt = post.posted_at
@@ -23,7 +24,7 @@ export default function Note ({ post }) {
             </p>
           </Card.Text>
           <Card.Text>Upvoted: {post.num_upvotes}  Downvoted: {post.num_downvotes}</Card.Text>
-
+          <Vote />
         </Card.Body>
 
       </post>
