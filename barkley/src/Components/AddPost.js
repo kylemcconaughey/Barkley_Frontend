@@ -50,16 +50,14 @@ class PostEditor extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    const fd = new FormData()
-    fd.append('image', this.state.image, this.state.image.name)
     axios
-      .post('http://brkly.herokuapp.com/profile/', {
+      .post('http://brkly.herokuapp.com/posts/', {
         body: this.state.body,
         font_style: this.state.font_style,
         text_align: this.state.text_align,
         font_size: this.state.font_size,
         image: this.state.image
-      }, fd,
+      },
       {
         headers: {
           Authorization: `Token ${this.props.token}`

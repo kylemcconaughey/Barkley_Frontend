@@ -13,6 +13,7 @@ import Logout from './Components/Logout'
 import Profile from './Components/Profile'
 import Register from './Components/Register'
 import Newsfeed from './Components/Newsfeed'
+import PostEditor from './Components/AddPost'
 import DogInfo from './Components/DogInfo'
 import Search from './Components/Search'
 import Discussions from './Components/Discussions'
@@ -64,6 +65,7 @@ class App extends React.Component {
           <Route path='/helpful'><Discussions token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/addnewdiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />   </Route>
+          <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username}>  </PostEditor></Route>
           <Route path='/calendar'> <Calendar> </Calendar> </Route>
           <Route path='/register'><Register /></Route>
         </Switch>
