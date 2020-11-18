@@ -55,7 +55,7 @@ export default function Advice (props) {
       >
         <button className='addBtn'><Link to='/addnewdiscussion'> <i class='far fa-plus-square' /> Add new discussion  </Link></button>
         {advice.map(post => (
-          <Recommendation key={post.id} post={post} />
+          <Recommendation key={post.id} post={post} token={token} />
         ))}
       </InfiniteScroll>
       {adviceErr && (

@@ -9,8 +9,8 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
 class NoteEditor extends React.Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       body: ''
     }
@@ -64,7 +64,7 @@ class NoteEditor extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
 
                   <Form.Group controlId='addAnswerText'>
-                    <Form.Control type='text' style={{ height: 100 }} placeholder='Add text to your post here' value={this.state.body} onChange={this.handleBodyChange} />
+                    <Form.Control type='text' style={{ height: 100 }} placeholder='Add an answer' value={this.state.body} onChange={this.handleBodyChange} />
                   </Form.Group>
 
                   <Button variant='outline-primary' type='submit' name='submit' value='Submit'>
