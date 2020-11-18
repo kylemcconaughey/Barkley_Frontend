@@ -3,7 +3,7 @@ import React from 'react'
 
 function Convo (props, { cList }) {
   // const [showchat, setShowChat] = useState(false)
-  const { token } = props
+  // const { token } = props
 
   return (
     <div className='col-left'>
