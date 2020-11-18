@@ -63,7 +63,7 @@ export function uploadImage (token, cardUrl, image) {
 }
 
 export function getPosts (token) {
-  return axios.get('https://brkly.herokuapp.com/posts/all/', {
+  return axios.get('https://brkly.herokuapp.com/posts/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -107,3 +107,11 @@ export function getComments (token) {
     .then(res => res.data)
 }
 
+export function getDiscussions (token) {
+  return axios.get('https://brkly.herokuapp.com/discussionboards', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
