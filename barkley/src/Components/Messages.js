@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getMessages } from './api'
+import MessageEditor from './AddMessage'
 
 function Messages (props) {
   const { token } = props
@@ -17,6 +18,7 @@ function Messages (props) {
         {messages.map((messages) => (
           <p className='indivmessages' key={messages.url}>
             {messages.body}
+            <MessageEditor> </MessageEditor>
           </p>
         ))}
       </div>

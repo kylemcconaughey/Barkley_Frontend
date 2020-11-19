@@ -203,7 +203,7 @@ font-size: 250%;
 
 .discussionHeader{
   font-size: xx-large;
-}
+}x
 
 .discussionAnswr{
   font-size: x-large;
@@ -213,7 +213,7 @@ font-size: 250%;
   font-size: large;
 }
 
-.indivNote{
+.indivNote, .indivmessages{
   border: black 5px solid;
   margin: 6px;
   padding: 5px;

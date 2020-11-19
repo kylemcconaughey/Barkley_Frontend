@@ -25,6 +25,7 @@ import NotesEditor from './Components/AddNotes'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
 import Messages from './Components/Messages'
+import MessageEditor from './Components/AddMessage'
 import Chat from './Components/Chat'
 import SideNavBar from './Components/SideBar'
 import Calendar from './Components/Calendar'
@@ -68,6 +69,7 @@ class App extends React.Component {
           <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
           <Route path='/convos/messages'> <Conversations token={this.state.token} username={this.state.username} /> <Chat token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/messages'><Messages token={this.state.token} username={this.state.username}> </Messages></Route>
+          <Route path='/messages'><MessageEditor token={this.state.token} username={this.state.username}> </MessageEditor></Route>
           <Route path='/helpful'><Discussions token={this.state.token} username={this.state.username} /> </Route>
           <Route path='/addnewdiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
           <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />   </Route>
