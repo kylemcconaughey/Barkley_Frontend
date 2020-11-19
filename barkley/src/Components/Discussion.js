@@ -28,12 +28,9 @@ export default function Discussion ({ post, token }) {
           <Card.Text id='post' className='discussionAnswr'>
             {post.body}
           </Card.Text>
-          <Card.Text>
-            {post.notes.body}
-          </Card.Text>
 
           {/* <Vote> </Vote> */}
-          <Notes token={token}> </Notes>
+          <Notes token={token} notes={post.notes}> </Notes>
           <NotesEditor token={token}> </NotesEditor>
         </Card.Body>
 
