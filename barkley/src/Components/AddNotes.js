@@ -9,8 +9,8 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
 class NoteEditor extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
     this.state = {
       body: ''
     }
@@ -25,7 +25,7 @@ class NoteEditor extends React.Component {
   handleSubmit (event) {
     event.preventDefault()
     axios
-      .post('http://brkly.herokuapp.com/notes/', {
+      .post('http://brkly.herokuapp.com/discussionboards/', {
         body: this.state.body
       },
       {
@@ -35,8 +35,7 @@ class NoteEditor extends React.Component {
       }
       )
       .then(response =>
-        console.log(response),
-      this.setState({ created: true }))
+        this.setState({ created: true }))
   }
 
   render () {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getDiscussions, getToken } from './api'
-import Recommendation from './Discussion'
+import Discussion from './Discussion'
 import InfiniteScroll from 'react-infinite-scroller'
 import {
   Link
@@ -39,7 +39,8 @@ export default function Advice (props) {
       setadvice(data)
       setLoading(false)
     })
-  }, [token])
+    console.log(advice)
+  }, [token, advice])
 
   if (loading) {
     return <p>Loading advice...</p>
@@ -55,7 +56,7 @@ export default function Advice (props) {
       >
         <button className='addBtn'><Link to='/addnewdiscussion'> <i class='far fa-plus-square' /> Add new discussion  </Link></button>
         {advice.map(post => (
-          <Recommendation key={post.id} post={post} token={token} />
+          <Discussion key={post.url} post={post} token={token} />
         ))}
       </InfiniteScroll>
       {adviceErr && (
