@@ -108,7 +108,7 @@ export function getComments (token) {
 }
 
 export function getDiscussions (token) {
-  return axios.get('httpss://brkly.herokuapp.com/discussionboards/', {
+  return axios.get('https://brkly.herokuapp.com/discussionboards/', {
     headers: {
       Authorization: 'Token ' + token
     }
