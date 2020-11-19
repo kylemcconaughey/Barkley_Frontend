@@ -14,6 +14,7 @@ class Vote extends Component {
   vote (i) {
     const newVotes = [...this.state.voting]
     newVotes[i].votes++
+    console.log(newVotes)
     this.setState({ voting: newVotes })
   }
 
@@ -23,7 +24,7 @@ class Vote extends Component {
         <div className='voting'>
           {
             this.state.voting.map((vote, i) =>
-              <div key={i} className='language'>
+              <div key={i} className='votes'>
                 <div className='voteCount'>
                   {vote.votes} {vote.name} <button onClick={this.vote.bind(this, i)}>Vote</button>
                 </div>

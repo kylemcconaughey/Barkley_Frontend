@@ -66,7 +66,7 @@ class SideNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item eventKey='6' icon={<Icon icon='comments-o' />}>
-                  <Link to='/messages'> <i class='far fa-comments' /> Messages </Link>
+                  <Link to='/convos/messages'> <i class='far fa-comments' /> Messages </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='7' icon={<Icon icon='calendar' />}>
