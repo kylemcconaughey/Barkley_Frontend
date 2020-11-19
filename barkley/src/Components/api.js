@@ -81,7 +81,7 @@ export function getDogInfo (token) {
 }
 
 export function getMessages (token) {
-  return axios.get('http://brkly.herokuapp.com/messages/', {
+  return axios.get('https://brkly.herokuapp.com/messages/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -90,7 +90,7 @@ export function getMessages (token) {
 }
 
 export function getConvo (token) {
-  return axios.get('http://brkly.herokuapp.com/conversations/', {
+  return axios.get('https://brkly.herokuapp.com/conversations/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -99,7 +99,7 @@ export function getConvo (token) {
 }
 
 export function getComments (token) {
-  return axios.get('http://brkly.herokuapp.com/comments/', {
+  return axios.get('https://brkly.herokuapp.com/comments/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -108,7 +108,7 @@ export function getComments (token) {
 }
 
 export function getDiscussions (token) {
-  return axios.get('https://brkly.herokuapp.com/discussionboards/', {
+  return axios.get('httpss://brkly.herokuapp.com/discussionboards/', {
     headers: {
       Authorization: 'Token ' + token
     }
