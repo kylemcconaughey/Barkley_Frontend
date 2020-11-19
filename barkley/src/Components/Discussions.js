@@ -9,7 +9,7 @@ import {
 export default function Advice (props) {
   const { token } = props
   const [loading, setLoading] = useState(true)
-  const [advice, setadvice] = useState([])
+  const [advice, setAdvice] = useState([])
   const [nextUrl, setNextUrl] = useState(null)
   const [adviceErr, setAdviceErr] = useState(null)
 
@@ -21,7 +21,7 @@ export default function Advice (props) {
   }
 
   function addAdvice (data) {
-    setadvice(advice.concat(data.results))
+    setAdvice(advice.concat(data.results))
     setNextUrl(data.next)
     setLoading(false)
   }
@@ -36,11 +36,11 @@ export default function Advice (props) {
   useEffect(() => {
     setLoading(true)
     getDiscussions(token).then(data => {
-      setadvice(data)
+      setAdvice(data)
       setLoading(false)
+      console.log(data)
     })
-    console.log(advice)
-  }, [token, advice])
+  }, [token])
 
   if (loading) {
     return <p>Loading advice...</p>

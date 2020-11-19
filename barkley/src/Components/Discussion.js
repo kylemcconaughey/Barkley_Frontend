@@ -17,7 +17,7 @@ export default function Discussion ({ post, token }) {
     <div className='discussionBrd'>
       <Card style={{ width: '40rem' }}>
         <Card.Header className='discussionHeader'>
-          {post.title}
+          {post.title} {post.id}
         </Card.Header>
         <p className='postHeader'> Posted by:
           <em> <Link to='/profile/'>{post.user.username} </Link></em>
@@ -34,7 +34,7 @@ export default function Discussion ({ post, token }) {
 
           <Vote> </Vote>
           <Notes token={token}> </Notes>
-          <NotesEditor> </NotesEditor>
+          <NotesEditor token={token}> </NotesEditor>
         </Card.Body>
 
       </Card>
