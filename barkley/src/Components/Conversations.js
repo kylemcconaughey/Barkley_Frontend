@@ -15,10 +15,13 @@ function Conversations (props) {
 
   return (
     <div>
-      <p className='m-title'>Conversations</p>
-      <div>
+      <p className='m-title'> </p>
+      <div >
         {convo.map(cList => (
-          <Convo key={cList.id} cList={cList} />
+          <div key={cList.url} className='convos'>
+            <Convo key={cList.id} cList={cList} />
+            <h1 className='convoHdr'> Conversation: </h1> {cList.convo_name}
+          </div>
         ))}
       </div>
     </div>

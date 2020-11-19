@@ -116,6 +116,18 @@ export function getDiscussions (token) {
     .then(res => res.data)
 }
 
+export function createNotes (token, body, board) {
+  return request.post('/discussionboards/', {
+    body: body,
+    board: board
+  }, {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+
 export function getNotes (token) {
   return axios.get('https://brkly.herokuapp.com/notes/', {
     headers: {
