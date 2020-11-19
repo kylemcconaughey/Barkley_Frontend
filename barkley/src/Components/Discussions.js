@@ -40,7 +40,7 @@ export default function Advice (props) {
       setLoading(false)
     })
     console.log(advice)
-  }, [token, advice])
+  }, [token])
 
   if (loading) {
     return <p>Loading advice...</p>

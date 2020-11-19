@@ -57,7 +57,7 @@ class PostEditor extends React.Component {
   handleSubmit (event) {
     event.preventDefault()
     axios
-      .post('http://brkly.herokuapp.com/posts/', {
+      .post('https://brkly.herokuapp.com/posts/', {
         body: this.state.body,
         font_style: this.state.font_style,
         text_align: this.state.text_align,

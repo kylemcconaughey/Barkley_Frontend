@@ -51,6 +51,7 @@ export default function Apost ({ post, token }) {
 
       <Reactions> </Reactions>
       <Comments token={token}> </Comments>
+
       {/* <LikeButton> </LikeButton> */}
       {/* <span role='img' aria-label='heart'>💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link> */}
       {/* <Comments> </Comments> */}
