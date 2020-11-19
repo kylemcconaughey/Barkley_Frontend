@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Convo from './Conversation'
+import {
+  Link
+} from 'react-router-dom'
 import { getConvo } from './api'
 
 function Conversations (props) {
@@ -16,11 +19,12 @@ function Conversations (props) {
   return (
     <div>
       <p className='m-title'> </p>
-      <div >
+      <div>
         {convo.map(cList => (
           <div key={cList.url} className='convos'>
             <Convo key={cList.id} cList={cList} />
             <h1 className='convoHdr'> Conversation: </h1> {cList.convo_name}
+            <Link to='/messages'> <i class='far fa-comments' /> See this convo </Link>
           </div>
         ))}
       </div>
