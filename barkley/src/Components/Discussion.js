@@ -2,12 +2,11 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
-// import LikeButton from './LikeButton'
 import Vote from './Voting'
 import Notes from './Notes'
 import NotesEditor from './AddNotes'
 
-export default function Recommendation ({ post }) {
+export default function Discussion ({ post, token }) {
   let postedAt = post.posted_at
   if (typeof postedAt === 'string') {
     postedAt = parse(postedAt, 'isoDateTime')
@@ -16,7 +15,7 @@ export default function Recommendation ({ post }) {
 
   return (
     <div className='discussionBrd'>
-      <post style={{ width: '40rem' }}>
+      <Card style={{ width: '40rem' }}>
         <Card.Header className='discussionHeader'>
           {post.title}
         </Card.Header>
@@ -29,12 +28,16 @@ export default function Recommendation ({ post }) {
           <Card.Text id='post' className='discussionAnswr'>
             {post.body}
           </Card.Text>
+          <Card.Text>
+            {post.notes.body}
+          </Card.Text>
+
           <Vote> </Vote>
-          <Notes> </Notes>
+          <Notes token={token}> </Notes>
           <NotesEditor> </NotesEditor>
         </Card.Body>
 
-      </post>
+      </Card>
 
     </div>
   )
