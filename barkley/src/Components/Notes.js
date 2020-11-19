@@ -13,9 +13,11 @@ function Notes (props) {
 
   return note.map((n) => (
     <div key={n.url}>
-      <div>
+      <div className='notes'>
         {n.notes.map((notes) => (
-          <p key={notes.id}>{notes.body}</p>
+          <p className='indivNote' key={notes.url}>
+            {notes.body} {notes.user}
+          </p>
         ))}
       </div>
     </div>
