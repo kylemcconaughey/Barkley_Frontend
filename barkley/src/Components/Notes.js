@@ -1,5 +1,4 @@
 import React from 'react'
-// import { getDiscussions } from './api'
 // import { parse, format } from 'fecha'
 // import Vote from './Voting'
 
@@ -17,10 +16,10 @@ function Notes (props) {
       {notes.map((note) => (
         <p className='indivNote' key={note.url}>
           {note.body}
-          <p> Posted by: {note.user} on {note.posted_at}
+          <p className='noteDetail'> Posted by: {note.user} on {note.posted_at}
           </p>
-          {/* <p>Upvoted: {notes.num_upvotes}  Downvoted: {notes.num_downvotes}</p>
-            <Vote> </Vote> */}
+          <p className='noteDetail'>Upvoted: {note.num_upvotes}  Downvoted: {note.num_downvotes}</p>
+          {/* <Vote> </Vote> */}
         </p>
       ))}
     </div>

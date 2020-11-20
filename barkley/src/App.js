@@ -27,7 +27,7 @@ import Conversations from './Components/Conversations'
 import Messages from './Components/Messages'
 import MessageEditor from './Components/AddMessage'
 import Chat from './Components/Chat'
-import SideNavBar from './Components/SideBar'
+// import SideNavBar from './Components/SideBar'
 import Calendar from './Components/Calendar'
 import Map from './Components/Location'
 
@@ -55,9 +55,9 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
-        <div>
+        {/* <div>
           <SideNavBar> </SideNavBar>
-        </div>
+        </div> */}
 
         <Switch>
           <Route path='/' exact component={Home}> </Route>

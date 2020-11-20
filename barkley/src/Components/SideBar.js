@@ -78,7 +78,7 @@ class SideNavBar extends React.Component {
                 </Nav.Item>
 
                 <Nav.Item eventKey='9' icon={<Icon icon='help-o' />}>
-                  <Link to='/helpful'> <i className='far fa-question-circle' />Helpful Advice  </Link>
+                  <Link to='/helpful'> <i className='far fa-question-circle' /> Discussions </Link>
                 </Nav.Item>
 
                 <Nav.Item eventKey='10' icon={<Icon icon='sign-out' />}>

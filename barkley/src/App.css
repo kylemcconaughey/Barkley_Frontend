@@ -205,8 +205,9 @@ font-size: 250%;
   font-size: xx-large;
 }x
 
-.discussionAnswr{
+.discussionBody{
   font-size: x-large;
+  margin: 10px;
 }
 
 .answerHeader{
@@ -215,10 +216,13 @@ font-size: 250%;
 
 .indivNote, .indivmessages{
   border: black 5px solid;
-  margin: 6px;
+  margin-top: 8px;
   padding: 5px;
 }
 
+.noteDetail{
+  margin: 6px;
+}
 
 .convoHdr{
   font-size: x-large;
