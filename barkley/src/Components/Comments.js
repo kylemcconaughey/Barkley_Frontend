@@ -21,20 +21,6 @@ function Comments (props) {
       </div>
     </div>
   ))
-
-  // return (
-  //   <div>
-  //     {comment.map((c) => (
-  //       <div>
-  //         <div>
-  //           {comment.comments.map(com => (
-  //             <p>{com.body}</p>
-  //           ))}
-  //         <div/>
-  //       <div/>
-  //     ))}
-  //   </div>
-  // )
 }
 
 export default Comments
