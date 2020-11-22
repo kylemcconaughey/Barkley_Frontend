@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css"
+import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop'
 
 const localizer = momentLocalizer(moment);
 
@@ -16,7 +17,7 @@ class CalendarPost extends Component {
         title: "Today"
       }
     ]
-  };
+  }
 
   render() {
     return (

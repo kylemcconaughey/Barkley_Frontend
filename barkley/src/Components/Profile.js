@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
-// import FollowButton from './FollowButton'
+import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
   const { token, username, picture } = props
@@ -22,6 +22,7 @@ function Profile (props, { post }) {
       {/* <div className='post-num'>posts: {postnum}</div> */}
       <div><Link to='/dogprofile'>{DogProfile.name}</Link></div>
       {/* <FollowButton> </FollowButton> */}
+      <button className='addBtn'><Link to='/adddog'> Add a dog!</Link></button>
       {/* <div className='user-dogs'>
         <DogInfo token={token} username={username} />
       </div> */}
