@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
-import FollowButton from './FollowButton'
+// import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
   const { token, username, picture } = props
