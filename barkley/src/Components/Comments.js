@@ -4,9 +4,9 @@ function Comments (props) {
   const { comments } = props
 
   return (
-    <div>
+    <div className='comments'>
       {comments.map((nice) => (
-        <p key={nice.id}>{nice.body}</p>
+        <p key={nice.url}>{nice.body}</p>
       ))}
     </div>
   )

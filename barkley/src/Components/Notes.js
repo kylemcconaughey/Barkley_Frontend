@@ -1,6 +1,6 @@
 import React from 'react'
 // import { parse, format } from 'fecha'
-// import Vote from './Voting'
+import Vote from './Voting'
 
 function Notes (props) {
   const { notes } = props
@@ -19,7 +19,7 @@ function Notes (props) {
           <p className='noteDetail'> Posted by: {note.user} on {note.posted_at}
           </p>
           <p className='noteDetail'>Upvoted: {note.num_upvotes}  Downvoted: {note.num_downvotes}</p>
-          {/* <Vote> </Vote> */}
+          <Vote> </Vote>
         </p>
       ))}
     </div>

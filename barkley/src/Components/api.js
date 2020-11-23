@@ -52,8 +52,22 @@ export function getPostnum (token) {
     .then(res => res.data)
 }
 
-export function uploadImage (token, cardUrl, image) {
-  return axios.put(cardUrl + 'image/', image, {
+// export function createPost (token, body, font_style, text_align, font_size, dog) {
+//   return axios.post('https://brkly.herokuapp.com/posts/', {
+//     body: body,
+//     font_style: font_style,
+//     text_align: text_align,
+//     font_size: font_size,
+//     dog: dog
+//   }, {
+//     headers: {
+//       Authorization: 'Token ' + token
+//     }
+//   }).then(res => res.data)
+// }
+
+export function uploadImage (token, postUrl, image) {
+  return axios.put(postUrl + 'image/', image, {
     headers: {
       Authorization: 'Token ' + token,
       'Content-Type': image.type,

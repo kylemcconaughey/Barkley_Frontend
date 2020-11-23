@@ -22,7 +22,7 @@ function AddComments (props) {
     <div>
       <form onSubmit={onSubmit}>
         <label
-          htmlfor='body'
+          htmlFor='body'
         />
         <input
           type='text'

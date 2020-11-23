@@ -4,7 +4,7 @@ import 'rsuite/dist/styles/rsuite-default.css'
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route, Redirect
 } from 'react-router-dom'
 import Home from './Components/Home'
 import Login from './Components/Login'
@@ -55,6 +55,7 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
+        <Redirect to='/newsfeed/' />
         {/* <div>
           <SideNavBar> </SideNavBar>
         </div> */}
