@@ -214,7 +214,7 @@ font-size: 250%;
   font-size: large;
 }
 
-.indivNote, .indivmessages{
+.indivNote, .message, .comments{
   border: black 5px solid;
   margin-top: 8px;
   padding: 5px;

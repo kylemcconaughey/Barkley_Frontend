@@ -18,7 +18,7 @@ function Chat (props) {
     <div>
       <div>
         {conversation.messages.map(m => (
-          <div key={m.id}>{m.body}</div>
+          <div key={m.id} className='message'>{m.body}</div>
         ))}
       </div>
       <form className='chat-box' onSubmit={onSubmit}>

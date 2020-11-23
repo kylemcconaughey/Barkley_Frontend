@@ -21,7 +21,7 @@ function Conversations (props) {
       <p className='m-title'>Conversations</p>
       <div>
         {convos.map(cList => (
-          <div key={cList.url}>
+          <div key={cList.url} className='convos'>
             <button onClick={(e) => setShowConversationId(cList.id)}>{cList.convo_name}</button>
           </div>
         ))}

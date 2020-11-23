@@ -4,7 +4,7 @@ import 'rsuite/dist/styles/rsuite-default.css'
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route, Redirect
 } from 'react-router-dom'
 import Home from './Components/Home'
 import Login from './Components/Login'
@@ -23,14 +23,12 @@ import DiscussionEditor from './Components/AddDiscussion'
 import Notes from './Components/Notes'
 import Note from './Components/Note'
 import NotesEditor from './Components/AddNotes'
-// import NavBar from './Components/NavBar'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
 // import Notifications from './Components/Notifications'
 import MessageEditor from './Components/AddMessage'
 // import Chat from './Components/Chat'
 import Calendar from './Components/Calendar'
-// import Dnd from './Components/ReactBigCalendar/CalendarPost'
 import Map from './Components/Location'
 
 class App extends React.Component {
@@ -57,6 +55,7 @@ class App extends React.Component {
             <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
           </div>
         </header>
+        <Redirect to='/newsfeed/' />
         {/* <div>
           <SideNavBar> </SideNavBar>
         </div> */}
