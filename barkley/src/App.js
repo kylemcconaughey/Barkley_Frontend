@@ -30,7 +30,7 @@ import Conversations from './Components/Conversations'
 import MessageEditor from './Components/AddMessage'
 // import Chat from './Components/Chat'
 import Calendar from './Components/Calendar'
-// import Calendar2 from './Components/ReactBigCalendar/Calendar2'
+// import Dnd from './Components/ReactBigCalendar/CalendarPost'
 import Map from './Components/Location'
 
 class App extends React.Component {
@@ -82,6 +82,7 @@ class App extends React.Component {
           <Route path='/helpful'><Note token={this.state.token} username={this.state.username}> </Note></Route>
           <Route path='/helpful'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
           <Route path='/calendar'> <Calendar> </Calendar> </Route>
+          {/* <Route path='/calendar'><Dnd> </Dnd></Route> */}
           <Route path='/dogfriendlylocations'><Map> </Map></Route>
           <Route path='/register'><Register /></Route>
         </Switch>
