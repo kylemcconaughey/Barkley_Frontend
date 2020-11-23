@@ -5,7 +5,7 @@ export default class FollowButton extends React.Component {
     constructor(props){
         super(props);
   this.state = {
-    followers: false,
+    follow: false,
     users: [], 
     token: localStorage.getItem('login_auth_token'),
     userid: this.props.userId
@@ -14,11 +14,11 @@ export default class FollowButton extends React.Component {
 }
 
 toggleFollow() {
-    this.setState((followers) => ({ followers: !this.state.followers }))
+    this.setState((follow) => ({ follow: !this.state.follow }))
 }
 
 handleSubmit = e => {
-    axios.post('https://brkly.herokuapp.com/users/', this.state, {
+    axios.post(`https://brkly.herokuapp.com/users/${this.state.usersid}/follow/`, this.state, {
         headers: {
             Authorization: `Token ${this.state.token}`
         }
@@ -32,7 +32,7 @@ handleSubmit = e => {
 }
 
 handleFollowing = e => {
-    axios.post(`https://brkly.herokuapp.com/users/${this.state.userid}/followed_by/`, this.state, {
+    axios.post(`https://brkly.herokuapp.com/users/${this.state.usersid}/follow/`, this.state, {
       headers: {
         Authorization: `Token ${this.state.token}`
       }
@@ -46,8 +46,8 @@ handleFollowing = e => {
   }
 
   render() {
-    const followers = this.state.followers;
-    if (followers === null) {
+    const follow = this.state.follow;
+    if (follow === null) {
       return (
         <div>
           <button
@@ -62,11 +62,11 @@ handleFollowing = e => {
         </div>
       )
     }
-    if (followers === true) {
+    if (follow === true) {
       return (
         <div>
           <button 
-            usersid='followers.id'
+            usersid='follow.id'
             className="followBtn" 
             onClick= {() => {
                 this.toggleFollow();
@@ -77,7 +77,7 @@ handleFollowing = e => {
         </div>
       );
     }
-    if (followers === false)
+    if (follow === false)
      {
       return (
         <div>

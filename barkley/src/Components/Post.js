@@ -5,6 +5,7 @@ import { parse, format } from 'fecha'
 import { Link } from 'react-router-dom'
 import Reactions from './Reactions'
 import Comments from './Comments'
+import AddComments from './AddComment'
 // import LikeButton from './LikeButton'
 
 export default function Apost ({ post, token }) {
@@ -50,11 +51,8 @@ export default function Apost ({ post, token }) {
       </post>
 
       <Reactions> </Reactions>
-      <Comments token={token}> </Comments>
-
-      {/* <LikeButton> </LikeButton> */}
-      {/* <span role='img' aria-label='heart'>💙</span><Link to='/profile/{post.url}'> {post.liked_by} </Link> */}
-      {/* <Comments> </Comments> */}
+      <Comments comments={post.comments} token={token}> </Comments>
+      <AddComments token={token}> </AddComments>
 
     </div>
   )

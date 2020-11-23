@@ -3,17 +3,11 @@ import { Link } from 'react-router-dom'
 import { getPostnum } from './api'
 import DogProfile from './DogProfile'
 import MyPost from './MyPost'
-
-// import FollowButton from './FollowButton'
-
-// import DogInfo from './DogInfo'
 // import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
   const { token, username, picture } = props
   const [setPostnum] = useState(0)
-  // const [friends, setFriends] = useState(0)
-  // const [setProfilePic] = useState(0)
 
   useEffect(() => {
     getPostnum(token).then(data => {
@@ -21,26 +15,14 @@ function Profile (props, { post }) {
     })
   }, [token, setPostnum])
 
-  // useEffect(() => {
-  //   getFriendsnum(token).then(data => {
-  //     setFriends(data)
-  //   })
-  // }, [token])
-
-  // useEffect(() => {
-  //   getUserInfo(token).then(data => {
-  //     setProfilePic(data)
-  //   })
-  // }, [token])
-
   return (
     <div className='profile-container'>
       <div className='user-pic'><img src={picture} alt='profile' /></div>
       <div className='user-title'>{username}</div>
       {/* <div className='post-num'>posts: {postnum}</div> */}
-      {/* <div className='friends'>Friends: {friends}</div> */}
       <div><Link to='/dogprofile'>{DogProfile.name}</Link></div>
       {/* <FollowButton> </FollowButton> */}
+      <button className='addBtn'><Link to='/adddog'> Add a dog!</Link></button>
       {/* <div className='user-dogs'>
         <DogInfo token={token} username={username} />
       </div> */}
