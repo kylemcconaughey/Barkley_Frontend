@@ -1,18 +1,43 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
-// import events from "./ReactBigCalendar/events";
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import 'react-big-calendar/lib/addons/dragAndDrop/styles.css'
-// lodash??
-const DnDCalendar = withDragAndDrop(Calendar)
+const localizer = momentLocalizer(moment);
+const DnDCalendar = withDragAndDrop(Calendar);
 
-const localizer = momentLocalizer(moment)
+const EventComponent = ({ start, end, title }) => {
+  return (
+    <>
+      <p>{title}</p>
+      <p>{start}</p>
+      <p>{end}</p>
+    </>
+  )
+}
 
-const initialEvents = [
-  {
-    id: 0,
+const EventAgenda = ({ event }) => {
+  return (
+    <span>
+      <em style={{ color: 'blue' }}>{event.title}</em>
+      <p>{event.desc}</p>
+    </span>
+  )
+}
+
+class CalendarPost extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    events:[
+      {
+        start: moment().toDate(),
+        end: moment().add(0, "days").toDate(),
+        title: "Today",
+      },
+      {
+      id: 0,
     title: 'Dog Park ',
     allDay: true,
     start: new Date(2020, 10, 12, 10, 30, 0, 0),
@@ -48,7 +73,7 @@ const initialEvents = [
   },
   {
     id: 7,
-    title: 'Meeting',
+    title: 'Doggie Playdate',
     start: new Date(2020, 11, 12, 14, 0, 0, 0),
     end: new Date(2020, 11, 12, 15, 0, 0, 0)
   },
@@ -59,80 +84,84 @@ const initialEvents = [
     end: new Date(2020, 11, 13, 10, 30, 0),
     desc: 'Address: 412 Scott Lane, Wallingford, PA 19086'
   },
-  {
-    id: 9,
-    title: 'Today',
-    start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() + 3))
+    ],
+  };
+
+  this.moveEvent = this.moveEvent.bind(this);
+}
+
+moveEvent({ event, start, end }) {
+  const { events } = this.state;
+
+  const idx = events.indexOf(event);
+  const updatedEvent = { ...event, start, end };
+
+  const nextEvents = [...events];
+  nextEvents.splice(idx, 1, updatedEvent);
+
+  this.setState({
+    events: nextEvents
+  });
+}
+
+resizeEvent = (resizeType, { event, start, end }) => {
+  const { events } = this.state;
+
+  const nextEvents = events.map(existingEvent => {
+    return existingEvent.id === event.id
+      ? { ...existingEvent, start, end }
+      : existingEvent;
+  });
+
+  this.setState({
+    events: nextEvents
+  });
+};
+
+handleSelect = ({ start, end }) => {
+  const title = window.prompt('New Event name')
+  if (title)
+    this.setState({
+      events: [
+        ...this.state.events,
+        {
+          start,
+          end,
+          title,
+        },
+      ],
+    })
   }
-]
 
-const onEventDrop = ({ event, start, end, allDay }) => {
-  console.log('event clicked')
-  console.log(start, event, end, allDay)
-}
-
-const Scheduler = () => {
-  const [events, setEvents] = React.useState(initialEvents)
-
-  const addEvent = ({ event, start, end, allDay }) => {
-    const newEvent = {
-      id: events.length,
-      title: 'New event',
-      start: new Date(new Date(start).setHours(new Date().getHours() - 3)),
-      end: new Date(new Date(end).setHours(new Date().getHours() + 3)),
-      desc: 'This is a new event'
-    }
-
-    setEvents(state => [...state, newEvent])
-  }
-
+render() {
   return (
-    <>
-      <div className='wrapper' style={{ minHeight: '100vh' }}>
-        <DnDCalendar
-          selectable
-          events={events}
-          startAccessor='start'
-          endAccessor='end'
-          defaultDate={moment().toDate()}
-          defaultView='month'
-          localizer={localizer}
-          toolbar
-          resizable
-          style={{ height: '100vh' }}
-          onEventDrop={onEventDrop}
-          components={{
-            event: EventComponent,
-            agenda: {
-              event: EventAgenda
-            }
-          }}
-          onSelectSlot={addEvent}
-          onSelectEvent={event => alert(event.desc)}
-        />
-      </div>
-    </>
-  )
+    <div className="App">
+      
+    <DnDCalendar
+    selectable
+      defaultDate={moment().toDate()}
+      defaultView="month"
+      events={this.state.events}
+      localizer={localizer}
+      onEventDrop={this.moveEvent}
+      onEventResize={this.resizeEvent}
+      onSelectEvent={event => alert(event.desc)}
+      onSelectSlot={this.handleSelect}
+      resizable
+      style={{ height: "100vh" }}
+      components={{
+        event: EventComponent,
+        agenda: {
+          event: EventAgenda
+        }
+      }}
+    />
+  </div>
+);
+}
 }
 
-export default Scheduler
 
-const EventComponent = ({ start, end, title }) => {
-  return (
-    <>
-      <p>{title}</p>
-      <p>{start}</p>
-      <p>{end}</p>
-    </>
-  )
-}
+export default CalendarPost 
 
-const EventAgenda = ({ event }) => {
-  return (
-    <span>
-      <em style={{ color: 'blue' }}>{event.title}</em>
-      <p>{event.desc}</p>
-    </span>
-  )
-}
+
