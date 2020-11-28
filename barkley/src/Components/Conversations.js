@@ -61,7 +61,7 @@ function Conversations (props) {
         </select> */}
         </select>
 
-        <button type='submit'>Add new conversation</button>
+        <button type='submit' className='addBtn'>Add new conversation</button>
       </form>
 
       <div>

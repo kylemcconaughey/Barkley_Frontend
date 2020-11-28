@@ -42,7 +42,7 @@ class Vote extends Component {
             this.state.voting.map((vote, i) =>
               <div key={i} className='votes'>
                 <div className='voteCount'>
-                  <button onClick={this.vote.bind(this, i)}>{vote.title}</button>
+                  <button className='voteBtn' onClick={this.vote.bind(this, i)}>{vote.title}</button>
                 </div>
               </div>
             )

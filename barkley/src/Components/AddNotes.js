@@ -7,17 +7,15 @@ import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Mention from './Mentions'
+// import Mention from './Mentions'
 
 class NoteEditor extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      body: '',
-      board: ''
+      body: ''
     }
     this.handleBodyChange = this.handleBodyChange.bind(this)
-    this.handleBoardChange = this.handleBoardChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -25,14 +23,10 @@ class NoteEditor extends React.Component {
     this.setState({ body: event.target.value })
   }
 
-  handleBoardChange (event) {
-    this.setState({ board: event.target.value })
-  }
-
   handleSubmit (event) {
     event.preventDefault()
     axios
-      .post('https://brkly.herokuapp.com/notes/', {
+      .post(`https://brkly.herokuapp.com/discussionboards/${this.props.id}/note/`, {
         body: this.state.body,
         board: this.state.board
       },
@@ -74,11 +68,7 @@ class NoteEditor extends React.Component {
                     <Form.Control type='text' style={{ height: 100 }} placeholder='Add an answer' value={this.state.body} onChange={this.handleBodyChange} />
                   </Form.Group>
 
-                  <Form.Group controlId='addBoard'>
-                    <Form.Control type='text' style={{ height: 50 }} placeholder='Please put board number here' value={this.state.board} onChange={this.handleBoardChange} />
-                  </Form.Group>
-
-                  <Button variant='outline-primary' type='submit' name='submit' value='Submit'>
+                  <Button variant='outline-primary' className='addBtn' type='submit' name='submit' value='Submit'>
                 Add Answer
                   </Button>
                 </Form>

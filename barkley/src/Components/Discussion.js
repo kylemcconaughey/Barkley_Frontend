@@ -31,7 +31,7 @@ export default function Discussion ({ post, token }) {
 
           {/* <Vote> </Vote> */}
           <Notes token={token} notes={post.notes}> </Notes>
-          <NotesEditor token={token}> </NotesEditor>
+          <NotesEditor token={token} id={post.id}> </NotesEditor>
         </Card.Body>
 
       </Card>

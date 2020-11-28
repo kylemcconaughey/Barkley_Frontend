@@ -6,7 +6,6 @@
   
 }
 
-
 .appheader{
   background-color: rgb(0, 0, 0);
   align-items: center;
@@ -31,8 +30,26 @@ input {
 }
 
 .addBtn{
-  padding: 15px;
+  padding: 12px;
   margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+}
+
+.addBtn:hover{
+  background-color: rgb(64, 160, 224);
+  color: black;
+}
+
+.voteBtn{
+  border-radius: 15px;
+}
+
+.voteBtn:hover{
+  background-color: rgb(70, 97, 114);
+  color: white;
 }
 
 .App {
@@ -48,8 +65,9 @@ input {
   margin-right: auto;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  border: 5px solid rgb(0, 124, 199);
-  box-shadow: 0px 8px 6px 2px gray;
+  border: 10px solid rgb(31, 180, 225);
+  border-radius: 20px;
+  box-shadow: 0px 12px 8px 2px gray;
   max-width: 45rem;
   align-items: center;
 }
@@ -104,6 +122,7 @@ margin-right: auto;
 
 input{
   border: rgba(74, 171, 201, 0.824) solid 5px;
+  border-radius: 20px;
 }
 
 label{
@@ -111,7 +130,8 @@ label{
 }
 
 button{
-  background-color: rgba(65, 203, 254, 0.824);
+  background-color: rgba(0, 187, 255, 0.911);
+  border-radius: 25px;
   color: aliceblue;
   padding: 5px;
   font-size: large;
@@ -124,6 +144,7 @@ button{
   background-color: rgb(52, 179, 218);
   overflow: hidden;
   list-style: none;
+  border-radius: 12px;
 }
 .navlinks a{
   float: left;
@@ -225,12 +246,25 @@ font-size: 250%;
 
 .indivNote, .message, .comments{
   border: rgb(191, 191, 191) 3.5px solid;
+  border-radius: 25px;
   margin-top: 8px;
   padding: 5px;
   border-radius: 15px;
   max-width: 75%;
 }
 
+.id_num{
+  display: none;
+}
+
+.addC-form-field{
+  border: rgb(18, 128, 172) 3.5px solid;
+  border-radius: 10px;
+  margin-top: 8px;
+  padding: 5px;
+  border-radius: 15px;
+  max-width: 75%;
+}
 .noteDetail{
   margin: 6px;
 }
@@ -246,22 +280,24 @@ font-size: 250%;
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: relative;
+  position: sticky;
   width: 36px;
   height: 30px;
   left: 36px;
   top: 36px;
+  margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #000000;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #0befff;
 }
 
 /* Position and sizing of clickable cross button */
@@ -286,9 +322,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
+  background: #313131;
+  padding: 1em .8em 0;
   font-size: 1.15em;
+  border-radius: 12px;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -310,4 +347,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
 }

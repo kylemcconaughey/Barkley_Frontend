@@ -29,7 +29,7 @@ function Chat (props) {
           type='text' placeholder='Type a message' name='message' value={body}
           onChange={e => setBody(e.target.value)}
         />
-        <button type='submit'>
+        <button type='submit' className='addBtn'>
           Send Message
         </button>
       </form>

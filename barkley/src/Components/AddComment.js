@@ -31,7 +31,7 @@ function AddComments (props) {
           value={body}
           onChange={e => setBody(e.target.value)}
         />
-        <button type='submit'>
+        <button className='addBtn' type='submit'>
             Add a comment...
         </button>
       </form>
