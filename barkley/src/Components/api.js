@@ -20,6 +20,15 @@ export function register (username, password) {
 }
 
 export function getUserPost (token) {
+  return axios.get('https://brkly.herokuapp.com/posts/theirs/', {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+
+export function getOtherUsersPost (token) {
   return axios.get('https://brkly.herokuapp.com/posts/mine/', {
     headers: {
       Authorization: 'Token ' + token
@@ -162,6 +171,15 @@ export function addComment (token, body, post) {
 
 export function sendMessage (token, body, id) {
   return axios.post('http://brkly.herokuapp.com/messages/', { conversation: id, body: body }, {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+
+export function AddConversation (token, convoname, members) {
+  return axios.post('http://brkly.herokuapp.com/conversations/', { convoname: convoname, members: [members] }, {
     headers: {
       Authorization: 'Token ' + token
     }

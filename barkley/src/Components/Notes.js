@@ -16,10 +16,10 @@ function Notes (props) {
       {notes.map((note) => (
         <p className='indivNote' key={note.url}>
           {note.body}
-          <p className='noteDetail'> Posted by: {note.user} on {note.posted_at}
+          <p className='noteDetail'> Posted by: {note.user} on {note.niceCreated}
           </p>
           <p className='noteDetail'>Upvoted: {note.num_upvotes}  Downvoted: {note.num_downvotes}</p>
-          <Vote> </Vote>
+          <Vote url={note.url} token={props.token}> </Vote>
         </p>
       ))}
     </div>

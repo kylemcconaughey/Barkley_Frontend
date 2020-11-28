@@ -1,24 +1,40 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 class Vote extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       voting: [
-        { name: 'Agree', votes: 0 },
-        { name: 'Disagree', votes: 0 }
+        { title: 'Agree', name: 'upvote', votes: 0 },
+        { title: 'Disagree', name: 'downvote', votes: 0 }
       ]
     }
   }
 
-  vote (i) {
+  makeVote = e => {
+    axios.post(`${this.props.url}` + e + "/", this.state, {
+      headers: {
+        Authorization: `Token ${this.props.token}`
+      }
+    })
+      .then(response => {
+        console.log(response)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  vote(i) {
     const newVotes = [...this.state.voting]
     newVotes[i].votes++
     console.log(newVotes)
     this.setState({ voting: newVotes })
+    this.makeVote(newVotes[i].name)
   }
 
-  render () {
+  render() {
     return (
       <>
         <div className='voting'>
@@ -26,7 +42,7 @@ class Vote extends Component {
             this.state.voting.map((vote, i) =>
               <div key={i} className='votes'>
                 <div className='voteCount'>
-                  {vote.name} <button onClick={this.vote.bind(this, i)}>Vote</button>
+                  <button onClick={this.vote.bind(this, i)}>{vote.title}</button>
                 </div>
               </div>
             )
