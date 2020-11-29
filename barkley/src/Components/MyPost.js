@@ -22,7 +22,7 @@ function MyPost (props) {
   return (
     <div>
       {posts.map(post => (
-        <Apost key={post.user.id} post={post} />
+        <Apost key={post.user.id} post={post} className='profPosts' />
       ))}
     </div>
   )

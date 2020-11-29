@@ -27,7 +27,7 @@ function Profile (props, { post }) {
       <p>{userInfo.username}</p>
       <div className='friends'>Friends: {userInfo.num_friends}</div>
       <div><Link to='/dogprofile'>{DogProfile.name}</Link></div>
-      <div className='user-post'>
+      <div className='profPosts'>
         <p>Posts</p>
         <MyPost token={token} username={username} />
       </div>

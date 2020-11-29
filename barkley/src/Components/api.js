@@ -27,7 +27,7 @@ export function register (username, password, firstname, lastname, streetaddress
     .then(res => res.token)
 }
 export function getUserPost (token) {
-  return axios.get('https://brkly.herokuapp.com/posts/theirs/', {
+  return axios.get('https://brkly.herokuapp.com/posts/mine/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -76,20 +76,6 @@ export function getPostnum (token) {
   })
     .then(res => res.data)
 }
-
-// export function createPost (token, body, font_style, text_align, font_size, dog) {
-//   return axios.post('https://brkly.herokuapp.com/posts/', {
-//     body: body,
-//     font_style: font_style,
-//     text_align: text_align,
-//     font_size: font_size,
-//     dog: dog
-//   }, {
-//     headers: {
-//       Authorization: 'Token ' + token
-//     }
-//   }).then(res => res.data)
-// }
 
 export function uploadImage (token, postUrl, image) {
   return axios.put(postUrl + 'image/', image, {
