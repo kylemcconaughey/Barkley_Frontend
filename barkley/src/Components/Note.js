@@ -3,8 +3,6 @@ import Card from 'react-bootstrap/Card'
 import Vote from './Voting'
 
 export default function Note ({ post }) {
-  let id = post.id
-
   return (
     <div className='note'>
       <post style={{ width: '40rem' }}>

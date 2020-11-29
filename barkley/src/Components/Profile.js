@@ -22,7 +22,7 @@ function Profile (props, { post }) {
 
   return (
     <div className='profile-container'>
-      <div><img src={userInfo.picture} className='userProfPic' /></div>
+      <div><img src={userInfo.picture} alt='The User' className='userProfPic' /></div>
       <p>{userInfo.first_name}</p>
       <p>{userInfo.username}</p>
       <div className='friends'>Friends: {userInfo.num_friends}</div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Login from './Login'
-import SideNavBar from './SideBar'
+// import SideNavBar from './SideBar'
 // import logo from './barkleylogo1.png'
 import logo from './LOGO2.png'
 import NavBar from './NavBar'
