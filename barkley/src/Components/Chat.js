@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { sendMessage } from './api'
 
-function Chat (props) {
+function Chat(props) {
   const { token, onSent, conversation } = props
   const [body, setBody] = useState('')
 
@@ -14,11 +14,23 @@ function Chat (props) {
       })
   }
 
+  // function onSubmit(e) {
+  //   e.preventDefault()
+
+  //   const { websocket } = props
+
+  //   try {
+  //     websocket.send(token, body, conversation.id)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
   return (
     <div>
       <div>
         {conversation.messages.map(m => (
-          <div key={m.id} className='message'>{m.body}</div>
+          <div key={m.id}>{m.body}</div>
         ))}
       </div>
       <form className='chat-box' onSubmit={onSubmit}>

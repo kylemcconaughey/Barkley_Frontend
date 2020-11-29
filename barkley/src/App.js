@@ -26,7 +26,6 @@ import NotesEditor from './Components/AddNotes'
 // import DogProfile from './Components/DogProfile'
 import Conversations from './Components/Conversations'
 // import Notifications from './Components/Notifications'
-import MessageEditor from './Components/AddMessage'
 // import Chat from './Components/Chat'
 import Calendar from './Components/Calendar'
 import Map from './Components/Location'
@@ -67,9 +66,7 @@ class App extends React.Component {
               <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
               <Route path='/adddog'><AddDog token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
-              {/* <Route path='/search'><DogSearch token={this.state.token} username={this.state.username}> </DogSearch> </Route> */}
               <Route path='/convos/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
-              <Route path='/messages'><MessageEditor token={this.state.token} username={this.state.username}> </MessageEditor></Route>
               {/* <Route path='/notifications'><Notifications token={this.state.token} username={this.state.username}> </Notifications> </Route> */}
               <Route path='/helpful'><Discussions token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/adddiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
@@ -79,7 +76,6 @@ class App extends React.Component {
               <Route path='/helpful'><Note token={this.state.token} username={this.state.username}> </Note></Route>
               <Route path='/helpful'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
               <Route path='/calendar'> <Calendar> </Calendar> </Route>
-              {/* <Route path='/calendar'><Dnd> </Dnd></Route> */}
               <Route path='/dogfriendlylocations'><Map> </Map></Route>
               <Route path='/register'><Register /></Route>
             </Switch>

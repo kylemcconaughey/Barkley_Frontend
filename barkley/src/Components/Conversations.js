@@ -6,10 +6,9 @@ function Conversations (props) {
   const { token, username } = props
   const [convos, setConvos] = useState([])
   const [convoname, setConvoName] = useState('')
-  const [showConversationId, setShowConversationId] = useState(null)
   const [options, setOptions] = useState([])
   const [members, setMembers] = useState([])
-  const [created, setCreated] = useState(false)
+  const [showConversationId, setShowConversationId] = useState(null)
 
   useEffect(() => {
     getConvo(token).then(data => {
@@ -31,7 +30,6 @@ function Conversations (props) {
     AddConversation(token, convoname, members)
       .then(function (token) {
       })
-      // .then(() => setCreated(true))
   }
 
   const conversationToShow = convos.find(convo => convo.id === showConversationId)
@@ -50,7 +48,7 @@ function Conversations (props) {
             setMembers(value)
           }}
         >
-          {/* {options.map(option => (
+          {options.map(option => (
             <option
               key={option.id}
               value={option.id}
@@ -58,7 +56,6 @@ function Conversations (props) {
               {option.username}
             </option>
           ))}
-        </select> */}
         </select>
 
         <button type='submit' className='addBtn'>Add new conversation</button>
