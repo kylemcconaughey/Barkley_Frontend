@@ -79,9 +79,9 @@ class App extends React.Component {
               <Route path='/helpful'><Notes token={this.state.token} username={this.state.username}> </Notes></Route>
               <Route path='/helpful'><Note token={this.state.token} username={this.state.username}> </Note></Route>
               <Route path='/helpful'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
-              <Route path='/calendar'> <Calendar> </Calendar> </Route>
+              <Route path='/calendar'> <Calendar token={this.state.token} username={this.state.username}> </Calendar> </Route>
               {/* <Route path='/calendar'><Dnd> </Dnd></Route> */}
-              <Route path='/dogfriendlylocations'><Map> </Map></Route>
+              <Route path='/dogfriendlylocations'><Map token={this.state.token} username={this.state.username}> </Map></Route>
               <Route path='/register'><Register /></Route>
             </Switch>
           </div>

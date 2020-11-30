@@ -46,6 +46,8 @@ input {
 
 .voteBtn{
   border-radius: 15px;
+  margin: 10px;
+  display: flex;
 }
 
 .voteBtn:hover{
@@ -53,10 +55,11 @@ input {
   color: white;
 }
 
-.App {
-  max-width: 40rem;
+.calendar {
+  max-width: 20rem;
   margin: 1rem auto;
   padding: 1rem;
+  background-color: white;
 }
 
 .post, .discussionBrd{
@@ -165,6 +168,12 @@ button{
   cursor: pointer;
 }
 
+.likedNum{
+  font-size: medium;
+  text-align: left;
+  font-weight: bolder;
+  color: #67a9e2;
+}
        
 .styleNormal{
   font-style: normal;
@@ -220,12 +229,16 @@ font-size: 250%;
   font-weight: bold;
 }
 
+.mapDiv{
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin: 10px 0px 0px 30px;
+}
 .mapContainer {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  height: 85%;
+  width: 85%;
 }
 
 .col-left {
@@ -238,14 +251,24 @@ font-size: 250%;
   padding-bottom: 0.5rem;
 }
 
+.item1{
+  display: flex;
+align-items: left;
+}
+
+.item2{
+  position: relative;
+}
+
 .discussionHeader{
   font-size: xx-large;
 }x
 
 .discussionBody{
-  font-size: x-large;
+  font-size: 2rem;
   margin: 10px;
   background-color: white;
+  
 }
 
 .answerHeader{
@@ -259,7 +282,7 @@ font-size: 250%;
   margin-top: 8px;
   padding: 5px;
   border-radius: 15px;
-  max-width: 75%;
+  max-width: 92%;
 }
 
 .sentInfo{
@@ -295,8 +318,6 @@ font-size: 250%;
   
 }
 
-
-/* Position and sizing of burger button */
 .bm-burger-button {
   position: sticky;
   width: 36px;
@@ -308,37 +329,28 @@ font-size: 250%;
   margin-right: 10px;
 }
 
-/* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #000000;
 }
 
-/* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
   background: #0befff;
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 24px;
   width: 24px;
 }
 
-/* Color/shape of close button cross */
 .bm-cross {
   background: #bdc3c7;
 }
 
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
 }
 
-/* General sidebar styles */
 .bm-menu {
   background: #313131;
   padding: 1em .8em 0;
@@ -346,24 +358,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border-radius: 12px;
 }
 
-/* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #373a47;
 }
 
-/* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
 }
 
-/* Individual item */
 .bm-item {
   display: inline-block;
 }
 
-/* Styling of overlay */
+
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(65, 121, 147, 0.988);
   border-radius: 12px;
 }

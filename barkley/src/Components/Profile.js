@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { getPersonalUser } from './api'
 import MyPost from './MyPost'
 
-// import FollowButton from './FollowButton'
+import FollowButton from './FollowButton'
 
 // import DogInfo from './DogInfo'
 // import FollowButton from './FollowButton'
@@ -27,6 +27,7 @@ function Profile (props, { post }) {
       <div className='followers'>Followers: {userInfo.num_friends}</div>
       <div><Link to='/dogprofile'>My Dogs</Link></div>
       <div><Link to='/adddog'> Add another pup</Link></div>
+      <FollowButton> Follow </FollowButton>
       <div className='profPosts'>
         <p>Posts</p>
         <MyPost token={token} username={username} />
