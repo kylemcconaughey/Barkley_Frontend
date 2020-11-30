@@ -18,12 +18,12 @@ class NavBar extends React.Component {
           <Link to='/search'> <i className='fas fa-search' /> Explore  </Link>
           <Link to='/newsfeed'> <i className='far fa-newspaper' /> Newsfeed  </Link>
           <Link to='/notifications'> <i className='far fa-bell' /> Notifications </Link>
-          <Link to='/convos/messages'> <i className='far fa-comments' /> Messages </Link>
+          <Link to='/convos'> <i className='far fa-comments' /> Messages </Link>
           <Link to='/calendar'> <i className='far fa-calendar-alt' />Calendar</Link>
-          <Link to='/dogfriendlylocations'> <i className='fas fa-map-marker-alt' />Dog Friendly  </Link>
+          <Link to='/dogfriendlylocations'> <i className='fas fa-map-marker-alt' /> Map </Link>
           <Link to='/helpful'> <i className='far fa-question-circle' />Discussions  </Link>
           <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
-          <a onClick={this.handleShowSettings} className='menu-item--small' href=''>Settings</a>
+          <Link to='/profile' onClick={this.handleShowSettings} className='menu-item--small'>Settings</Link>
         </div>
 
       </Menu>

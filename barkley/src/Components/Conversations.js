@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Chat from './Chat'
 import { getConvo, AddConversation, getUserInfo } from './api'
+import { Link } from 'react-router-dom'
 
 function Conversations (props) {
   const { token, username } = props
@@ -41,7 +42,7 @@ function Conversations (props) {
       <div className='item1'>
         {convos.map(cList => (
           <div key={cList.url} className='convos'>
-            <button className='convoHdr' onClick={(e) => setShowConversationId(cList.id)}>{cList.convo_name}</button>
+            <Link to='/messages'> </Link><button className='convoHdr' onClick={(e) => setShowConversationId(cList.id)}>{cList.convo_name}</button>
           </div>
         ))}
       </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getPersonalUser } from './api'
-import DogProfile from './DogProfile'
 import MyPost from './MyPost'
 
 // import FollowButton from './FollowButton'

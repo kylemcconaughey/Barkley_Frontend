@@ -15,7 +15,7 @@ function Register (props) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState(null)
-  const { token, onRegister } = props
+  const { token } = props
 
   if (token) {
     return <Redirect to='/newsfeed' />
