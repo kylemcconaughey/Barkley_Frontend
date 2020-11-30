@@ -36,32 +36,9 @@ function Conversations (props) {
 
   return (
     <div>
-      <p className='m-title'>Conversations</p>
-      <form onSubmit={MakeNewConvo}>
-        <input
-          type='text' onChange={e => setConvoName(e.target.value)} value={convoname}
-        />
-        <p>Select Members: </p>
-        <select
-          multiple value={members} onChange={e => {
-            const value = Array.from(e.target.selectedOptions, option => option.value)
-            setMembers(value)
-          }}
-        >
-          {options.map(option => (
-            <option
-              key={option.id}
-              value={option.id}
-            >
-              {option.username}
-            </option>
-          ))}
-        </select>
-
-        <button type='submit' className='addBtn'>Add new conversation</button>
-      </form>
-
-      <div>
+      <h2 className='m-title'>Conversations</h2>
+      <h3> Select a conversation or </h3>
+      <div className='item1'>
         {convos.map(cList => (
           <div key={cList.url} className='convos'>
             <button className='convoHdr' onClick={(e) => setShowConversationId(cList.id)}>{cList.convo_name}</button>
@@ -71,6 +48,32 @@ function Conversations (props) {
       {conversationToShow && (
         <Chat conversation={conversationToShow} username={username} token={token} onSent={() => console.log('onSent')} />
       )}
+      <h3>Start a new Conversation</h3>
+      <div>
+        <form onSubmit={MakeNewConvo}>
+          <input
+            type='text' onChange={e => setConvoName(e.target.value)} value={convoname}
+          />
+          <p>Select Members: </p>
+          <select
+            multiple value={members} onChange={e => {
+              const value = Array.from(e.target.selectedOptions, option => option.value)
+              setMembers(value)
+            }}
+          >
+            {options.map(option => (
+              <option
+                key={option.id}
+                value={option.id}
+              >
+                {option.username}
+              </option>
+            ))}
+          </select>
+
+          <button type='submit' className='addBtn'>Add new conversation</button>
+        </form>
+      </div>
     </div>
   )
 }

@@ -10,7 +10,7 @@ function Notes (props) {
       {notes.map((note) => (
         <p className='indivNote' key={note.url}>
           {note.body}
-          <p class='id_num'>{note.id}</p>
+          <p className='id_num'>{note.id}</p>
           <p className='noteDetail'> Posted by: {note.user} on {note.niceCreated}
           </p>
           <p className='noteDetail'>Upvoted: {note.num_upvotes}  Downvoted: {note.num_downvotes}</p>

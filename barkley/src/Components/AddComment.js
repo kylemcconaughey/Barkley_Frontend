@@ -23,7 +23,7 @@ function AddComments (props) {
     <div>
       <form onSubmit={onSubmit}>
         <label
-          htmlfor='body'
+          htmlFor='body'
         />
         <input
           type='text'
@@ -34,7 +34,7 @@ function AddComments (props) {
           onChange={e => setBody(e.target.value)}
         />
         <label
-          htmlfor='post'
+          htmlFor='post'
         />
         <input
           type='id'

@@ -24,6 +24,7 @@ import Notes from './Components/Notes'
 import Note from './Components/Note'
 import NotesEditor from './Components/AddNotes'
 // import DogProfile from './Components/DogProfile'
+import PersonalDogInfo from './Components/PersonalDogInfo'
 import Conversations from './Components/Conversations'
 // import Notifications from './Components/Notifications'
 import MessageEditor from './Components/AddMessages'
@@ -63,7 +64,7 @@ class App extends React.Component {
               <Route path='/login' exact component={Login}> Login </Route>
               <Route path='/logout/'><Logout onLogout={this.handleLogout} /></Route>
               <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
-              <Route path='/dogprofile/'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
+              <Route path='/dogprofile/'> <PersonalDogInfo token={this.state.token} username={this.state.username} /></Route>
               <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
               <Route path='/adddog'><AddDog token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>

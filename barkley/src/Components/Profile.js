@@ -24,9 +24,10 @@ function Profile (props, { post }) {
     <div className='profile-container'>
       <div><img src={userInfo.picture} alt='The User' className='userProfPic' /></div>
       <p>{userInfo.first_name}</p>
-      <p>{userInfo.username}</p>
-      <div className='friends'>Friends: {userInfo.num_friends}</div>
-      <div><Link to='/dogprofile'>{DogProfile.name}</Link></div>
+      <p>Username: <em> {userInfo.username} </em> </p>
+      <div className='followers'>Followers: {userInfo.num_friends}</div>
+      <div><Link to='/dogprofile'>My Dogs</Link></div>
+      <div><Link to='/adddog'> Add another pup</Link></div>
       <div className='profPosts'>
         <p>Posts</p>
         <MyPost token={token} username={username} />

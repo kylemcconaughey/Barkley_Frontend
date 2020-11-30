@@ -24,7 +24,7 @@ class Header extends React.Component {
             : (
               <div>
                 <div>
-                  <h1 className='appheader'>  </h1>
+                  <h1 className='appheader'>   </h1>
                 </div>
 
                 <div>

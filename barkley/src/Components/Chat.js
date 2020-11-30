@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { sendMessage } from './api'
 
-function Chat(props) {
+function Chat (props) {
   const { token, onSent, conversation } = props
   const [body, setBody] = useState('')
 
@@ -30,7 +30,10 @@ function Chat(props) {
     <div>
       <div>
         {conversation.messages.map(m => (
-          <div key={m.id}>{m.body}</div>
+          <div className='message' key={m.url}>
+            {m.body}
+            <p className='sentInfo'> <em> Sent by: {m.sender.username} on {m.time_sent} </em> </p>
+          </div>
         ))}
       </div>
       <form className='chat-box' onSubmit={onSubmit}>
@@ -38,7 +41,7 @@ function Chat(props) {
           htmlFor='message'
         />
         <input
-          type='text' placeholder='Type a message' name='message' value={body}
+          type='text' placeholder='Type a message' className='message' value={body}
           onChange={e => setBody(e.target.value)}
         />
         <button type='submit' className='addBtn'>

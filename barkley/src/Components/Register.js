@@ -24,11 +24,10 @@ function Register (props) {
   function registration (event) {
     event.preventDefault()
 
-    register(username, password)
-      .then(function (token) {
-        setMessage('Welcome to Barkley!')
-        onRegister(token)
+    register(username, password, firstname, lastname, numpets, streetaddress)
+      .then(data => {
       })
+      .then(() => setMessage(true))
   }
 
   return (

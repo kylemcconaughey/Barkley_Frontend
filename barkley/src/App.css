@@ -102,6 +102,7 @@ input {
   margin-left: auto;
   margin-right: auto;
   border: solid 5px rgb(132, 177, 255);
+  background-color: white;
   max-width: 35rem;
   box-shadow: 0px 8px 6px 2px gray;
 }
@@ -261,6 +262,10 @@ font-size: 250%;
   max-width: 75%;
 }
 
+.sentInfo{
+  color: rgb(0, 166, 255);
+}
+
 .id_num{
   display: none;
 }
@@ -274,6 +279,7 @@ font-size: 250%;
   max-width: 75%;
   background-color: white;
 }
+
 .noteDetail{
   margin: 6px;
 }

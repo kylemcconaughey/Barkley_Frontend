@@ -1,7 +1,7 @@
 import React from 'react'
 import { getToken } from './api'
 import Register from './Register'
-import logo from './barkleylogo1.png'
+import logo from './LOGO2.png'
 
 class Login extends React.Component {
   constructor () {

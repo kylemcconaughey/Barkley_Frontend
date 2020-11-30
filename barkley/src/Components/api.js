@@ -190,7 +190,7 @@ export function sendMessage (token, body, id) {
     .then(res => res.data)
 }
 
-export function AddConversation(token, convoname, members) {
+export function AddConversation (token, convoname, members) {
   return axios.post('https://brkly.herokuapp.com/conversations/', { convo_name: convoname, members: members }, {
     headers: {
       Authorization: 'Token ' + token
