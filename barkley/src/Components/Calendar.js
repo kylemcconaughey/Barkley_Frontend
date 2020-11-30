@@ -38,10 +38,10 @@ constructor(props) {
       },
       {
       id: 0,
-    title: 'Dog Park ',
+    title: 'Dog Park',
     allDay: true,
-    start: new Date(2020, 10, 12, 10, 30, 0, 0),
-    end: new Date(2020, 10, 12, 12, 30, 0, 0),
+    start: new Date(2020, 11, 12, 10, 30, 0, 0),
+    end: new Date(2020, 11, 12, 12, 30, 0, 0),
     desc: 'Address: 910 Brookside Dr, Raleigh, NC 27604'
   },
   {
@@ -74,8 +74,9 @@ constructor(props) {
   {
     id: 7,
     title: 'Doggie Playdate',
-    start: new Date(2020, 11, 12, 14, 0, 0, 0),
-    end: new Date(2020, 11, 12, 15, 0, 0, 0)
+    start: new Date(2020, 11, 29, 14, 0, 0, 0),
+    end: new Date(2020, 11, 29, 15, 0, 0, 0),
+    desc: '910 Brookside Dr, Raleigh, NC 27604'
   },
   {
     id: 8,
@@ -135,7 +136,7 @@ handleSelect = ({ start, end }) => {
 
 render() {
   return (
-    <div className="App">
+    <div className="calendar">
       
     <DnDCalendar
     selectable

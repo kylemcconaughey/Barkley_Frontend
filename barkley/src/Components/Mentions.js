@@ -24,9 +24,6 @@ Mention.propTypes = {
   ]),
   markup: PropTypes.string,
   displayTransform: PropTypes.func,
-  /**
-   * If set to `true` spaces will not interrupt matching suggestions
-   */
   allowSpaceInQuery: PropTypes.bool,
 
   isLoading: PropTypes.bool

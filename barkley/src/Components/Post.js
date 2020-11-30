@@ -45,6 +45,14 @@ export default function Apost ({ post, token }) {
               <img src={post.image} alt='post' className='image' />
             )}
           </Card.Text>
+          <Card.Text className='likedNum'>
+            Liked by: {post.liked_by.length} Users
+          </Card.Text>
+          <Card.Text>
+            {post.reactions.reaction}
+            {post.reactions.user}
+            {/* data not being passed from backend to show */}
+          </Card.Text>
 
         </Card.Body>
 

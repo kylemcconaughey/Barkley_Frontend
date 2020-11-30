@@ -38,7 +38,7 @@ function Conversations (props) {
   return (
     <div>
       <h2 className='m-title'>Conversations</h2>
-      <h3> Select a conversation or </h3>
+      <h3> View a conversation or </h3>
       <div className='item1'>
         {convos.map(cList => (
           <div key={cList.url} className='convos'>
@@ -50,7 +50,7 @@ function Conversations (props) {
         <Chat conversation={conversationToShow} username={username} token={token} onSent={() => console.log('onSent')} />
       )}
       <h3>Start a new Conversation</h3>
-      <div>
+      <div className='item2'>
         <form onSubmit={MakeNewConvo}>
           <input
             type='text' onChange={e => setConvoName(e.target.value)} value={convoname}

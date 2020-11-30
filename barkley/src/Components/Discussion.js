@@ -17,16 +17,15 @@ export default function Discussion ({ post, token }) {
     <div className='discussionBrd'>
       <Card style={{ width: '40rem' }}>
         <Card.Header className='discussionHeader'>
-          {post.title} #{post.id}
+          {post.title}
         </Card.Header>
-        <p className='discussionDetail'> Posted by:
-          <em> <Link to='/profile/'>{post.user.username} </Link></em>
-             on {postedAt}
-        </p>
-
         <Card.Body>
           <Card.Text id='discussionBody' className='discussionBody'>
             {post.body}
+            <p className='discussionDetail'> Posted by:
+              <em> <Link to='/profile/'>{post.user.username} </Link></em>
+             on {postedAt}
+            </p>
           </Card.Text>
 
           {/* <Vote> </Vote> */}
