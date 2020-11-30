@@ -3,7 +3,7 @@ import React from 'react'
 function DogProfile ({ dog }) {
   return (
     <div className='doggo'>
-      <h2>{dog.name} </h2>
+      <h2 className='doggoName'>{dog.name} </h2>
       <div>
         <img src={dog.picture} alt='doggo' className='dogProfPic' />
       </div>

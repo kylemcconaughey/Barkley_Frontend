@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Apost from './Post'
-import { getUserPost } from './api'
+import { getOtherUsersPost } from './api'
 
-function MyPost (props) {
+function UsersPosts (props) {
   const { token } = props
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    getUserPost(token).then(data => {
+    getOtherUsersPost(token).then(data => {
       setPosts(data)
       setLoading(false)
       console.log(data)
@@ -22,10 +22,10 @@ function MyPost (props) {
   return (
     <div>
       {posts.map(post => (
-        <Apost key={post.user.id} post={post} className='profPosts' />
+        <Apost key={post.user.id} post={post} />
       ))}
     </div>
   )
 }
 
-export default MyPost
+export default UsersPosts

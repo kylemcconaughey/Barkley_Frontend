@@ -70,7 +70,7 @@ class MessageEditor extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
 
                   <Form.Group controlId='addMsgText'>
-                    <Form.Control type='text' style={{ height: 100 }} placeholder='Type message here' value={this.state.body} onChange={this.handleBodyChange} />
+                    <Form.Control type='text' style={{ height: 100 }} placeholder='Tyoe message here' value={this.state.body} onChange={this.handleBodyChange} />
                   </Form.Group>
 
                   <Form.Group controlId='addConvo'>

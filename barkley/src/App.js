@@ -24,10 +24,11 @@ import Notes from './Components/Notes'
 import Note from './Components/Note'
 import NotesEditor from './Components/AddNotes'
 // import DogProfile from './Components/DogProfile'
+import PersonalDogInfo from './Components/PersonalDogInfo'
 import Conversations from './Components/Conversations'
 // import Notifications from './Components/Notifications'
-import MessageEditor from './Components/AddMessage'
-// import Chat from './Components/Chat'
+// import MessageEditor from './Components/AddMessages'
+import Chat from './Components/Chat'
 import Calendar from './Components/Calendar'
 import Map from './Components/Location'
 
@@ -49,43 +50,44 @@ class App extends React.Component {
 
   render () {
     return (
-      <Router>
-        <header>
+      <div>
+        <Router>
+          <header>
+            <div>
+              <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
+              <Redirect to='/newsfeed/' />
+            </div>
+          </header>
           <div>
-            <Header token={this.state.token} setToken={token => this.setState({ token: token })} username={this.state.username} />
+            <Switch>
+              <Route path='/' exact component={Home}> </Route>
+              <Route path='/login' exact component={Login}> Login </Route>
+              <Route path='/logout/'><Logout onLogout={this.handleLogout} /></Route>
+              <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
+              <Route path='/dogprofile/'> <PersonalDogInfo token={this.state.token} username={this.state.username} /></Route>
+              <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
+              <Route path='/adddog'><AddDog token={this.state.token} username={this.state.username} /> </Route>
+              <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
+              {/* <Route path='/search'><DogSearch token={this.state.token} username={this.state.username}> </DogSearch> </Route> */}
+              <Route path='/convos'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
+              <Route path='/messages'><Chat token={this.state.token} username={this.state.username}> </Chat></Route>
+              {/* <Route path='/notifications'><Notifications token={this.state.token} username={this.state.username}> </Notifications> </Route> */}
+              <Route path='/helpful'><Discussions token={this.state.token} username={this.state.username} /> </Route>
+              <Route path='/adddiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
+              <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />   </Route>
+              <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username}>  </PostEditor></Route>
+              <Route path='/helpful'><Notes token={this.state.token} username={this.state.username}> </Notes></Route>
+              <Route path='/helpful'><Note token={this.state.token} username={this.state.username}> </Note></Route>
+              <Route path='/helpful'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
+              <Route path='/calendar'> <Calendar> </Calendar> </Route>
+              {/* <Route path='/calendar'><Dnd> </Dnd></Route> */}
+              <Route path='/dogfriendlylocations'><Map> </Map></Route>
+              <Route path='/register'><Register /></Route>
+            </Switch>
           </div>
-        </header>
-        <Redirect to='/newsfeed/' />
-        {/* <div>
-          <SideNavBar> </SideNavBar>
-        </div> */}
+        </Router>
 
-        <Switch>
-          <Route path='/' exact component={Home}> </Route>
-          <Route path='/login' exact component={Login}> Login </Route>
-          <Route path='/logout/'><Logout onLogout={this.handleLogout} /></Route>
-          <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/dogprofile/'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/adddog'><AddDog token={this.state.token} username={this.state.username} /> </Route>
-          <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
-          {/* <Route path='/search'><DogSearch token={this.state.token} username={this.state.username}> </DogSearch> </Route> */}
-          <Route path='/convos/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
-          <Route path='/messages'><MessageEditor token={this.state.token} username={this.state.username}> </MessageEditor></Route>
-          {/* <Route path='/notifications'><Notifications token={this.state.token} username={this.state.username}> </Notifications> </Route> */}
-          <Route path='/helpful'><Discussions token={this.state.token} username={this.state.username} /> </Route>
-          <Route path='/addnewdiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
-          <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />   </Route>
-          <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username}>  </PostEditor></Route>
-          <Route path='/helpful'><Notes token={this.state.token} username={this.state.username}> </Notes></Route>
-          <Route path='/helpful'><Note token={this.state.token} username={this.state.username}> </Note></Route>
-          <Route path='/helpful'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
-          <Route path='/calendar'> <Calendar> </Calendar> </Route>
-          {/* <Route path='/calendar'><Dnd> </Dnd></Route> */}
-          <Route path='/dogfriendlylocations'><Map> </Map></Route>
-          <Route path='/register'><Register /></Route>
-        </Switch>
-      </Router>
+      </div>
     )
   }
 }

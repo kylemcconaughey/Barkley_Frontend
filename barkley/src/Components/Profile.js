@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getPostnum } from './api'
-import DogProfile from './DogProfile'
+import { getPersonalUser } from './api'
 import MyPost from './MyPost'
+
+// import FollowButton from './FollowButton'
+
+// import DogInfo from './DogInfo'
 // import FollowButton from './FollowButton'
 
 function Profile (props, { post }) {
-  const { token, username, picture } = props
-  const [setPostnum] = useState(0)
+  const { token, username } = props
+  const [userInfo, setUserInfo] = useState([])
 
   useEffect(() => {
-    getPostnum(token).then(data => {
-      setPostnum(data)
+    getPersonalUser(token).then(data => {
+      setUserInfo(data)
+      console.log(data)
     })
-  }, [token, setPostnum])
+  }, [token])
 
   return (
     <div className='profile-container'>
-      <div className='user-pic'><img src={picture} alt='profile' /></div>
-      <div className='user-title'>{username}</div>
-      {/* <div className='post-num'>posts: {postnum}</div> */}
-      <div><Link to='/dogprofile'>{DogProfile.name}</Link></div>
-      {/* <FollowButton> </FollowButton> */}
-      <button className='addBtn'><Link to='/adddog'> Add a dog!</Link></button>
-      {/* <div className='user-dogs'>
-        <DogInfo token={token} username={username} />
-      </div> */}
-      {/* <div className='bio'>{}</div> */}
-      <div className='user-post'>
+      <div><img src={userInfo.picture} alt='The User' className='userProfPic' /></div>
+      <p>{userInfo.first_name}</p>
+      <p>Username: <em> {userInfo.username} </em> </p>
+      <div className='followers'>Followers: {userInfo.num_friends}</div>
+      <div><Link to='/dogprofile'>My Dogs</Link></div>
+      <div><Link to='/adddog'> Add another pup</Link></div>
+      <div className='profPosts'>
         <p>Posts</p>
         <MyPost token={token} username={username} />
       </div>

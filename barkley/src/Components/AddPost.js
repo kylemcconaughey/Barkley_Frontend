@@ -8,6 +8,20 @@ import classNames from 'classnames'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+// import { MentionsInput, Mention } from 'react-mentions'
+
+// <MentionsInput value={this.state.value} onChange={this.handleChange}>
+//   <Mention
+//     trigger="@"
+//     data={this.props.users}
+//     renderSuggestion={this.renderUserSuggestion}
+//   />
+//   <Mention
+//     trigger="#"
+//     data={this.requestTag}
+//     renderSuggestion={this.renderTagSuggestion}
+//   />
+// </MentionsInput>
 
 class PostEditor extends React.Component {
   constructor () {
@@ -56,6 +70,8 @@ class PostEditor extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
+    const form_data = new FormData()
+    form_data.append('image', this.state.image, this.state.image.name)
     axios
       .post('https://brkly.herokuapp.com/posts/', {
         body: this.state.body,
@@ -67,6 +83,8 @@ class PostEditor extends React.Component {
       },
       {
         headers: {
+          'content-type': 'multipart/form-data',
+          'Content-Disposition': `attachment; filename=${this.state.image.name}`,
           Authorization: `Token ${this.props.token}`
         }
       }
@@ -149,13 +167,13 @@ class PostEditor extends React.Component {
                     </Form.Control>
                   </Form.Group>
 
-                  <Form.Group controlId='addPostText'>
+                  <Form.Group controlId='addDogs'>
                     <Form.Control type='text' style={{ height: 100 }} placeholder='Add dogs in post here' value={this.state.dog} onChange={this.handleDogChange} />
                   </Form.Group>
 
                   <Form.Group>
                     <Form.Label htmlFor='image'>Upload Image</Form.Label>
-                    <Form.Control input type='file' id='image' onChange={this.handleImageChange}>
+                    <Form.Control input type='file' id='image' accept='image/png, image/jpeg' onChange={this.handleImageChange} required>
                     </Form.Control>
                     <button onClick={this.handleUploadImage}>Upload</button>
                   </Form.Group>

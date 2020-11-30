@@ -15,7 +15,7 @@ function Register (props) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState(null)
-  const { token, onRegister } = props
+  const { token } = props
 
   if (token) {
     return <Redirect to='/newsfeed' />
@@ -24,11 +24,10 @@ function Register (props) {
   function registration (event) {
     event.preventDefault()
 
-    register(username, password)
-      .then(function (token) {
-        setMessage('Welcome to Barkley!')
-        onRegister(token)
+    register(username, password, firstname, lastname, numpets, streetaddress)
+      .then(data => {
       })
+      .then(() => setMessage(true))
   }
 
   return (

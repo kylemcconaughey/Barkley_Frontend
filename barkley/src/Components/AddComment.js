@@ -3,12 +3,13 @@ import { addComment } from './api'
 
 function AddComments (props) {
   const [body, setBody] = useState('')
+  const [post, setPost] = useState('')
   const [created, setCreated] = useState(false)
   const { token } = props
 
   function onSubmit (e) {
     e.preventDefault()
-    addComment(token, body)
+    addComment(token, post, body)
       .then(data => {
       })
       .then(() => setCreated(true))
@@ -29,9 +30,20 @@ function AddComments (props) {
           className='addC-form-field'
           name='body'
           value={body}
+          on
           onChange={e => setBody(e.target.value)}
         />
-        <button type='submit'>
+        <label
+          htmlFor='post'
+        />
+        <input
+          type='id'
+          className='addC-form-field'
+          name='post'
+          value={post}
+          onChange={e => setPost(e.target.value)}
+        />
+        <button type='submit' className='addBtn'>
             Add a comment...
         </button>
       </form>
