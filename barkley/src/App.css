@@ -9,6 +9,9 @@
 .appheader{
   background-color: rgb(0, 0, 0);
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .appimg{
@@ -41,6 +44,9 @@ input {
   background-color: black;
   color: white;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .addBtn:hover{
@@ -60,7 +66,7 @@ input {
 }
 
 .calendar {
-  max-width: 20rem;
+  max-width: 60rem;
   margin: 1rem auto;
   padding: 1rem;
   background-color: white;
@@ -74,11 +80,15 @@ input {
   margin-bottom: 2rem;
   margin-top: 2rem;
   background-color: white;
-  border: 10px solid rgb(31, 180, 225);
+  border: 6px solid rgb(31, 180, 225);
   border-radius: 20px;
   box-shadow: 0px 12px 8px 2px gray;
   max-width: 45rem;
   align-items: center;
+}
+
+.postDate{
+  font-size: medium;
 }
 
 .convos{
@@ -86,33 +96,29 @@ input {
   min-height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  border: 5px solid rgb(31, 180, 225);
-  border-radius: 25px;
-  box-shadow: 0px 8px 6px 2px gray;
-  background-color: white;
-  max-width: 45rem;
-  align-items: center;
+  
 }
 
 .image, img{
-  max-width: 70%;
-  max-height: 20%;
+  max-width: 20rem;
+  max-height: 30rem;
   margin-left: 32px;
   margin-top: 1rem;
 }
 
 .doggo{
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  padding: 10px;
+  min-height: 100px;
   margin-left: auto;
   margin-right: auto;
-  border: solid 5px rgb(31, 180, 225);
-  border-radius: 25px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   background-color: white;
-  max-width: 35rem;
-  box-shadow: 0px 8px 6px 2px gray;
+  border: 8px solid rgb(31, 180, 225);
+  border-radius: 20px;
+  box-shadow: 0px 12px 8px 2px gray;
+  max-width: 40rem;
+  align-items: center;
 }
 
 .doggoName{
@@ -124,13 +130,26 @@ margin-right: auto;
   max-width: 25rem;
   max-height: 25rem;
   border-radius: 30px 30px;
-margin-left: 8rem;
-margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 .userProfPic{
   max-width: 20rem;
   max-height: 25rem;
-  border-radius: 75px 75px 75px 75px;
+  border-radius: 50%;
+  background-color: white;
+
+}
+
+.profile-container{
+  display: flex;
+  align-items: stretch;
+}
+
+.profPosts{
+  display: flex;
 }
 
 input{
@@ -256,33 +275,24 @@ font-size: 250%;
   padding-bottom: 0.5rem;
 }
 
-.item1{
-  display: flex;
-align-items: left;
-}
-
-.item2{
-  position: relative;
-}
-
 .discussionHeader{
   font-size: xx-large;
 }x
 
 .discussionBody{
   font-size: xx-large;
+  text-align: center;
   margin: 10px;
   background-color: white;
   padding: 15px;
-  
 }
 
 .discussionDetail{
   border-bottom: rgb(120, 132, 138) 5px solid;
   border-radius: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
   padding-bottom: 25px;
-  font-size: xx-large;
 }
 
 .answerHeader{
@@ -307,6 +317,12 @@ align-items: left;
   display: none;
 }
 
+.search{
+  padding: 20px;
+  margin: auto;
+  align-content: center;
+}
+
 .addC-form-field{
   border: rgb(10, 12, 12, 0.824) 3.5px solid;
   border-radius: 10px;
@@ -323,13 +339,23 @@ align-items: left;
 
 .convoHdr{
   font-size: x-large;
-  background-color: #67a9e2;
+  padding: 15px;
+  background-color: #030304;
   border-radius: 20px;
   text-align: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  
+  color: white;
+  box-shadow: 0px 12px 8px 2px gray;
+ display: inline;
+}
+
+.wholeConvoPage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .bm-burger-button {

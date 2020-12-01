@@ -17,11 +17,10 @@ export default function Apost ({ post, token }) {
 
   return (
     <div className='post'>
-      <post style={{ width: '40rem' }}>
-        <p className='postHeader'> Posted by:
+      <Card style={{ width: '40rem' }}>
+        <h3 className='postHeader'> <img src={post.user.picture} alt='user' />
           <em> <Link to='/profile/'>{post.user.username} </Link></em>
-             on {postedAt}
-        </p>
+        </h3>
         <Card.Body className={classNames({
           styleNormal: post.font_style === 'N',
           styleBold: post.font_style === 'B',
@@ -39,14 +38,16 @@ export default function Apost ({ post, token }) {
         >
           <Card.Text id='post'>
             {post.body}
-            {post.comments.body}
-
             {post.image && (
               <img src={post.image} alt='post' className='image' />
             )}
+            <p className='postDate'> <em>{postedAt}</em></p>
+          </Card.Text>
+          <Card.Text>
+            <em> {post.user.username}:</em> {post.body}
           </Card.Text>
           <Card.Text className='likedNum'>
-            Liked by: {post.liked_by.length} Users
+            {post.liked_by.length} likes
           </Card.Text>
           <Card.Text>
             {post.reactions.reaction}
@@ -56,7 +57,7 @@ export default function Apost ({ post, token }) {
 
         </Card.Body>
 
-      </post>
+      </Card>
 
       <Reactions> </Reactions>
       <Comments comments={post.comments} token={token}> </Comments>

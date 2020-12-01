@@ -22,6 +22,8 @@ export default function Discussion ({ post, token }) {
         <Card.Body>
           <Card.Text id='discussionBody' className='discussionBody'>
             {post.body}
+          </Card.Text>
+          <Card.Text>
             <p className='discussionDetail'> Posted by:
               <em> <Link to='/profile/'>{post.user.username} </Link></em>
              on {postedAt}

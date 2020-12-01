@@ -17,7 +17,7 @@ import PostEditor from './Components/AddPost'
 import DogInfo from './Components/DogInfo'
 import AddDog from './Components/AddDogs'
 import Search from './Components/Search'
-// import DogSearch from './Components/DogSearch'
+import DogSearch from './Components/DogSearch'
 import Discussions from './Components/Discussions'
 import DiscussionEditor from './Components/AddDiscussion'
 import Notes from './Components/Notes'
@@ -68,7 +68,7 @@ class App extends React.Component {
               <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
               <Route path='/adddog'><AddDog token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
-              {/* <Route path='/search'><DogSearch token={this.state.token} username={this.state.username}> </DogSearch> </Route> */}
+              <Route path='/search'><DogSearch token={this.state.token} username={this.state.username}> </DogSearch> </Route>
               <Route path='/convos'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/messages'><Chat token={this.state.token} username={this.state.username}> </Chat></Route>
               {/* <Route path='/notifications'><Notifications token={this.state.token} username={this.state.username}> </Notifications> </Route> */}

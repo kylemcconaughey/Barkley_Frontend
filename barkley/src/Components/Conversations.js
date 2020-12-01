@@ -37,10 +37,10 @@ function Conversations (props) {
   const conversationToShow = convos.find(convo => convo.id === showConversationId)
 
   return (
-    <div>
+    <div className='wholeConvoPage'>
       <h2 className='m-title'>Conversations</h2>
-      <h3> View a conversation or </h3>
-      <div className='item1'>
+      <h3> View a conversation </h3>
+      <div className='convos'>
         {convos.map(cList => (
           <div key={cList.url} className='convos'>
             <Link to='/messages'> </Link><button className='convoHdr' onClick={(e) => setShowConversationId(cList.id)}>{cList.convo_name}</button>
@@ -51,7 +51,7 @@ function Conversations (props) {
         <Chat conversation={conversationToShow} username={username} token={token} onSent={() => console.log('onSent')} />
       )}
       <h3>Start a new Conversation</h3>
-      <div className='item2'>
+      <div>
         <form onSubmit={MakeNewConvo}>
           <input
             type='text' onChange={e => setConvoName(e.target.value)} value={convoname}
