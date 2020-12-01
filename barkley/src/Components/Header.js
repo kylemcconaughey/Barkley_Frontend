@@ -13,10 +13,9 @@ class Header extends React.Component {
           {this.props.token
             ? (
               <div>
-                <h1 className='appheader'><img className='appimg' src={logo} alt='Barkley Header' /> </h1>
-                <div className='navbar'>
+                <h1 className='appheader'><img className='appimg' src={logo} alt='Barkley Header' />
                   <NavBar> </NavBar>
-                </div>
+                </h1>
 
               </div>
 

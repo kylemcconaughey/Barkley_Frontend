@@ -18,7 +18,7 @@ export default function Apost ({ post, token }) {
   return (
     <div className='post'>
       <Card style={{ width: '40rem' }}>
-        <h3 className='postHeader'> <img src={post.user.picture} alt='user' />
+        <h3 className='postHeader'> <img src={post.user.picture} alt='user' className='postProPic' />
           <em> <Link to='/profile/'>{post.user.username} </Link></em>
         </h3>
         <Card.Body className={classNames({
@@ -37,14 +37,13 @@ export default function Apost ({ post, token }) {
         })}
         >
           <Card.Text id='post'>
-            {post.body}
             {post.image && (
               <img src={post.image} alt='post' className='image' />
             )}
-            <p className='postDate'> <em>{postedAt}</em></p>
           </Card.Text>
           <Card.Text>
-            <em> {post.user.username}:</em> {post.body}
+            {post.body}
+            <p className='postDate'> <em>{postedAt}</em></p>
           </Card.Text>
           <Card.Text className='likedNum'>
             {post.liked_by.length} likes
@@ -61,7 +60,7 @@ export default function Apost ({ post, token }) {
 
       <Reactions> </Reactions>
       <Comments comments={post.comments} token={token}> </Comments>
-      <AddComments token={token}> </AddComments>
+      <AddComments token={token} id={post.id}> </AddComments>
 
     </div>
   )

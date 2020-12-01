@@ -10,7 +10,7 @@ function User ({ user }) {
       <div> {user.dogs.name} </div>
       <div> {} </div>
       <div>
-        <img src={user.picture} alt='owner' className='userProfPic' />
+        <img src={user.picture} alt='owner' className='userPic' />
       </div>
     </div>
   )
