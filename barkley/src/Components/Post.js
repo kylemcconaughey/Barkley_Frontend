@@ -18,7 +18,7 @@ export default function Apost ({ post, token }) {
   return (
     <div className='post'>
       <Card style={{ width: '40rem' }}>
-        <h3 className='postHeader'> <img src={post.user.picture} />
+        <h3 className='postHeader'> <img src={post.user.picture} alt='user' />
           <em> <Link to='/profile/'>{post.user.username} </Link></em>
         </h3>
         <Card.Body className={classNames({
