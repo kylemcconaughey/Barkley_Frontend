@@ -10,7 +10,7 @@ export default function Newsfeed (props) {
 
   return (
     <div className='Home'>
-      <button className='addPostBtn'><Link to='/addpost'> Add new post!</Link></button>
+      <button className='addBtn'><Link to='/addpost'> Add new post!</Link></button>
       <Posts token={token} className='post' />
     </div>
   )
