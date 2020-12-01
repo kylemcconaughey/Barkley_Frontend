@@ -18,22 +18,20 @@ export default function Discussion ({ post, token }) {
       <Card style={{ width: '40rem' }}>
         <Card.Header className='discussionHeader'>
           {post.title}
+          <p className='discussionBody'>{post.body}</p>
         </Card.Header>
-        <Card.Body>
-          <Card.Text id='discussionBody' className='discussionBody'>
-            {post.body}
-          </Card.Text>
-          <Card.Text>
-            <p className='discussionDetail'> Posted by:
-              <em> <Link to='/profile/'>{post.user.username} </Link></em>
-             on {postedAt}
-            </p>
-          </Card.Text>
 
-          {/* <Vote> </Vote> */}
-          <Notes token={token} notes={post.notes}> </Notes>
-          <NotesEditor token={token} id={post.id}> </NotesEditor>
-        </Card.Body>
+        <Card.Text>
+          <p className='discussionDetail'> Posted by:
+            <em> <Link to='/profile/'>{post.user.username} </Link></em>
+             on {postedAt}
+          </p>
+        </Card.Text>
+
+        {/* <Vote> </Vote> */}
+        <Notes token={token} notes={post.notes}> </Notes>
+        <NotesEditor token={token} id={post.id}> </NotesEditor>
+
 
       </Card>
 

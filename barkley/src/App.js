@@ -1,6 +1,8 @@
 import React from 'react'
-import './App.css'
+
 import 'rsuite/dist/styles/rsuite-default.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 import {
   BrowserRouter as Router,
   Switch,

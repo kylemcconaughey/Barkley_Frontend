@@ -55,12 +55,12 @@ input {
 }
 
 .followBtn{
-  background-color: white;
+  background-color: rgb(0, 187, 255, 0.911);
   border-radius: 10px;
 }
 
 .followBtn:hover{
-  background-color: rgb(64, 160, 224);
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
@@ -337,11 +337,13 @@ font-size: 250%;
 }x
 
 .discussionBody{
-  font-size: xx-large;
+  font-size: x-large;
   text-align: center;
   margin: 10px;
   background-color: white;
   padding: 15px;
+  width: 100%;
+  text-align: justify;
 }
 
 .discussionDetail{
@@ -363,25 +365,7 @@ font-size: 250%;
   margin-top: 8px;
   padding: 5px;
   border-radius: 15px;
-  max-width: 92%;
-}
-
-.message{
-  max-width: 50%;
-}
-
-.two{ 
-  height:200px; 
-  position: relative; 
-  left: 35%; 
-  margin-top: -400px; 
-  margin-left: -100px;
-}
-
-.three{
-  position:fixed;
-  left:1300px;
-  top:200px;
+  max-width: 100%;
 }
 
 

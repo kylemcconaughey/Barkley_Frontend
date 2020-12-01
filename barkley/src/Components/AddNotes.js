@@ -7,7 +7,7 @@ import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Mention from './Mentions'
+// import Mention from './Mentions'
 
 class NoteEditor extends React.Component {
   constructor (props) {
@@ -51,9 +51,9 @@ class NoteEditor extends React.Component {
           <div className='answerText'>
             <Card style={{ width: '40rem' }}>
               <Card.Body>
-                <Card.Text>
-                  {this.state.body}
-                </Card.Text>
+
+                {this.state.body}
+
               </Card.Body>
             </Card>
           </div>
@@ -66,7 +66,7 @@ class NoteEditor extends React.Component {
 
                   <Form.Group controlId='addAnswerText'>
                     <Form.Control type='text' style={{ height: 100 }} placeholder='Add an answer' value={this.state.body} onChange={this.handleBodyChange} />
-                    <Mention> </Mention>
+                    {/* <Mention> </Mention> */}
                   </Form.Group>
 
                   <Button variant='outline-primary' className='addBtn' type='submit' name='submit' value='Submit'>
