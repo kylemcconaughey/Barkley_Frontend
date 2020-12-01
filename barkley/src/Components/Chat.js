@@ -20,7 +20,7 @@ function Chat (props) {
         {conversation.messages.map(m => (
           <div className='message' key={m.url}>
             {m.body}
-            <p className='sentInfo'> <em> Sent by: {m.sender.username} on {m.niceCreated} </em> </p>
+            <p className='sentInfo'> <em> Sent by:  {m.sender.username} on {m.niceCreated} </em> </p>
             <p> <em> {m.conversation} </em></p>
           </div>
         ))}

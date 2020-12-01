@@ -60,7 +60,7 @@ export default function Apost ({ post, token }) {
 
       <Reactions> </Reactions>
       <Comments comments={post.comments} token={token}> </Comments>
-      <AddComments token={token}> </AddComments>
+      <AddComments token={token} id={post.id}> </AddComments>
 
     </div>
   )

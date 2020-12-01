@@ -172,8 +172,8 @@ export function getNotes (token) {
     .then(res => res.data)
 }
 
-export function addComment (token, body, post) {
-  return axios.post('http://brkly.herokuapp.com/comments/', { post: post, body: body }, {
+export function addComment (token, body, id) {
+  return axios.post('http://brkly.herokuapp.com/comments/', { post: id, body: body }, {
     headers: {
       Authorization: 'Token ' + token
     }

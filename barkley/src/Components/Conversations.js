@@ -38,11 +38,11 @@ function Conversations (props) {
   const conversationToShow = convos.find(convo => convo.id === showConversationId)
 
   return (
-    <Container>
+    <Container fluid>
       <h2 className='m-title'>Conversations</h2>
       <Row>
 
-        <Col sm className='py-2 border rounded'>
+        <Col>
           <h3> View a conversation </h3>
           <div className='convos'>
             {convos.map(cList => (
@@ -53,14 +53,14 @@ function Conversations (props) {
           </div>
 
         </Col>
-        <Col sm className='py-2 border rounded'>
+        <Col sm={6}>
           <div className='two'>
             {conversationToShow && (
               <Chat conversation={conversationToShow} username={username} token={token} onSent={() => console.log('onSent')} />
             )}
           </div>
         </Col>
-        <Col sm className='py-2 border rounded'>
+        <Col>
           <div className='three'>
             <h3>Start a new Conversation</h3>
             <div>
