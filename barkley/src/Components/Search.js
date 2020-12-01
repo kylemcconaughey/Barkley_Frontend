@@ -29,7 +29,7 @@ class Search extends Component {
   };
 
   get renderusers() {
-    let users = <h2>There are no users with that name</h2>
+    let users = <h2 className='noUsersReturn'>There are no users with that name</h2>
     if (this.state.users) {
       console.log(this.state.users)
       users = this.state.users.map(user => <User key={user.id} user={user} />)
@@ -40,7 +40,7 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
+      <div className='search'>
         <input
           value={this.state.value}
           onChange={e => this.onChangeHandler(e)}
