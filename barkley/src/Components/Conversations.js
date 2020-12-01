@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Chat from './Chat'
 import { getConvo, AddConversation, getUserInfo } from './api'
 import { Link } from 'react-router-dom'
+import Select from 'react-select'
 
 function Conversations (props) {
   const { token, username } = props
