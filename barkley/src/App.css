@@ -54,6 +54,16 @@ input {
   color: black;
 }
 
+.followBtn{
+  background-color: white;
+  border-radius: 10px;
+}
+
+.followBtn:hover{
+  background-color: rgb(64, 160, 224);
+  color: black;
+}
+
 .voteBtn{
   border-radius: 15px;
   margin: 10px;
@@ -82,13 +92,22 @@ input {
   background-color: white;
   border: 6px solid rgb(31, 180, 225);
   border-radius: 20px;
-  box-shadow: 0px 12px 8px 2px gray;
+  box-shadow: 6px 12px 12px 12px gray;
   max-width: 45rem;
   align-items: center;
 }
 
 .postDate{
-  font-size: medium;
+  font-size: small;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.postProPic{
+  border-radius: 85%;
+  max-width: 10%;
+  max-height: 5%;
 }
 
 .convos{
@@ -100,10 +119,11 @@ input {
 }
 
 .image, img{
-  max-width: 20rem;
+  max-width: 25rem;
   max-height: 30rem;
   margin-left: 32px;
   margin-top: 1rem;
+  border-radius: 25px;
 }
 
 .doggo{
@@ -136,20 +156,57 @@ margin-right: auto;
   
 }
 .userProfPic{
-  max-width: 20rem;
-  max-height: 25rem;
+  max-width: 40%;
+  max-height: 12rem;
   border-radius: 50%;
   background-color: white;
-
+  position: relative;
+  float: right; 
+  margin: 5px 5px 15px 15px;
+  overflow: hidden;
 }
 
-.profile-container{
+.div{
+  justify-content: space-between;
   display: flex;
-  align-items: stretch;
+}
+
+.picDiv{
+display: flex;
+justify-content: right;
+}
+
+.userPic, .owner{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+ 
+.profile-container{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  text-align: center;
+  border-bottom: 4px solid black ;
+  border-radius: 25px;
+  justify-content: space-evenly;
+  font-size: medium;
+}
+
+.usersNames{
+  margin-top: 50px;
+  text-align: right;
+  margin-bottom: 60px;
 }
 
 .profPosts{
   display: flex;
+  align-items: stretch;
+  margin-left: 25px;
+}
+.profPostHdr{
+margin-bottom: 40px;
 }
 
 input{
@@ -257,7 +314,7 @@ font-size: 250%;
   position: relative;
   width: 800px;
   height: 600px;
-  margin: 10px 0px 0px 30px;
+  margin: 10px 30px 30px 30px;
 }
 .mapContainer {
   position: fixed;
@@ -309,6 +366,10 @@ font-size: 250%;
   max-width: 92%;
 }
 
+.message{
+  float: ;
+}
+
 .sentInfo{
   color: rgb(0, 166, 255);
 }
@@ -339,7 +400,7 @@ font-size: 250%;
 
 .convoHdr{
   font-size: x-large;
-  padding: 15px;
+  padding: 8px;
   background-color: #030304;
   border-radius: 20px;
   text-align: center;
@@ -348,14 +409,15 @@ font-size: 250%;
   margin-right: auto;
   color: white;
   box-shadow: 0px 12px 8px 2px gray;
- display: inline;
+ display: flex;
+ max-width: 80rem;
 }
 
 .wholeConvoPage{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 50%;
 }
 
 .bm-burger-button {
