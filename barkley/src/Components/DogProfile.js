@@ -15,7 +15,7 @@ function DogProfile ({ dog }) {
         <div>Breed:{dog.breed}</div>
         <div>Good in group sizes: {dog.group_size}</div>
         <div>Vaccinated: {dog.vaccinated}</div>
-        <div>Owner: <Link to='/profile'><em>{dog.owner.username} </em></Link><em> </em></div>
+        <div>Owner: <Link to={`/profile/${dog.owner.id}/`}><em>{dog.owner.username} </em></Link><em> </em></div>
       </div>
     </div>
   )
