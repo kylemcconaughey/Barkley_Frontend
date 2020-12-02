@@ -15,7 +15,7 @@ export default function Discussion ({ post, token }) {
 
   return (
     <div className='discussionBrd'>
-      <Card style={{ width: '40rem' }}>
+      <Card >
         <Card.Header className='discussionHeader'>
           {post.title}
           <p className='discussionBody'>{post.body}</p>

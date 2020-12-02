@@ -5,7 +5,7 @@ import Vote from './Voting'
 export default function Note ({ post }) {
   return (
     <div className='note'>
-      <post style={{ width: '40rem' }}>
+      <post>
         <Card.Body>
           <Card.Text id='post' className='noteBody'>
             {post.body}
