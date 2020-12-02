@@ -31,7 +31,7 @@ function Register (props) {
   }
 
   return (
-    <div>
+    <div className='registration'>
       {message &&
         <div>
           {message}
@@ -118,7 +118,7 @@ function Register (props) {
         {/* <label
           htmlFor='email'
         /> */}
-        <button className='formBtn' type='submit'>
+        <button className='registerBtn' type='submit'>
             Sign Up
         </button>
       </form>
