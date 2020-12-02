@@ -31,7 +31,7 @@ class DiscussionEditor extends React.Component {
   handleSubmit (event) {
     event.preventDefault()
     axios
-      .post('http://brkly.herokuapp.com/discussionboards/', {
+      .post('https://brkly.herokuapp.com/discussionboards/', {
         title: this.state.title,
         body: this.state.body
       },
