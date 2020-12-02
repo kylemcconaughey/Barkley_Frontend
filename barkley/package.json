@@ -45,6 +45,7 @@
     "react-mapbox-gl": "^5.0.0",
     "react-mentions": "^4.0.2",
     "react-moment": "^1.0.0",
+    "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-search-box": "^2.0.2",
