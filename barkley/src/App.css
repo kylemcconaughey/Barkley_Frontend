@@ -112,7 +112,6 @@ input {
   background-color: white;
 }
 
-@media only screen and (min-width: 550px) and (max-width: 1089px) {
 .post, .discussionBrd{
   padding: 10px;
   min-height: 100px;
@@ -126,7 +125,6 @@ input {
   box-shadow: 6px 12px 12px 12px gray;
   max-width: 45rem;
   align-items: center;
-}
 }
 
 .postDate{

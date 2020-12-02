@@ -7,7 +7,6 @@ import Reactions from './Reactions'
 import Comments from './Comments'
 import AddComments from './AddComment'
 import LikeButton from './LikeButton'
-
 import MediaQuery from 'react-responsive'
 
 export default function Apost ({ post, token }) {
@@ -20,7 +19,6 @@ export default function Apost ({ post, token }) {
   const handleMediaQueryChange = (matches) => {
     // matches will be true or false based on the value for the media query
   }
-
 
   return (
     <MediaQuery minDeviceWidth={1224} onChange={handleMediaQueryChange}>
