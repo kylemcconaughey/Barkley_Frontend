@@ -47,7 +47,6 @@ export default function Apost ({ post, token }) {
           </Card.Text>
           <Card.Text className='likedNum'>
             {post.liked_by.length} likes
-            <LikeButton> </LikeButton>
           </Card.Text>
           <Card.Text>
             {post.reactions.reaction}
@@ -58,6 +57,7 @@ export default function Apost ({ post, token }) {
         </Card.Body>
 
       </Card>
+      <LikeButton> </LikeButton>
       <Reactions> </Reactions>
       <Comments comments={post.comments} token={token}> </Comments>
       <AddComments token={token} id={post.id}> </AddComments>

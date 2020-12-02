@@ -30,9 +30,9 @@ class NavBar extends React.Component {
 
   if (isMobile) {
     return (
-      <Menu width='400px'>
+      <Menu width='280px'>
         <div className='navlinks'>
-          <Link to='/newsfeed'> <i className="fas fa-home"></i> Home  </Link>
+        <Link to='/newsfeed'> <i className="fas fa-home"></i> Home  </Link>
           <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
           <Link to='/doglist'><p className='links'> <i className='fas fa-paw' /> Dogs</p></Link>
           <Link to='/search'> <i className='fas fa-search' /> Explore  </Link>
@@ -40,7 +40,7 @@ class NavBar extends React.Component {
           <Link to='/messages'> <i className='far fa-comments' /> Messages </Link>
           <Link to='/calendar'> <i className='far fa-calendar-alt' /> Calendar</Link>
           {/* <Link to='/dogfriendlylocations'> <i className='fas fa-map-marker-alt' /> Map </Link> */}
-          <Link to='/helpful'> <i className='far fa-question-circle' />Discussion Boards  </Link>
+          <Link to='/discussions'> <i className='far fa-question-circle' />Discussion Boards  </Link>
           <Link to='/logout'><p className='links'> <i className='fas fa-sign-out-alt' /> Logout </p></Link>
         </div>
       </Menu>

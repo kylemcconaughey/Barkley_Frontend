@@ -112,7 +112,6 @@ input {
   background-color: white;
 }
 
-
 .post, .discussionBrd{
   padding: 10px;
   min-height: 100px;
@@ -150,11 +149,12 @@ input {
 }
 
 .image, img{
-  max-width: 25rem;
+  max-width: 20rem;
   max-height: 30rem;
   margin-left: 32px;
   margin-top: 1rem;
   border-radius: 25px;
+  overflow: hidden;
 }
 
 .doggo{
@@ -220,6 +220,7 @@ justify-content: right;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+  overflow: hidden;
 }
  
 .profile-container{
@@ -464,7 +465,7 @@ color: #0befff;
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  top: 45px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
