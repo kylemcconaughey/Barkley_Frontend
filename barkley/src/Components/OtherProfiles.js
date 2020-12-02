@@ -37,7 +37,7 @@ function Profile (props) {
         <div className='followers'>Followers: {userInfo.num_friends}</div>
         <div className='dogProLink'><Link to='/dogprofile'>My Dogs</Link></div>
         {/* <div className='addDogLink'><Link to='/adddog'> Add another pup</Link></div> */}
-        <div><Link to='/convos'> <i className='far fa-envelope' /> Message </Link></div>
+        <div><Link to='/messages'> <i className='far fa-envelope' /> Message </Link></div>
         <FollowButton> Follow </FollowButton>
       </div>
       <div className='profPosts'>
