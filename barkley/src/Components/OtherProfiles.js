@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getOtherUser } from './api'
-import DogProfile from './DogProfile'
+// import DogProfile from './DogProfile'
 import OtherUsersPosts from './OtherUsersPosts'
 import { useParams } from 'react-router'
 

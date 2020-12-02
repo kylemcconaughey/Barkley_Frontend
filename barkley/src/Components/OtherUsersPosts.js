@@ -13,7 +13,7 @@ function OtherUsersPosts (props) {
       setLoading(false)
       console.log(data)
     })
-  }, [token])
+  }, [token, id])
 
   if (loading) {
     return <p>Loading Post...</p>
