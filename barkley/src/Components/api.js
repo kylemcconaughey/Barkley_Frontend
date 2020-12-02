@@ -45,7 +45,7 @@ export function getOtherUsersPost (token, id) {
 }
 
 export function getPersonalUser (token) {
-  return axios.get('http://brkly.herokuapp.com/users/me/', {
+  return axios.get('https://brkly.herokuapp.com/users/me/', {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -54,7 +54,7 @@ export function getPersonalUser (token) {
 }
 
 export function getOtherUser (token, id) {
-  return axios.get(`http://brkly.herokuapp.com/users/${id}/`, {
+  return axios.get(`https://brkly.herokuapp.com/users/${id}/`, {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -182,7 +182,7 @@ export function getNotes (token) {
 }
 
 export function addComment (token, body, id) {
-  return axios.post('http://brkly.herokuapp.com/comments/', { post: id, body: body }, {
+  return axios.post('https://brkly.herokuapp.com/comments/', { post: id, body: body }, {
     headers: {
       Authorization: 'Token ' + token
     }
@@ -191,7 +191,7 @@ export function addComment (token, body, id) {
 }
 
 export function sendMessage (token, body, id) {
-  return axios.post('http://brkly.herokuapp.com/messages/', { conversation: id, body: body }, {
+  return axios.post('https://brkly.herokuapp.com/messages/', { conversation: id, body: body }, {
     headers: {
       Authorization: 'Token ' + token
     }
