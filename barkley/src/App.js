@@ -73,16 +73,16 @@ class App extends React.Component {
               <Route path='/adddog'><AddDog token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/search'><Search token={this.state.token} username={this.state.username}> </Search> </Route>
               <Route path='/search'><DogSearch token={this.state.token} username={this.state.username}> </DogSearch> </Route>
-              <Route path='/convos'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
+              <Route path='/messages'> <Conversations token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/messages'><Chat token={this.state.token} username={this.state.username}> </Chat></Route>
               {/* <Route path='/notifications'><Notifications token={this.state.token} username={this.state.username}> </Notifications> </Route> */}
-              <Route path='/helpful'><Discussions token={this.state.token} username={this.state.username} /> </Route>
+              <Route path='/discussions'><Discussions token={this.state.token} username={this.state.username} /> </Route>
               <Route path='/adddiscussion'><DiscussionEditor token={this.state.token} username={this.state.username} /></Route>
               <Route path='/newsfeed'><Newsfeed token={this.state.token} username={this.state.username} />   </Route>
               <Route path='/addpost'><PostEditor token={this.state.token} username={this.state.username}>  </PostEditor></Route>
-              <Route path='/helpful'><Notes token={this.state.token} username={this.state.username}> </Notes></Route>
-              <Route path='/helpful'><Note token={this.state.token} username={this.state.username}> </Note></Route>
-              <Route path='/helpful'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
+              <Route path='/discussions'><Notes token={this.state.token} username={this.state.username}> </Notes></Route>
+              <Route path='/discussions'><Note token={this.state.token} username={this.state.username}> </Note></Route>
+              <Route path='/discussions'><NotesEditor token={this.state.token} username={this.state.username}>  </NotesEditor></Route>
               <Route path='/calendar'> <Calendar token={this.state.token} username={this.state.username}> </Calendar> </Route>
               {/* <Route path='/calendar'><Dnd> </Dnd></Route> */}
               <Route path='/dogfriendlylocations'><Map token={this.state.token} username={this.state.username}> </Map></Route>

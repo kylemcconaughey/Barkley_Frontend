@@ -10,7 +10,7 @@ function Comments (props) {
         <p className='comments' key={comment.url}>
           {comment.body}
           <p className='id_num'>{comment.id}</p>
-          <p className='commentDetail'> Posted by: <em><Link to='/profile'>{comment.user.username}</Link></em>  on {comment.niceCreated} </p>
+          <p className='commentDetail'> Posted by: <em><Link to={`/profile/${comment.user.id}/`}>{comment.user.username}</Link></em>  on {comment.niceCreated} </p>
         </p>
       ))}
     </div>

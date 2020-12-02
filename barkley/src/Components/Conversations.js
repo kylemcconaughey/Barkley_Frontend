@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Chat from './Chat'
 import { getConvo, AddConversation, getUserInfo } from './api'
 import { Link } from 'react-router-dom'
-import Select from 'react-select'
+// import Select from 'react-select'
 import { Container, Row, Col } from 'reactstrap'
 
 function Conversations (props) {
@@ -69,7 +69,7 @@ function Conversations (props) {
                   type='text' onChange={e => setConvoName(e.target.value)} value={convoname}
                 />
                 <p>Select Members: </p>
-                <Select
+                <select
                   multiple value={members} onChange={e => {
                     const value = Array.from(e.target.selectedOptions, option => option.value)
                     setMembers(value)
@@ -83,7 +83,7 @@ function Conversations (props) {
                       {option.username}
                     </option>
                   ))}
-                </Select>
+                </select>
 
                 <button type='submit' className='addBtn'>Add new conversation</button>
               </form>
