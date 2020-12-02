@@ -29,7 +29,7 @@ function Profile (props, { post }) {
         </div>
       </div>
       <div className='profile-container'>
-        <p>Username: <em> {userInfo.username} </em> </p>
+     
         <div className='followers'>Followers: {userInfo.num_friends}</div>
         <div className='dogProLink'><Link to='/dogprofile'>My Dogs</Link></div>
         {/* <div className='addDogLink'><Link to='/adddog'> Add another pup</Link></div> */}
