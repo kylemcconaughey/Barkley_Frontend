@@ -1,3 +1,4 @@
+@media screen and (min-width: 900px) {
 * {
   box-sizing: border-box;
   margin: 0;
@@ -70,7 +71,11 @@ input {
   font-size: x-large;
  }
 
-.addBtn:hover, .addPostBtn:hover, .loginBtn:hover, .registerBtn:hover{
+ .likeBtn{
+
+ }
+
+.addBtn:hover, .addPostBtn:hover, .loginBtn:hover, .registerBtn:hover, .likeBtn:hover{
   background-color: rgb(64, 160, 224);
   color: black;
 }
@@ -510,4 +515,5 @@ color: #0befff;
 .bm-overlay {
   background: rgba(65, 121, 147, 0.988);
   border-radius: 12px;
+}
 }

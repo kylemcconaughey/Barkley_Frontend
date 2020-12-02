@@ -20,7 +20,7 @@ class LikeButton extends React.Component {
     const label = this.state.liked ? 'Unlike' : 'Like'
     return (
       <div className='customContainer'>
-        <button className='btn btn-primary' onClick={this.handleClick}>
+        <button className='likeBtn' onClick={this.handleClick}>
           {label}
         </button>
         <p>
