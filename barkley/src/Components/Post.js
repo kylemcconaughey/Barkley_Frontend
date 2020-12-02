@@ -17,7 +17,7 @@ export default function Apost ({ post, token }) {
 
   return (
     <div className='post'>
-      <Card style={{ width: '40rem' }}>
+      <Card>
         <h3 className='postHeader'> <img src={post.user.picture} alt='user' className='postProPic' />
           <em> <Link to={`/profile/${post.user.id}/`}>{post.user.username} </Link></em>
         </h3>

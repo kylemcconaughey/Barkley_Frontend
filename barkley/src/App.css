@@ -149,8 +149,8 @@ input {
 }
 
 .image, img{
-  max-width: 20rem;
-  max-height: 30rem;
+  max-width: 45%;
+  height: auto;
   margin-left: 32px;
   margin-top: 1rem;
   border-radius: 25px;
