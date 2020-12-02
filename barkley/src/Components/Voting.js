@@ -6,8 +6,8 @@ class Vote extends Component {
     super(props)
     this.state = {
       voting: [
-        { title: '👍', name: 'upvote', votes: 0 },
-        { title: '👎', name: 'downvote', votes: 0 }
+        { title: 'Upvote', name: 'upvote', votes: 0 },
+        { title: 'Downvote', name: 'downvote', votes: 0 }
       ]
     }
   }

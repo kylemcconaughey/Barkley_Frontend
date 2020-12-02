@@ -35,6 +35,15 @@ export function getUserPost (token) {
     .then(res => res.data)
 }
 
+export function getOtherUsersPost (token, id) {
+  return axios.get(`https://brkly.herokuapp.com/posts/theirs/?p=${id}`, {
+    headers: {
+      Authorization: 'Token ' + token
+    }
+  })
+    .then(res => res.data)
+}
+
 export function getPersonalUser (token) {
   return axios.get('http://brkly.herokuapp.com/users/me/', {
     headers: {
@@ -44,8 +53,8 @@ export function getPersonalUser (token) {
     .then(res => res.data)
 }
 
-export function getOtherUsersPost (token) {
-  return axios.get('https://brkly.herokuapp.com/posts/mine/', {
+export function getOtherUser (token, id) {
+  return axios.get(`http://brkly.herokuapp.com/users/${id}/`, {
     headers: {
       Authorization: 'Token ' + token
     }

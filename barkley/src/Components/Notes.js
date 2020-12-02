@@ -13,7 +13,7 @@ function Notes (props) {
           <p className='id_num'>{note.id}</p>
           <p className='noteDetail'> Posted by: {note.user} on {note.niceCreated}
           </p>
-          <p className='noteDetail'>Liked: {note.num_upvotes}  Unliked: {note.num_downvotes}</p>
+          <p className='noteDetail'>Upvoted: {note.num_upvotes}  Downvoted: {note.num_downvotes}</p>
           <Vote url={note.url} token={props.token}> </Vote>
         </div>
       ))}

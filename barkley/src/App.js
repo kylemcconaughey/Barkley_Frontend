@@ -13,6 +13,7 @@ import Login from './Components/Login'
 import Header from './Components/Header'
 import Logout from './Components/Logout'
 import Profile from './Components/Profile'
+import OtherProfiles from './Components/OtherProfiles'
 import Register from './Components/Register'
 import Newsfeed from './Components/Newsfeed'
 import PostEditor from './Components/AddPost'
@@ -65,6 +66,7 @@ class App extends React.Component {
               <Route path='/' exact component={Home}> </Route>
               <Route path='/login' exact component={Login}> Login </Route>
               <Route path='/logout/'><Logout onLogout={this.handleLogout} /></Route>
+              <Route path='/profile/:id'><OtherProfiles token={this.state.token} username={this.state.username} > </OtherProfiles></Route>
               <Route path='/profile'> <Profile token={this.state.token} username={this.state.username} /></Route>
               <Route path='/dogprofile/'> <PersonalDogInfo token={this.state.token} username={this.state.username} /></Route>
               <Route path='/doglist'> <DogInfo token={this.state.token} username={this.state.username} /></Route>
