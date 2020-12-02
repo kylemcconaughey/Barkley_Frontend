@@ -31,7 +31,7 @@ class NavBar extends React.Component {
   if (isMobile) {
     return (
       <Menu width='280px'>
-        <div className='navlinks'>
+        <div className='navlinksMobile'>
         <Link to='/newsfeed'> <i className="fas fa-home"></i> Home  </Link>
           <Link to='/profile'><p className='links'> <i className='fas fa-user-circle' /> Profile </p></Link>
           <Link to='/doglist'><p className='links'> <i className='fas fa-paw' /> Dogs</p></Link>
