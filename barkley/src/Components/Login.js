@@ -32,11 +32,11 @@ class Login extends React.Component {
   render () {
     return (
 
-      <div className='login'>
+      <div>
         <div>
           <h1 className='appheader'><img className='appimg' src={logo} alt='Barkley Header' /> </h1>
         </div>
-        <div className='login-form'>
+        <div className='login'>
           <form onSubmit={this.handleLogin}>
             <div>
               {this.state.error}

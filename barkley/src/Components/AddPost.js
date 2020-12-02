@@ -175,10 +175,10 @@ class PostEditor extends React.Component {
                     <Form.Label htmlFor='image'>Upload Image</Form.Label>
                     <Form.Control input type='file' id='image' accept='image/png, image/jpeg' onChange={this.handleImageChange} required>
                     </Form.Control>
-                    <button onClick={this.handleUploadImage}>Upload</button>
+                    <button className='addBtn' onClick={this.handleUploadImage}>Upload</button>
                   </Form.Group>
 
-                  <Button variant='outline-primary' type='submit' name='submit' value='Submit'>
+                  <Button variant='outline-primary' type='submit' name='submit' value='Submit' className='addBtn'>
                 Add Post
                   </Button>
                 </Form>

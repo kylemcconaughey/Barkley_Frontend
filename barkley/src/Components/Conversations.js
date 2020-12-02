@@ -39,7 +39,7 @@ function Conversations (props) {
 
   return (
     <Container fluid>
-      <h2 className='m-title'>Conversations</h2>
+      <h2 className='m-title' style={{ textDecoration: 'underline' }}>Conversations</h2>
       <Row>
 
         <Col>
