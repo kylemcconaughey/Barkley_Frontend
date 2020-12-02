@@ -49,7 +49,7 @@ class NoteEditor extends React.Component {
         <h1 className='answerHeader'> Add an answer!</h1>
         <Col>
           <div className='answerText'>
-            <Card style={{ width: '40rem' }}>
+            <Card>
               <Card.Body>
 
                 {this.state.body}
